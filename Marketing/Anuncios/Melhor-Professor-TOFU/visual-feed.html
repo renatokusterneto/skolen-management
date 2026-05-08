@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Feed · Visual Antes/Depois · Melhor Professor · BOFU · 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow:     #F5C842;
+  --teal:       #5ECBA8;
+  --pink:       #E87DB0;
+  --blue:       #5A8ED4;
+  --text:       #2B3641;
+  --white:      #FFFFFF;
+  --gray-mid:   #8A95A3;
+  --gray-light: #E8EAED;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: #ECEEF2; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#canvas .c-tr {
+  width: 160px; height: 160px;
+  background: var(--yellow);
+  top: -50px; right: -50px;
+}
+#canvas .c-bl {
+  width: 180px; height: 180px;
+  background: var(--yellow);
+  bottom: -55px; left: -55px;
+}
+#canvas .c-br {
+  width: 220px; height: 220px;
+  background: var(--teal);
+  bottom: -65px; right: -65px;
+}
+
+#header {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 20px;
+  z-index: 4;
+  background: var(--white);
+}
+.header-title {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0;
+  margin-bottom: 4px;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header-brand-text {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+#panels {
+  position: absolute;
+  top: 140px; left: 36px; right: 36px; bottom: 90px;
+  display: flex;
+  gap: 16px;
+  z-index: 2;
+  align-items: stretch;
+}
+
+.panel {
+  flex: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-label {
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+.panel-label-icon {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel-label-text {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.panel-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.panel-before { border: 2px solid var(--gray-light); }
+.panel-before .panel-label { background: #F4F5F7; }
+.panel-before .panel-label-text { color: var(--gray-mid); }
+.panel-before .panel-label-icon { background: rgba(138,149,163,0.15); }
+
+.panel-after { border: 2px solid rgba(94,203,168,0.45); }
+.panel-after .panel-label { background: #F0F9F5; }
+.panel-after .panel-label-text { color: var(--teal); }
+.panel-after .panel-label-icon { background: rgba(94,203,168,0.15); }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="header">
+    <span class="header-title">Diretores antes e depois</span>
+    <div class="header-brand">
+      <span class="header-title" style="margin-bottom:0">de saber o</span>
+      <div class="ad-logo-mark" style="width:28px;height:28px;gap:3px;">
+        <span class="lm-tl" style="width:11px;height:11px"></span>
+        <span class="lm-tr" style="width:11px;height:11px"></span>
+        <span class="lm-bl" style="width:11px;height:11px"></span>
+        <span class="lm-br" style="width:11px;height:11px"></span>
+      </div>
+      <span class="header-brand-text">Skolen</span>
+    </div>
+  </div>
+
+  <div id="panels">
+    <div class="panel panel-before">
+      <div class="panel-label">
+        <div class="panel-label-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="13" stroke="#8A95A3" stroke-width="2"/>
+            <circle cx="10" cy="12" r="1.8" fill="#8A95A3"/>
+            <circle cx="18" cy="12" r="1.8" fill="#8A95A3"/>
+            <path d="M9 20c1.5-3 9.5-3 11 0" stroke="#8A95A3" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="10" cy="16" rx="1.4" ry="2.2" fill="#5A8ED4" opacity="0.55"/>
+          </svg>
+        </div>
+        <span class="panel-label-text">Antes</span>
+      </div>
+      <div class="panel-image">
+        <img src="https://picsum.photos/seed/stress/520/700" style="width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(60%)">
+      </div>
+    </div>
+
+    <div class="panel panel-after">
+      <div class="panel-label">
+        <div class="panel-label-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="14" r="13" stroke="#5ECBA8" stroke-width="2"/>
+            <circle cx="10" cy="11.5" r="1.8" fill="#5ECBA8"/>
+            <circle cx="18" cy="11.5" r="1.8" fill="#5ECBA8"/>
+            <path d="M9 17c1.5 3 9.5 3 11 0" stroke="#5ECBA8" stroke-width="2" stroke-linecap="round"/>
+            <ellipse cx="8.5" cy="16" rx="2.5" ry="1.5" fill="#E87DB0" opacity="0.3"/>
+            <ellipse cx="19.5" cy="16" rx="2.5" ry="1.5" fill="#E87DB0" opacity="0.3"/>
+          </svg>
+        </div>
+        <span class="panel-label-text">Com Skolen</span>
+      </div>
+      <div class="panel-image">
+        <img src="https://picsum.photos/seed/success/520/700" style="width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

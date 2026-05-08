@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Carrossel Slide 2 · Text · 1080×1080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #F5C842;
+  --teal:   #5ECBA8;
+  --pink:   #E87DB0;
+  --blue:   #5A8ED4;
+  --text:   #2B3641;
+  --white:  #FFFFFF;
+  --gray-bg: #F4F5F7;
+  --gray-mid: #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 1080px; height: 1080px; overflow: hidden; background: #FFFFFF; }
+body { font-family: 'Nunito', sans-serif; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+
+/* ── Canvas ── */
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slide 2 — c-tl e c-bl conectam com c-tr e c-br do slide 1 */
+#canvas .c-tl { width: 220px; height: 220px; background: var(--yellow); top:  -65px; left: -65px; }
+#canvas .c-tr { width: 200px; height: 200px; background: var(--teal);   top:  -58px; right: -58px; }
+#canvas .c-bl { width: 240px; height: 240px; background: var(--teal);   bottom: -70px; left: -70px; }
+#canvas .c-br { width: 200px; height: 200px; background: var(--blue);   bottom: -58px; right: -58px; }
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 110px 120px;
+  text-align: center;
+  z-index: 2;
+  gap: 0;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  background: rgba(245,200,66,0.12);
+  padding: 10px 24px;
+  border-radius: 999px;
+}
+
+.headline {
+  font-size: 70px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 56px;
+}
+.headline em { font-style: normal; color: var(--yellow); }
+
+/* Card de texto */
+.text-card {
+  background: rgba(245,200,66,0.08);
+  border: 2px solid rgba(245,200,66,0.30);
+  border-radius: 24px;
+  padding: 48px 64px;
+  width: calc(100% - 220px);
+  max-width: 720px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.35;
+}
+.bullet-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="body">
+    <p class="label">Sinal #1</p>
+
+    <h2 class="headline">
+      Tempo perdido<br>em tarefas <em>manuais</em>
+    </h2>
+
+    <div class="text-card">
+      <div class="bullet-item">
+        <div class="bullet-dot" style="background:var(--yellow)"></div>
+        <span>Dados digitados várias vezes</span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot" style="background:var(--teal)"></div>
+        <span>Erros e retrabalho frequentes</span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot" style="background:var(--blue)"></div>
+        <span>Gestão no apagar incêndios</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Story · Melhor Professor · TOFU · 1080×1920</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow:     #F5C842;
+  --teal:       #5ECBA8;
+  --pink:       #E87DB0;
+  --blue:       #5A8ED4;
+  --text:       #2B3641;
+  --white:      #FFFFFF;
+  --gray-mid:   #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--white); }
+body { font-family: 'Nunito', sans-serif; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.ad-logo-mark.sz56 { width: 56px; height: 56px; }
+.ad-logo-mark.sz56 span { width: 24px; height: 24px; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+.ad-logo-text { font-size: 36px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+.ad-logo-text.sz44 { font-size: 44px; }
+
+#t4-canvas {
+  width: 1080px;
+  height: 1920px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#t4-canvas .c-tl {
+  width: 500px; height: 500px;
+  background: var(--yellow);
+  top: -160px; left: -160px;
+}
+#t4-canvas .c-tr {
+  width: 380px; height: 380px;
+  background: var(--blue);
+  top: -100px; right: -100px;
+}
+#t4-canvas .c-bl {
+  width: 420px; height: 420px;
+  background: var(--teal);
+  bottom: -120px; left: -120px;
+}
+#t4-canvas .c-br {
+  width: 460px; height: 460px;
+  background: var(--pink);
+  bottom: -130px; right: -130px;
+}
+#t4-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 100px;
+  padding-top: 130px;
+  text-align: center;
+  z-index: 2;
+}
+#t4-canvas .eyebrow {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+#t4-canvas .question {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 80px;
+  text-wrap: pretty;
+  hyphens: auto;
+}
+#t4-canvas .question em { font-style: normal; color: var(--yellow); }
+#t4-canvas .subtext {
+  font-size: 36px;
+  font-weight: 600;
+  color: #B0BAC4;
+  line-height: 1.45;
+  max-width: 820px;
+  text-wrap: pretty;
+  hyphens: auto;
+}
+#t4-logo {
+  position: absolute;
+  bottom: 100px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<div id="t4-canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+  <div id="t4-body">
+    <p class="eyebrow">Para Diretores de Escola</p>
+    <h1 class="question">
+      Qual professor retém<br>
+      <em>mais alunos?</em>
+    </h1>
+    <p class="subtext">
+      Diretores que sabem isso tomam decisões melhores —<br>
+      e faturam mais.
+    </p>
+  </div>
+
+  <div id="t4-logo">
+    <div class="ad-logo-mark sz56">
+      <span class="lm-tl"></span>
+      <span class="lm-tr"></span>
+      <span class="lm-bl"></span>
+      <span class="lm-br"></span>
+    </div>
+    <span class="ad-logo-text sz44">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

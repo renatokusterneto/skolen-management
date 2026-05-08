@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skolen — Marketing Kanban</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   SKOLEN MARKETING KANBAN — Brand Identity v2
+   Brand Colors: Yellow #F5C842 · Teal #5ECBA8 · Pink #E87DB0 · Blue #5A8ED4
+   ============================================================ */
+
+:root {
+  /* Skolen Brand Colors */
+  --brand-yellow: #F5C842;
+  --brand-yellow-light: #FEF7D6;
+  --brand-yellow-dark:  #D9A800;
+
+  --brand-teal:   #5ECBA8;
+  --brand-teal-light: #D4F4EB;
+  --brand-teal-dark:  #3A9E7E;
+
+  --brand-pink:   #E87DB0;
+  --brand-pink-light: #FAEAF3;
+  --brand-pink-dark:  #C44E88;
+
+  --brand-blue:   #5A8ED4;
+  --brand-blue-light: #E0EBFB;
+  --brand-blue-dark:  #3568B0;
+
+  --brand-green:  #3DB88A;
+  --brand-green-light: #C8EEE1;
+
+  --text-dark:    #2B3641;
+  --white:        #FFFFFF;
+
+  /* Grays */
+  --gray-50:  #F8FAFB;
+  --gray-100: #F1F4F6;
+  --gray-200: #E4E9EE;
+  --gray-300: #CBD3DB;
+  --gray-400: #9AA6B2;
+  --gray-500: #6B7A87;
+  --gray-600: #4A5663;
+  --gray-700: #2B3641;
+
+  --font: 'Nunito', sans-serif;
+  --radius-sm: 0.375rem;
+  --radius:    0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.125rem;
+  --radius-full: 9999px;
+
+  --shadow-xs: 0 1px 2px rgba(43,54,65,.05);
+  --shadow-sm: 0 1px 4px rgba(43,54,65,.08), 0 1px 2px rgba(43,54,65,.04);
+  --shadow:    0 4px 10px rgba(43,54,65,.08), 0 1px 3px rgba(43,54,65,.05);
+  --shadow-md: 0 8px 20px rgba(43,54,65,.10), 0 2px 6px rgba(43,54,65,.06);
+  --shadow-lg: 0 16px 40px rgba(43,54,65,.12), 0 4px 10px rgba(43,54,65,.07);
+}
+
+/* ── LIGHT THEME (default) ──────────────────────────────── */
+[data-theme="light"] {
+  --bg-app:       #F4F6F8;
+  --bg-header:    #FFFFFF;
+  --bg-sidebar:   #FFFFFF;
+  --bg-col:       #ECEEF1;
+  --bg-card:      #FFFFFF;
+  --bg-card-hover:#F9FAFC;
+  --bg-input:     #FFFFFF;
+
+  --border:       rgba(43,54,65,.09);
+  --border-card:  rgba(43,54,65,.07);
+  --border-hover: rgba(90,142,212,.3);
+
+  --text-primary:   #2B3641;
+  --text-secondary: #4A5663;
+  --text-muted:     #9AA6B2;
+  --text-disabled:  #CBD3DB;
+
+  --shadow-card: 0 1px 4px rgba(43,54,65,.09), 0 1px 2px rgba(43,54,65,.05);
+  --shadow-card-hover: 0 6px 18px rgba(43,54,65,.12), 0 2px 6px rgba(43,54,65,.06);
+
+  /* Tags */
+  --tag-meta-bg:      #E0EBFB;
+  --tag-meta-text:    #3568B0;
+  --tag-google-bg:    #D4F4EB;
+  --tag-google-text:  #2A7A5C;
+  --tag-carousel-bg:  #FAEAF3;
+  --tag-carousel-text:#A0306E;
+  --tag-story-bg:     #FEF7D6;
+  --tag-story-text:   #8C6800;
+  --tag-feed-bg:      #D4F4EB;
+  --tag-feed-text:    #2A7A5C;
+  --tag-email-bg:     #FAEAF3;
+  --tag-email-text:   #A0306E;
+  --tag-pesquisa-bg:  #FEF7D6;
+  --tag-pesquisa-text:#8C6800;
+  --tag-design-bg:    #E0EBFB;
+  --tag-design-text:  #3568B0;
+  --tag-video-bg:     #D4F4EB;
+  --tag-video-text:   #2A7A5C;
+  --tag-ads-bg:       #E0EBFB;
+  --tag-ads-text:     #3568B0;
+}
+
+/* ── DARK THEME ─────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg-app:       #141C24;
+  --bg-header:    #1A2436;
+  --bg-sidebar:   #1A2436;
+  --bg-col:       #1E2A3A;
+  --bg-card:      #243044;
+  --bg-card-hover:#2A3850;
+  --bg-input:     #243044;
+
+  --border:       rgba(255,255,255,.07);
+  --border-card:  rgba(255,255,255,.06);
+  --border-hover: rgba(90,142,212,.4);
+
+  --text-primary:   #EEF2F7;
+  --text-secondary: rgba(238,242,247,.60);
+  --text-muted:     rgba(238,242,247,.35);
+  --text-disabled:  rgba(238,242,247,.18);
+
+  --shadow-card: 0 2px 8px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.2);
+  --shadow-card-hover: 0 8px 24px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.25);
+
+  /* Tags dark */
+  --tag-meta-bg:      rgba(90,142,212,.22);
+  --tag-meta-text:    #8DB8F0;
+  --tag-google-bg:    rgba(94,203,168,.18);
+  --tag-google-text:  #72D9B8;
+  --tag-carousel-bg:  rgba(232,125,176,.18);
+  --tag-carousel-text:#F09EC8;
+  --tag-story-bg:     rgba(245,200,66,.16);
+  --tag-story-text:   #F5D06A;
+  --tag-feed-bg:      rgba(94,203,168,.18);
+  --tag-feed-text:    #72D9B8;
+  --tag-email-bg:     rgba(232,125,176,.18);
+  --tag-email-text:   #F09EC8;
+  --tag-pesquisa-bg:  rgba(245,200,66,.16);
+  --tag-pesquisa-text:#F5D06A;
+  --tag-design-bg:    rgba(90,142,212,.22);
+  --tag-design-text:  #8DB8F0;
+  --tag-video-bg:     rgba(94,203,168,.18);
+  --tag-video-text:   #72D9B8;
+  --tag-ads-bg:       rgba(90,142,212,.22);
+  --tag-ads-text:     #8DB8F0;
+}
+
+/* ── RESET & BASE ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  transition: background .25s, color .25s;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(154,166,178,.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(154,166,178,.5); }
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr 272px;
+  grid-template-areas:
+    "header  header"
+    "filters filters"
+    "board   sidebar";
+  min-height: 100vh;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header {
+  grid-area: header;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Logo — 4 circles mark */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  flex-shrink: 0;
+}
+.logo-mark .circle {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+.logo-mark .c1 { top: 0;   left: 0;   background: var(--brand-yellow); }
+.logo-mark .c2 { top: 0;   right: 0;  background: var(--brand-blue); }
+.logo-mark .c3 { bottom: 0; left: 0;  background: var(--brand-pink); }
+.logo-mark .c4 { bottom: 0; right: 0; background: var(--brand-teal); }
+
+.logo-text-group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.logo-name {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+}
+[data-theme="dark"] .logo-name { color: var(--text-primary); }
+.logo-sub {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.header-spacer { flex: 1; }
+
+/* Header stats pills */
+.header-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.stat-pill.blue   { background: var(--brand-blue-light);   color: var(--brand-blue-dark); }
+.stat-pill.yellow { background: var(--brand-yellow-light); color: var(--brand-yellow-dark); }
+.stat-pill.pink   { background: var(--brand-pink-light);   color: var(--brand-pink-dark); }
+.stat-pill.teal   { background: var(--brand-teal-light);   color: var(--brand-teal-dark); }
+.stat-pill.green  { background: var(--brand-green-light);  color: var(--brand-green); }
+.stat-pill .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.stat-pill.blue   .dot { background: var(--brand-blue); }
+.stat-pill.yellow .dot { background: var(--brand-yellow); }
+.stat-pill.pink   .dot { background: var(--brand-pink); }
+.stat-pill.teal   .dot { background: var(--brand-teal); }
+.stat-pill.green  .dot { background: var(--brand-green); }
+
+/* Theme toggle */
+.theme-btn {
+  width: 36px; height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: background .2s, color .2s, border-color .2s;
+  flex-shrink: 0;
+}
+.theme-btn:hover {
+  background: var(--bg-col);
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+}
+
+/* ============================================================
+   FILTER BAR
+   ============================================================ */
+.filter-bar {
+  grid-area: filters;
+  background: var(--bg-header);
+  border-bottom: 1px solid var(--border);
+  padding: 0.625rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.filter-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.25rem;
+}
+.filter-btn {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1.5px solid transparent;
+  font-family: var(--font);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .18s;
+  background: var(--bg-col);
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: currentColor;
+}
+.filter-btn.fb-blue   { color: var(--brand-blue);   }
+.filter-btn.fb-yellow { color: var(--brand-yellow-dark); }
+.filter-btn.fb-pink   { color: var(--brand-pink);   }
+.filter-btn.fb-teal   { color: var(--brand-teal-dark); }
+.filter-btn.fb-blue.active   { background: var(--brand-blue-light); }
+.filter-btn.fb-yellow.active { background: var(--brand-yellow-light); }
+.filter-btn.fb-pink.active   { background: var(--brand-pink-light); }
+.filter-btn.fb-teal.active   { background: var(--brand-teal-light); }
+.filter-btn.all.active       { background: var(--brand-blue-light); color: var(--brand-blue-dark); border-color: var(--brand-blue); }
+
+/* ============================================================
+   BOARD
+   ============================================================ */
+.board-wrapper {
+  grid-area: board;
+  overflow-x: auto;
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+}
+.board {
+  display: flex;
+  gap: 1rem;
+  min-width: max-content;
+  align-items: flex-start;
+}
+
+/* ── COLUMN ──────────────────────────────────────────────── */
+.column {
+  width: 256px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--bg-col);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border);
+}
+
+.col-header {
+  padding: 0.875rem 1rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+.col-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.col-icon {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+}
+.col-title {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.col-count {
+  font-size: 0.75rem;
+  font-weight: 800;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.28);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Column header colors */
+.col-blue   .col-header { background: var(--brand-blue); }
+.col-yellow .col-header { background: var(--brand-yellow); }
+.col-yellow .col-title, .col-yellow .col-count, .col-yellow .col-icon { color: var(--text-dark) !important; }
+.col-yellow .col-icon { background: rgba(0,0,0,.12) !important; }
+.col-yellow .col-count { background: rgba(0,0,0,.15) !important; color: var(--text-dark) !important; }
+.col-pink   .col-header { background: var(--brand-pink); }
+.col-teal   .col-header { background: var(--brand-teal); }
+.col-green  .col-header { background: var(--brand-green); }
+
+.col-body {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  min-height: 120px;
+}
+
+/* Pulse animation on Criando column */
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 rgba(245,200,66,.45); }
+  70%  { box-shadow: 0 0 0 7px rgba(245,200,66,0); }
+  100% { box-shadow: 0 0 0 0 rgba(245,200,66,0); }
+}
+.col-yellow .col-header {
+  animation: pulse-ring 2.2s ease-out infinite;
+}
+
+/* ── CARD ────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-card);
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow .2s, transform .2s, border-color .2s;
+  overflow: hidden;
+}
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+/* Colored left-border stripe */
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  border-radius: 4px 0 0 4px;
+}
+.col-blue   .card::before { background: var(--brand-blue); }
+.col-yellow .card::before { background: var(--brand-yellow); }
+.col-pink   .card::before { background: var(--brand-pink); }
+.col-teal   .card::before { background: var(--brand-teal); }
+.col-green  .card::before { background: var(--brand-green); }
+
+.card-title {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin-bottom: 0.375rem;
+}
+.tag {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+.tag.meta     { background: var(--tag-meta-bg);     color: var(--tag-meta-text); }
+.tag.google   { background: var(--tag-google-bg);   color: var(--tag-google-text); }
+.tag.carousel { background: var(--tag-carousel-bg); color: var(--tag-carousel-text); }
+.tag.story    { background: var(--tag-story-bg);    color: var(--tag-story-text); }
+.tag.feed     { background: var(--tag-feed-bg);     color: var(--tag-feed-text); }
+.tag.email    { background: var(--tag-email-bg);    color: var(--tag-email-text); }
+.tag.pesquisa { background: var(--tag-pesquisa-bg); color: var(--tag-pesquisa-text); }
+.tag.design   { background: var(--tag-design-bg);   color: var(--tag-design-text); }
+.tag.video    { background: var(--tag-video-bg);    color: var(--tag-video-text); }
+.tag.ads      { background: var(--tag-ads-bg);      color: var(--tag-ads-text); }
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.card-assignee {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  font-size: 0.625rem;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+.avatar-blue   { background: var(--brand-blue); }
+.avatar-yellow { background: var(--brand-yellow-dark); }
+.avatar-pink   { background: var(--brand-pink); }
+.avatar-teal   { background: var(--brand-teal-dark); }
+
+.card-priority {
+  font-size: 0.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.1rem 0.4rem;
+  border-radius: var(--radius-sm);
+}
+.priority-high   { background: var(--brand-pink-light);   color: var(--brand-pink-dark); }
+.priority-medium { background: var(--brand-yellow-light); color: var(--brand-yellow-dark); }
+.priority-low    { background: var(--brand-teal-light);   color: var(--brand-teal-dark); }
+
+/* Empty state placeholder */
+.card-empty {
+  border: 2px dashed var(--border);
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 1.25rem 0.75rem;
+  cursor: default;
+  transition: border-color .2s;
+}
+.card-empty:hover {
+  border-color: var(--brand-teal);
+  transform: none;
+  box-shadow: none;
+}
+.card-empty::before { display: none; }
+.card-empty .empty-icon {
+  font-size: 1.5rem;
+  opacity: 0.45;
+}
+.card-empty .empty-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+.sidebar {
+  grid-area: sidebar;
+  background: var(--bg-sidebar);
+  border-left: 1px solid var(--border);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: auto;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.section-title {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Sprint Progress */
+.sprint-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.sprint-name {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.sprint-days {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.progress-bar {
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border);
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal));
+  transition: width .5s ease;
+}
+.progress-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* Sprint column breakdown */
+.col-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+.breakdown-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.breakdown-label {
+  flex: 1;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+.breakdown-count {
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* Active Agents */
+.agent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.agent-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: var(--radius);
+  background: var(--bg-col);
+  border: 1px solid var(--border);
+  transition: border-color .2s;
+}
+.agent-item:hover { border-color: var(--border-hover); }
+.agent-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.agent-info { flex: 1; min-width: 0; }
+.agent-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agent-task {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.agent-status {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@keyframes blink-active {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+.status-active {
+  background: var(--brand-teal);
+  animation: blink-active 1.8s ease-in-out infinite;
+}
+.status-idle    { background: var(--brand-yellow); }
+.status-waiting { background: var(--brand-pink); }
+
+/* Metrics chart */
+.metrics-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.metric-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.metric-label {
+  width: 72px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.metric-bar-wrap {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.metric-bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width .6s ease;
+}
+.metric-value {
+  width: 28px;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.card {
+  animation: fade-in-up .3s ease both;
+}
+.card:nth-child(1) { animation-delay: .04s; }
+.card:nth-child(2) { animation-delay: .08s; }
+.card:nth-child(3) { animation-delay: .12s; }
+.card:nth-child(4) { animation-delay: .16s; }
+.card:nth-child(5) { animation-delay: .20s; }
+.card:nth-child(6) { animation-delay: .24s; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "filters"
+      "board"
+      "sidebar";
+  }
+  .sidebar {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+  .header-stats { display: none; }
+}
+
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ======================================================
+       HEADER
+       ====================================================== -->
+  <header class="header">
+    <a href="#" class="logo">
+      <div class="logo-mark" aria-hidden="true">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+        <span class="circle c4"></span>
+      </div>
+      <div class="logo-text-group">
+        <span class="logo-name">Skolen</span>
+        <span class="logo-sub">Marketing Kanban</span>
+      </div>
+    </a>
+
+    <div class="header-spacer"></div>
+
+    <div class="header-stats">
+      <div class="stat-pill blue">
+        <span class="dot"></span>
+        Contexto &nbsp;<strong>4</strong>
+      </div>
+      <div class="stat-pill yellow">
+        <span class="dot"></span>
+        Criando &nbsp;<strong>6</strong>
+      </div>
+      <div class="stat-pill pink">
+        <span class="dot"></span>
+        Revisão &nbsp;<strong>2</strong>
+      </div>
+      <div class="stat-pill teal">
+        <span class="dot"></span>
+        Aprovado &nbsp;<strong>3</strong>
+      </div>
+      <div class="stat-pill green">
+        <span class="dot"></span>
+        Publicado &nbsp;<strong>0</strong>
+      </div>
+    </div>
+
+    <button class="theme-btn" id="themeToggle" title="Alternar tema" aria-label="Alternar modo claro/escuro">
+      <span id="themeIcon">🌙</span>
+    </button>
+  </header>
+
+  <!-- ======================================================
+       FILTER BAR
+       ====================================================== -->
+  <div class="filter-bar">
+    <span class="filter-label">Filtrar:</span>
+    <button class="filter-btn all active" onclick="filterCards('all', this)">Todos</button>
+    <button class="filter-btn fb-blue"   onclick="filterCards('meta', this)">Meta Ads</button>
+    <button class="filter-btn fb-blue"   onclick="filterCards('google', this)">Google Ads</button>
+    <button class="filter-btn fb-pink"   onclick="filterCards('carousel', this)">Carrossel</button>
+    <button class="filter-btn fb-yellow" onclick="filterCards('story', this)">Story</button>
+    <button class="filter-btn fb-teal"   onclick="filterCards('feed', this)">Feed</button>
+    <button class="filter-btn fb-pink"   onclick="filterCards('email', this)">E-mail</button>
+    <button class="filter-btn fb-yellow" onclick="filterCards('pesquisa', this)">Pesquisa</button>
+    <button class="filter-btn fb-blue"   onclick="filterCards('design', this)">Design</button>
+    <button class="filter-btn fb-teal"   onclick="filterCards('video', this)">Vídeo</button>
+  </div>
+
+  <!-- ======================================================
+       BOARD
+       ====================================================== -->
+  <main class="board-wrapper">
+    <div class="board">
+
+      <!-- CONTEXTO (Blue) -->
+      <div class="column col-blue">
+        <div class="col-header">
+          <div class="col-title-row">
+            <div class="col-icon">🔍</div>
+            <span class="col-title">Contexto</span>
+          </div>
+          <span class="col-count">4</span>
+        </div>
+        <div class="col-body">
+
+          <div class="card" data-tags="pesquisa">
+            <div class="card-title">Pesquisa de concorrentes</div>
+            <div class="card-tags">
+              <span class="tag pesquisa">Pesquisa</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-blue">AN</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="pesquisa">
+            <div class="card-title">Personas — Diretores de escola</div>
+            <div class="card-tags">
+              <span class="tag pesquisa">Pesquisa</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-pink">ML</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="feed meta">
+            <div class="card-title">Hooks de gestão escolar</div>
+            <div class="card-tags">
+              <span class="tag meta">Meta Ads</span>
+              <span class="tag feed">Feed</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-teal">CR</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="design pesquisa">
+            <div class="card-title">Análise de posicionamento Skolen</div>
+            <div class="card-tags">
+              <span class="tag pesquisa">Pesquisa</span>
+              <span class="tag design">Design</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-yellow">JP</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CRIANDO (Yellow) -->
+      <div class="column col-yellow">
+        <div class="col-header">
+          <div class="col-title-row">
+            <div class="col-icon">✏️</div>
+            <span class="col-title">Criando</span>
+          </div>
+          <span class="col-count">6</span>
+        </div>
+        <div class="col-body">
+
+          <div class="card" data-tags="meta ads">
+            <div class="card-title">Ad copy Meta — 6 ângulos de conversão</div>
+            <div class="card-tags">
+              <span class="tag meta">Meta Ads</span>
+              <span class="tag ads">Ads</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-blue">AN</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="design feed">
+            <div class="card-title">Templates estáticos — Feed institucional</div>
+            <div class="card-tags">
+              <span class="tag design">Design</span>
+              <span class="tag feed">Feed</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-pink">ML</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="carousel">
+            <div class="card-title">Carrossel educativo 3x — Gestão de notas</div>
+            <div class="card-tags">
+              <span class="tag carousel">Carrossel</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-teal">CR</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="video">
+            <div class="card-title">Scripts HeyGen — Vídeo produto</div>
+            <div class="card-tags">
+              <span class="tag video">Vídeo</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-yellow">JP</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="email">
+            <div class="card-title">Sequência de e-mails — Nurturing diretores</div>
+            <div class="card-tags">
+              <span class="tag email">E-mail</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-blue">AN</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="feed story">
+            <div class="card-title">Calendário social — Abril 2026</div>
+            <div class="card-tags">
+              <span class="tag feed">Feed</span>
+              <span class="tag story">Story</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-pink">ML</div>
+              <span class="card-priority priority-low">Baixa</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- REVISÃO (Pink) -->
+      <div class="column col-pink">
+        <div class="col-header">
+          <div class="col-title-row">
+            <div class="col-icon">👁️</div>
+            <span class="col-title">Revisão</span>
+          </div>
+          <span class="col-count">2</span>
+        </div>
+        <div class="col-body">
+
+          <div class="card" data-tags="google ads">
+            <div class="card-title">Google RSA — Headlines de busca</div>
+            <div class="card-tags">
+              <span class="tag google">Google Ads</span>
+              <span class="tag ads">Ads</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-teal">CR</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="feed design">
+            <div class="card-title">Template feed — Inadimplência escolar</div>
+            <div class="card-tags">
+              <span class="tag feed">Feed</span>
+              <span class="tag design">Design</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-yellow">JP</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- APROVADO (Teal) -->
+      <div class="column col-teal">
+        <div class="col-header">
+          <div class="col-title-row">
+            <div class="col-icon">✅</div>
+            <span class="col-title">Aprovado</span>
+          </div>
+          <span class="col-count">3</span>
+        </div>
+        <div class="col-body">
+
+          <div class="card" data-tags="design">
+            <div class="card-title">Brand Guidelines — Identidade Skolen</div>
+            <div class="card-tags">
+              <span class="tag design">Design</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-blue">AN</div>
+              <span class="card-priority priority-high">Alta</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="design">
+            <div class="card-title">Design System — Componentes UI</div>
+            <div class="card-tags">
+              <span class="tag design">Design</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-pink">ML</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+          <div class="card" data-tags="pesquisa">
+            <div class="card-title">Product Marketing Context — Skolen v2</div>
+            <div class="card-tags">
+              <span class="tag pesquisa">Pesquisa</span>
+            </div>
+            <div class="card-meta">
+              <div class="card-assignee avatar-teal">CR</div>
+              <span class="card-priority priority-medium">Média</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PUBLICADO (Green) -->
+      <div class="column col-green">
+        <div class="col-header">
+          <div class="col-title-row">
+            <div class="col-icon">🚀</div>
+            <span class="col-title">Publicado</span>
+          </div>
+          <span class="col-count">0</span>
+        </div>
+        <div class="col-body">
+
+          <div class="card card-empty">
+            <span class="empty-icon">📭</span>
+            <span class="empty-text">Nenhum item publicado ainda</span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ======================================================
+       SIDEBAR
+       ====================================================== -->
+  <aside class="sidebar">
+
+    <!-- Sprint Progress -->
+    <div class="sidebar-section">
+      <div class="section-title">Sprint atual</div>
+      <div class="sprint-info">
+        <span class="sprint-name">Sprint #4 — Abril</span>
+        <span class="sprint-days">5 dias restantes</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 63%"></div>
+      </div>
+      <div class="progress-label">63% concluído</div>
+
+      <div class="col-breakdown" style="margin-top:.5rem">
+        <div class="breakdown-row">
+          <div class="breakdown-dot" style="background:var(--brand-blue)"></div>
+          <span class="breakdown-label">Contexto</span>
+          <span class="breakdown-count">4</span>
+        </div>
+        <div class="breakdown-row">
+          <div class="breakdown-dot" style="background:var(--brand-yellow)"></div>
+          <span class="breakdown-label">Criando</span>
+          <span class="breakdown-count">6</span>
+        </div>
+        <div class="breakdown-row">
+          <div class="breakdown-dot" style="background:var(--brand-pink)"></div>
+          <span class="breakdown-label">Revisão</span>
+          <span class="breakdown-count">2</span>
+        </div>
+        <div class="breakdown-row">
+          <div class="breakdown-dot" style="background:var(--brand-teal)"></div>
+          <span class="breakdown-label">Aprovado</span>
+          <span class="breakdown-count">3</span>
+        </div>
+        <div class="breakdown-row">
+          <div class="breakdown-dot" style="background:var(--brand-green)"></div>
+          <span class="breakdown-label">Publicado</span>
+          <span class="breakdown-count">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Agents -->
+    <div class="sidebar-section">
+      <div class="section-title">Agentes ativos</div>
+      <div class="agent-list">
+
+        <div class="agent-item">
+          <div class="agent-avatar" style="background:var(--brand-blue)">AN</div>
+          <div class="agent-info">
+            <div class="agent-name">Agente Copy</div>
+            <div class="agent-task">Ad copy Meta — 6 ângulos</div>
+          </div>
+          <div class="agent-status status-active"></div>
+        </div>
+
+        <div class="agent-item">
+          <div class="agent-avatar" style="background:var(--brand-pink)">ML</div>
+          <div class="agent-info">
+            <div class="agent-name">Agente Design</div>
+            <div class="agent-task">Templates estáticos feed</div>
+          </div>
+          <div class="agent-status status-active"></div>
+        </div>
+
+        <div class="agent-item">
+          <div class="agent-avatar" style="background:var(--brand-teal)">CR</div>
+          <div class="agent-info">
+            <div class="agent-name">Agente SEO</div>
+            <div class="agent-task">Google RSA headlines</div>
+          </div>
+          <div class="agent-status status-idle"></div>
+        </div>
+
+        <div class="agent-item">
+          <div class="agent-avatar" style="background:var(--brand-yellow-dark)">JP</div>
+          <div class="agent-info">
+            <div class="agent-name">Agente Vídeo</div>
+            <div class="agent-task">Scripts HeyGen</div>
+          </div>
+          <div class="agent-status status-waiting"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="sidebar-section">
+      <div class="section-title">Métricas do sprint</div>
+      <div class="metrics-chart">
+
+        <div class="metric-row">
+          <span class="metric-label">Criados</span>
+          <div class="metric-bar-wrap">
+            <div class="metric-bar" style="width:78%; background:var(--brand-blue)"></div>
+          </div>
+          <span class="metric-value">14</span>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Em revisão</span>
+          <div class="metric-bar-wrap">
+            <div class="metric-bar" style="width:22%; background:var(--brand-pink)"></div>
+          </div>
+          <span class="metric-value">4</span>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Aprovados</span>
+          <div class="metric-bar-wrap">
+            <div class="metric-bar" style="width:44%; background:var(--brand-teal)"></div>
+          </div>
+          <span class="metric-value">8</span>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Publicados</span>
+          <div class="metric-bar-wrap">
+            <div class="metric-bar" style="width:0%; background:var(--brand-green)"></div>
+          </div>
+          <span class="metric-value">0</span>
+        </div>
+
+        <div class="metric-row">
+          <span class="metric-label">Retrabalho</span>
+          <div class="metric-bar-wrap">
+            <div class="metric-bar" style="width:11%; background:var(--brand-yellow)"></div>
+          </div>
+          <span class="metric-value">2</span>
+        </div>
+
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<script>
+/* ── THEME TOGGLE ─────────────────────────────────────────── */
+const html       = document.documentElement;
+const themeBtn   = document.getElementById('themeToggle');
+const themeIcon  = document.getElementById('themeIcon');
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  themeIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  localStorage.setItem('skolen-theme', theme);
+}
+
+themeBtn.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// Load saved preference (default: light)
+const saved = localStorage.getItem('skolen-theme') || 'light';
+setTheme(saved);
+
+/* ── TAG FILTER ───────────────────────────────────────────── */
+function filterCards(tag, btn) {
+  // Update button state
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  // Show/hide cards
+  document.querySelectorAll('.card:not(.card-empty)').forEach(card => {
+    if (tag === 'all') {
+      card.style.display = '';
+      return;
+    }
+    const tags = (card.dataset.tags || '').split(' ');
+    card.style.display = tags.includes(tag) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

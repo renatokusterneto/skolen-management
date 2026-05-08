@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skolen — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ============================================================
+   SKOLEN DESIGN SYSTEM — design-tokens.css
+   Layer 1: Primitives → Layer 2: Semantic → Layer 3: Components
+   ============================================================ */
+
+:root {
+
+  /* ── LAYER 1: PRIMITIVE TOKENS ─────────────────────────── */
+
+  /* Blue Scale */
+  --color-blue-50:  #EEF3FD;
+  --color-blue-100: #D5E2FB;
+  --color-blue-200: #ABBFF7;
+  --color-blue-300: #7799F1;
+  --color-blue-400: #4D75EB;
+  --color-blue-500: #2D5FE8;
+  --color-blue-600: #1E4ADB;
+  --color-blue-700: #1638C4;
+  --color-blue-800: #112DA0;
+  --color-blue-900: #0B1E6B;
+
+  /* Amber Scale */
+  --color-amber-50:  #FFF9EC;
+  --color-amber-100: #FEF0CA;
+  --color-amber-200: #FDD888;
+  --color-amber-300: #FCC44A;
+  --color-amber-400: #F5A623;
+  --color-amber-500: #E8920A;
+  --color-amber-600: #C97607;
+  --color-amber-700: #A85C05;
+  --color-amber-800: #854508;
+  --color-amber-900: #5C2E09;
+
+  /* Gray Scale */
+  --color-gray-0:   #FFFFFF;
+  --color-gray-50:  #F8FAFC;
+  --color-gray-100: #F1F4F8;
+  --color-gray-200: #E2E8F0;
+  --color-gray-300: #CBD5E1;
+  --color-gray-400: #94A3B8;
+  --color-gray-500: #64748B;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1E293B;
+  --color-gray-900: #0F172A;
+  --color-gray-950: #070D19;
+
+  /* Status Colors */
+  --color-green-50:  #ECFDF5;
+  --color-green-500: #10B981;
+  --color-green-600: #059669;
+  --color-red-50:    #FEF2F2;
+  --color-red-500:   #EF4444;
+  --color-red-600:   #DC2626;
+  --color-yellow-50: #FFFBEB;
+  --color-yellow-500:#F59E0B;
+
+  /* Spacing (4px base) */
+  --space-0:    0;
+  --space-px:   1px;
+  --space-0-5:  0.125rem;  /* 2px */
+  --space-1:    0.25rem;   /* 4px */
+  --space-1-5:  0.375rem;  /* 6px */
+  --space-2:    0.5rem;    /* 8px */
+  --space-2-5:  0.625rem;  /* 10px */
+  --space-3:    0.75rem;   /* 12px */
+  --space-4:    1rem;      /* 16px */
+  --space-5:    1.25rem;   /* 20px */
+  --space-6:    1.5rem;    /* 24px */
+  --space-8:    2rem;      /* 32px */
+  --space-10:   2.5rem;    /* 40px */
+  --space-12:   3rem;      /* 48px */
+  --space-16:   4rem;      /* 64px */
+  --space-20:   5rem;      /* 80px */
+  --space-24:   6rem;      /* 96px */
+
+  /* Font Families */
+  --font-family-heading: 'Nunito', sans-serif;
+  --font-family-body:    'Inter', sans-serif;
+  --font-family-mono:    'Fira Code', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --font-size-xs:   0.75rem;   /* 12px */
+  --font-size-sm:   0.875rem;  /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg:   1.125rem;  /* 18px */
+  --font-size-xl:   1.25rem;   /* 20px */
+  --font-size-2xl:  1.5rem;    /* 24px */
+  --font-size-3xl:  1.875rem;  /* 30px */
+  --font-size-4xl:  2.25rem;   /* 36px */
+  --font-size-5xl:  3rem;      /* 48px */
+  --font-size-6xl:  3.75rem;   /* 60px */
+
+  /* Font Weights */
+  --font-weight-light:    300;
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --font-weight-extrabold:800;
+  --font-weight-black:    900;
+
+  /* Line Heights */
+  --leading-none:    1;
+  --leading-tight:   1.25;
+  --leading-snug:    1.375;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose:   2;
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight:   -0.025em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.025em;
+  --tracking-wider:   0.05em;
+  --tracking-widest:  0.1em;
+
+  /* Border Radius */
+  --radius-none:    0;
+  --radius-sm:      0.125rem;  /* 2px */
+  --radius-default: 0.25rem;   /* 4px */
+  --radius-md:      0.375rem;  /* 6px */
+  --radius-lg:      0.5rem;    /* 8px */
+  --radius-xl:      0.75rem;   /* 12px */
+  --radius-2xl:     1rem;      /* 16px */
+  --radius-3xl:     1.5rem;    /* 24px */
+  --radius-full:    9999px;
+
+  /* Shadows */
+  --shadow-none:    none;
+  --shadow-sm:      0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-default: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md:      0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:      0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:      0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl:     0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner:   inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Motion */
+  --duration-75:   75ms;
+  --duration-100:  100ms;
+  --duration-150:  150ms;
+  --duration-200:  200ms;
+  --duration-300:  300ms;
+  --duration-500:  500ms;
+  --duration-fast:   var(--duration-150);
+  --duration-normal: var(--duration-200);
+  --duration-slow:   var(--duration-300);
+
+  /* Z-Index */
+  --z-dropdown: 1000;
+  --z-sticky:   1100;
+  --z-modal:    1200;
+  --z-tooltip:  1400;
+
+  /* ── LAYER 2: SEMANTIC TOKENS ──────────────────────────── */
+
+  /* Page */
+  --color-background:         var(--color-gray-50);
+  --color-foreground:         var(--color-gray-900);
+
+  /* Surface */
+  --color-card:               var(--color-gray-0);
+  --color-card-foreground:    var(--color-gray-900);
+
+  /* Brand Primary — Skolen Blue */
+  --color-primary:            var(--color-blue-600);
+  --color-primary-hover:      var(--color-blue-700);
+  --color-primary-active:     var(--color-blue-800);
+  --color-primary-foreground: var(--color-gray-0);
+  --color-primary-subtle:     var(--color-blue-50);
+
+  /* Brand Accent — Skolen Amber */
+  --color-accent:             var(--color-amber-400);
+  --color-accent-hover:       var(--color-amber-500);
+  --color-accent-foreground:  var(--color-gray-900);
+  --color-accent-subtle:      var(--color-amber-50);
+
+  /* Secondary */
+  --color-secondary:          var(--color-gray-100);
+  --color-secondary-hover:    var(--color-gray-200);
+  --color-secondary-foreground: var(--color-gray-700);
+
+  /* Muted */
+  --color-muted:              var(--color-gray-100);
+  --color-muted-foreground:   var(--color-gray-500);
+
+  /* Status */
+  --color-success:            var(--color-green-600);
+  --color-success-subtle:     var(--color-green-50);
+  --color-warning:            var(--color-yellow-500);
+  --color-warning-subtle:     var(--color-yellow-50);
+  --color-destructive:        var(--color-red-600);
+  --color-destructive-subtle: var(--color-red-50);
+  --color-destructive-foreground: var(--color-gray-0);
+
+  /* Border */
+  --color-border:             var(--color-gray-200);
+  --color-ring:               var(--color-blue-500);
+
+  /* Semantic Spacing */
+  --spacing-component-xs: var(--space-1);
+  --spacing-component-sm: var(--space-2);
+  --spacing-component:    var(--space-3);
+  --spacing-component-lg: var(--space-4);
+  --spacing-section-sm:   var(--space-8);
+  --spacing-section:      var(--space-12);
+  --spacing-section-lg:   var(--space-16);
+  --spacing-page-x:       var(--space-6);
+  --spacing-page-y:       var(--space-8);
+
+  /* Semantic Typography */
+  --font-heading:    var(--font-family-heading);
+  --font-body:       var(--font-family-body);
+
+  /* ── LAYER 3: COMPONENT TOKENS ─────────────────────────── */
+
+  /* Button — Primary */
+  --button-bg:           var(--color-primary);
+  --button-fg:           var(--color-primary-foreground);
+  --button-hover-bg:     var(--color-primary-hover);
+  --button-active-bg:    var(--color-primary-active);
+  --button-radius:       var(--radius-xl);
+  --button-font-size:    var(--font-size-sm);
+  --button-font-weight:  var(--font-weight-semibold);
+  --button-padding-x:    var(--space-5);
+  --button-padding-y:    var(--space-2-5);
+  --button-padding-x-lg: var(--space-8);
+  --button-padding-y-lg: var(--space-4);
+
+  /* Button — Accent */
+  --button-accent-bg:       var(--color-accent);
+  --button-accent-fg:       var(--color-accent-foreground);
+  --button-accent-hover-bg: var(--color-accent-hover);
+
+  /* Input */
+  --input-bg:           var(--color-gray-0);
+  --input-border:       var(--color-border);
+  --input-fg:           var(--color-foreground);
+  --input-placeholder:  var(--color-muted-foreground);
+  --input-focus-border: var(--color-ring);
+  --input-error-border: var(--color-destructive);
+  --input-padding-x:    var(--space-4);
+  --input-padding-y:    var(--space-2-5);
+  --input-radius:       var(--radius-xl);
+  --input-font-size:    var(--font-size-sm);
+
+  /* Card */
+  --card-bg:           var(--color-card);
+  --card-fg:           var(--color-card-foreground);
+  --card-border:       var(--color-border);
+  --card-shadow:       var(--shadow-default);
+  --card-shadow-hover: var(--shadow-md);
+  --card-padding:      var(--space-6);
+  --card-padding-sm:   var(--space-4);
+  --card-radius:       var(--radius-2xl);
+
+  /* Badge */
+  --badge-padding-x: var(--space-2-5);
+  --badge-padding-y: var(--space-0-5);
+  --badge-radius:    var(--radius-full);
+  --badge-font-size: var(--font-size-xs);
+  --badge-font-weight: var(--font-weight-semibold);
+
+  /* Navbar */
+  --nav-bg:       var(--color-gray-0);
+  --nav-border:   var(--color-border);
+  --nav-height:   4rem;
+  --nav-shadow:   var(--shadow-sm);
+
+  /* Avatar */
+  --avatar-sm:  2rem;
+  --avatar-md:  2.5rem;
+  --avatar-lg:  3rem;
+  --avatar-xl:  4rem;
+
+}
+
+/* ── DARK MODE ─────────────────────────────────────────────── */
+.dark {
+  --color-background:       var(--color-gray-900);
+  --color-foreground:       var(--color-gray-50);
+  --color-card:             var(--color-gray-800);
+  --color-card-foreground:  var(--color-gray-50);
+  --color-muted:            var(--color-gray-800);
+  --color-muted-foreground: var(--color-gray-400);
+  --color-secondary:        var(--color-gray-800);
+  --color-secondary-foreground: var(--color-gray-200);
+  --color-border:           var(--color-gray-700);
+}
+
+/* ============================================================
+   DESIGN SYSTEM DOCUMENT STYLES
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-normal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.ds-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+.ds-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--color-gray-0);
+  border-right: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: var(--space-6) 0;
+}
+
+.ds-sidebar-logo {
+  padding: 0 var(--space-6) var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-4);
+}
+
+.ds-sidebar-brand {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-primary);
+  letter-spacing: var(--tracking-tight);
+  display: block;
+}
+
+.ds-sidebar-version {
+  font-size: var(--font-size-xs);
+  color: var(--color-muted-foreground);
+  margin-top: var(--space-1);
+}
+
+.ds-sidebar nav ul { list-style: none; }
+
+.ds-sidebar nav ul li a {
+  display: block;
+  padding: var(--space-1-5) var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  text-decoration: none;
+  transition: all var(--duration-fast);
+  border-left: 2px solid transparent;
+}
+
+.ds-sidebar nav ul li a:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+  border-left-color: var(--color-primary);
+}
+
+.ds-sidebar-section {
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-gray-400);
+  padding: var(--space-4) var(--space-6) var(--space-1);
+}
+
+.ds-main {
+  flex: 1;
+  padding: var(--space-8) var(--space-10);
+  max-width: 960px;
+}
+
+/* Sections */
+.ds-section {
+  margin-bottom: var(--space-16);
+  padding-top: var(--space-8);
+}
+
+.ds-section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+  letter-spacing: var(--tracking-tight);
+}
+
+.ds-section-subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--space-8);
+  line-height: var(--leading-relaxed);
+}
+
+.ds-divider {
+  height: 1px;
+  background: var(--color-border);
+  margin-bottom: var(--space-8);
+}
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.ds-hero {
+  background: linear-gradient(135deg, var(--color-blue-900) 0%, var(--color-blue-700) 50%, var(--color-blue-600) 100%);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-12) var(--space-12);
+  margin-bottom: var(--space-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.ds-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(245,166,35,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ds-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: 20%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(45,95,232,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ds-hero-eyebrow {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-amber-300);
+  margin-bottom: var(--space-3);
+}
+
+.ds-hero-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
+  color: white;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-2);
+}
+
+.ds-hero-title span { color: var(--color-amber-400); }
+
+.ds-hero-tagline {
+  font-size: var(--font-size-lg);
+  color: rgba(255,255,255,0.7);
+  margin-bottom: var(--space-8);
+}
+
+.ds-hero-meta {
+  display: flex;
+  gap: var(--space-6);
+  font-size: var(--font-size-xs);
+  color: rgba(255,255,255,0.5);
+}
+
+.ds-hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1-5);
+}
+
+/* ── BRAND SECTION ─────────────────────────────────────────── */
+.ds-brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.ds-brand-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
+}
+
+.ds-brand-card h4 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-widest);
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.ds-brand-card p {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+}
+
+.ds-brand-card .big-text {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.ds-logo-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--color-gray-900);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-3);
+}
+
+.ds-logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--color-blue-500), var(--color-blue-700));
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+  letter-spacing: -0.05em;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(30,74,219,0.4);
+}
+
+.ds-logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-extrabold);
+  color: white;
+  letter-spacing: var(--tracking-tight);
+}
+
+.ds-logo-text span {
+  color: var(--color-amber-400);
+}
+
+.ds-logo-display-light {
+  background: white;
+  border: 1px solid var(--color-border);
+}
+
+.ds-logo-display-light .ds-logo-text { color: var(--color-gray-900); }
+
+/* ── COLOR TOKENS ──────────────────────────────────────────── */
+.ds-color-group { margin-bottom: var(--space-8); }
+
+.ds-color-group-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  margin-bottom: var(--space-3);
+}
+
+.ds-color-scale {
+  display: flex;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+}
+
+.ds-color-swatch {
+  flex: 1;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: var(--space-2);
+  cursor: default;
+  transition: flex var(--duration-normal);
+  position: relative;
+}
+
+.ds-color-swatch:hover { flex: 2; }
+
+.ds-color-swatch-label {
+  font-size: 0.6rem;
+  font-weight: var(--font-weight-semibold);
+  opacity: 0;
+  transition: opacity var(--duration-fast);
+  text-align: center;
+}
+
+.ds-color-swatch:hover .ds-color-swatch-label { opacity: 1; }
+
+.ds-color-swatch.light .ds-color-swatch-label { color: rgba(0,0,0,0.5); }
+.ds-color-swatch.dark  .ds-color-swatch-label { color: rgba(255,255,255,0.7); }
+
+/* Semantic color cards */
+.ds-semantic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.ds-semantic-swatch {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+}
+
+.ds-semantic-color {
+  height: 72px;
+}
+
+.ds-semantic-info {
+  background: white;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-top: none;
+}
+
+.ds-semantic-name {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+}
+
+.ds-semantic-token {
+  font-size: 0.6875rem;
+  color: var(--color-muted-foreground);
+  font-family: var(--font-family-mono);
+}
+
+/* ── TYPOGRAPHY ────────────────────────────────────────────── */
+.ds-type-sample {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ds-type-sample:last-child { border-bottom: none; }
+
+.ds-type-meta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.ds-type-meta span {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-muted-foreground);
+  background: var(--color-gray-100);
+  padding: var(--space-0-5) var(--space-2);
+  border-radius: var(--radius-default);
+}
+
+/* ── SPACING ───────────────────────────────────────────────── */
+.ds-spacing-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.ds-spacing-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-gray-100);
+  color: var(--color-gray-500);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+
+.ds-spacing-table th:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.ds-spacing-table th:last-child  { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+
+.ds-spacing-table td {
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-gray-700);
+  vertical-align: middle;
+}
+
+.ds-spacing-table td:first-child {
+  font-family: var(--font-family-mono);
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+
+.ds-spacing-bar {
+  display: inline-block;
+  height: 8px;
+  background: linear-gradient(90deg, var(--color-blue-500), var(--color-blue-300));
+  border-radius: var(--radius-full);
+  vertical-align: middle;
+}
+
+/* ── COMPONENT SHOWCASE ────────────────────────────────────── */
+.ds-component-preview {
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  padding: var(--space-8);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.ds-component-code {
+  background: var(--color-gray-900);
+  border-radius: 0 0 var(--radius-2xl) var(--radius-2xl);
+  padding: var(--space-4) var(--space-6);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-300);
+  overflow-x: auto;
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.ds-component-code .token-prop  { color: #7DD3FC; }
+.ds-component-code .token-val   { color: #86EFAC; }
+.ds-component-code .token-var   { color: #FCA5A5; }
+.ds-component-code .token-comment { color: #6B7280; font-style: italic; }
+
+/* Actual Components */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--button-radius);
+  font-family: var(--font-body);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--duration-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--button-bg);
+  color: var(--button-fg);
+  border-color: var(--button-bg);
+}
+.btn-primary:hover { background: var(--button-hover-bg); border-color: var(--button-hover-bg); }
+
+.btn-accent {
+  background: var(--button-accent-bg);
+  color: var(--button-accent-fg);
+  border-color: var(--button-accent-bg);
+}
+.btn-accent:hover { background: var(--button-accent-hover-bg); border-color: var(--button-accent-hover-bg); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-outline:hover { background: var(--color-primary-subtle); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--color-foreground);
+  border-color: transparent;
+}
+.btn-ghost:hover { background: var(--color-secondary); }
+
+.btn-lg {
+  padding: var(--button-padding-y-lg) var(--button-padding-x-lg);
+  font-size: var(--font-size-base);
+}
+
+.btn-sm {
+  padding: var(--space-1-5) var(--space-3);
+  font-size: var(--font-size-xs);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--badge-padding-y) var(--badge-padding-x);
+  border-radius: var(--badge-radius);
+  font-size: var(--badge-font-size);
+  font-weight: var(--badge-font-weight);
+  line-height: 1;
+}
+
+.badge-primary    { background: var(--color-primary); color: white; }
+.badge-accent     { background: var(--color-accent-subtle); color: var(--color-amber-700); border: 1px solid var(--color-amber-200); }
+.badge-success    { background: var(--color-success-subtle); color: var(--color-success); border: 1px solid var(--color-green-500); }
+.badge-warning    { background: var(--color-warning-subtle); color: var(--color-amber-700); border: 1px solid var(--color-yellow-500); }
+.badge-secondary  { background: var(--color-secondary); color: var(--color-secondary-foreground); }
+.badge-destructive{ background: var(--color-destructive); color: white; }
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: var(--input-padding-y) var(--input-padding-x);
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: var(--input-radius);
+  font-family: var(--font-body);
+  font-size: var(--input-font-size);
+  color: var(--input-fg);
+  transition: all var(--duration-fast);
+  outline: none;
+}
+.input::placeholder { color: var(--input-placeholder); }
+.input:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px rgba(45,95,232,0.15);
+}
+.input:hover:not(:focus) { border-color: var(--color-gray-400); }
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--duration-normal), transform var(--duration-normal);
+}
+
+.card-interactive {
+  cursor: pointer;
+}
+.card-interactive:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-1-5);
+}
+
+.card-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-muted-foreground);
+  line-height: var(--leading-relaxed);
+}
+
+/* Alerts */
+.alert {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-xl);
+  border: 1px solid;
+  font-size: var(--font-size-sm);
+}
+.alert-info        { background: var(--color-primary-subtle); border-color: var(--color-blue-200); color: var(--color-blue-800); }
+.alert-success     { background: var(--color-success-subtle); border-color: var(--color-green-500); color: var(--color-green-600); }
+.alert-warning     { background: var(--color-warning-subtle); border-color: var(--color-yellow-500); color: var(--color-amber-700); }
+.alert-destructive { background: var(--color-destructive-subtle); border-color: var(--color-red-500); color: var(--color-red-600); }
+
+.alert-icon { font-size: var(--font-size-base); flex-shrink: 0; line-height: 1.5; }
+.alert-title { font-weight: var(--font-weight-semibold); margin-bottom: var(--space-0-5); }
+
+/* ── CODE BLOCK ────────────────────────────────────────────── */
+.code-block {
+  background: var(--color-gray-900);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5) var(--space-6);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-200);
+  overflow-x: auto;
+  margin-bottom: var(--space-6);
+}
+
+.code-block .c-comment  { color: #6B7280; }
+.code-block .c-selector { color: #F9A8D4; }
+.code-block .c-prop     { color: #7DD3FC; }
+.code-block .c-val      { color: #86EFAC; }
+.code-block .c-var      { color: #FCA5A5; }
+.code-block .c-layer    { color: #FCD34D; font-weight: 600; }
+.code-block .c-num      { color: #C4B5FD; }
+
+/* ── TOKEN TABLE ───────────────────────────────────────────── */
+.token-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-8);
+}
+
+.token-table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-gray-100);
+  color: var(--color-gray-500);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+}
+.token-table th:first-child { border-radius: var(--radius-md) 0 0 var(--radius-md); }
+.token-table th:last-child  { border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+
+.token-table td {
+  padding: var(--space-2-5) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.token-table td:first-child {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
+}
+
+.token-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-md);
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.1);
+  vertical-align: middle;
+  margin-right: var(--space-2);
+}
+
+/* ── GRID + HELPERS ────────────────────────────────────────── */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+.mb-4   { margin-bottom: var(--space-4); }
+.mb-6   { margin-bottom: var(--space-6); }
+.mb-8   { margin-bottom: var(--space-8); }
+
+/* Radius demo */
+.radius-demo {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.radius-sample {
+  width: 64px;
+  height: 64px;
+  background: var(--color-primary-subtle);
+  border: 2px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-align: center;
+  gap: 2px;
+}
+
+/* Shadow demo */
+.shadow-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.shadow-sample {
+  height: 80px;
+  background: white;
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted-foreground);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Motion demo */
+.motion-demo {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.motion-box {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-primary-subtle);
+  border: 1px solid var(--color-blue-200);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: all var(--duration-normal);
+}
+
+.motion-box:hover {
+  background: var(--color-primary);
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ── SKOLEN SPECIFIC COMPONENTS ────────────────────────────── */
+.course-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--duration-normal), transform var(--duration-normal);
+}
+.course-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
+}
+
+.course-card-thumb {
+  height: 140px;
+  background: linear-gradient(135deg, var(--color-blue-600), var(--color-blue-800));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.course-card-body { padding: var(--space-4); }
+
+.course-card-category {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-1-5);
+}
+
+.course-card-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+  line-height: var(--leading-snug);
+}
+
+.course-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+.course-card-price {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+}
+
+.progress-bar {
+  height: 6px;
+  background: var(--color-gray-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: var(--space-3);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-blue-500), var(--color-amber-400));
+  border-radius: var(--radius-full);
+}
+
+.stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  padding: var(--space-5);
+  box-shadow: var(--card-shadow);
+}
+
+.stat-card-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+  margin-bottom: var(--space-2);
+}
+
+.stat-card-value {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-gray-900);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.stat-card-change {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.stat-card-change.up   { color: var(--color-success); }
+.stat-card-change.down { color: var(--color-destructive); }
+
+/* ── VOICE & TONE ───────────────────────────────────────────── */
+.voice-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.voice-card {
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  border: 1px solid;
+}
+
+.voice-card.do {
+  background: var(--color-success-subtle);
+  border-color: var(--color-green-500);
+}
+
+.voice-card.dont {
+  background: var(--color-destructive-subtle);
+  border-color: var(--color-red-500);
+}
+
+.voice-card-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-3);
+}
+
+.voice-card.do    .voice-card-label { color: var(--color-success); }
+.voice-card.dont  .voice-card-label { color: var(--color-destructive); }
+
+.voice-card p {
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-relaxed);
+  color: var(--color-gray-700);
+}
+
+.voice-card p + p { margin-top: var(--space-2); }
+
+/* ── DARK MODE TOGGLE ──────────────────────────────────────── */
+.dark-toggle {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  padding: var(--space-2-5) var(--space-4);
+  background: var(--color-gray-900);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  z-index: 100;
+  transition: all var(--duration-fast);
+}
+.dark-toggle:hover { transform: scale(1.05); }
+
+/* Section anchor offset */
+:target::before {
+  content: '';
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="ds-wrapper">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="ds-sidebar">
+    <div class="ds-sidebar-logo">
+      <span class="ds-sidebar-brand">Sk<span style="color:var(--color-amber-400)">.</span></span>
+      <div class="ds-sidebar-version">Design System v1.0 · 2026</div>
+    </div>
+    <nav>
+      <div class="ds-sidebar-section">Identidade</div>
+      <ul>
+        <li><a href="#brand">Marca</a></li>
+        <li><a href="#voice">Voz & Tom</a></li>
+      </ul>
+      <div class="ds-sidebar-section">Tokens</div>
+      <ul>
+        <li><a href="#colors">Cores</a></li>
+        <li><a href="#typography">Tipografia</a></li>
+        <li><a href="#spacing">Espaçamento</a></li>
+        <li><a href="#radius">Bordas</a></li>
+        <li><a href="#shadows">Sombras</a></li>
+        <li><a href="#motion">Movimento</a></li>
+      </ul>
+      <div class="ds-sidebar-section">Componentes</div>
+      <ul>
+        <li><a href="#buttons">Botões</a></li>
+        <li><a href="#badges">Badges</a></li>
+        <li><a href="#inputs">Inputs</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#alerts">Alertas</a></li>
+      </ul>
+      <div class="ds-sidebar-section">Patterns</div>
+      <ul>
+        <li><a href="#patterns">Skolen UI</a></li>
+        <li><a href="#tokens-ref">Referência CSS</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- ── MAIN ── -->
+  <main class="ds-main">
+
+    <!-- HERO -->
+    <div class="ds-hero">
+      <div class="ds-hero-eyebrow">skolen.com.br · Design System</div>
+      <h1 class="ds-hero-title">Skolen<span>.</span></h1>
+      <p class="ds-hero-tagline">Aprenda. Cresça. Transforme.</p>
+      <div class="ds-hero-meta">
+        <span>📐 Three-Layer Tokens</span>
+        <span>🎨 Nunito + Inter</span>
+        <span>🇧🇷 PT-BR</span>
+        <span>♿ WCAG AA</span>
+      </div>
+    </div>
+
+    <!-- ── BRAND ── -->
+    <section class="ds-section" id="brand">
+      <h2 class="ds-section-title">Identidade de Marca</h2>
+      <p class="ds-section-subtitle">A Skolen é uma empresa de EdTech — sistema de gestão escolar SaaS. O nome evoca rigor acadêmico escandinavão com calor e acessibilidade brasileiras.</p>
+      <div class="ds-divider"></div>
+
+      <!-- Logo -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Logotipo</h3>
+      <div class="grid-2 mb-8">
+        <div>
+          <div class="ds-logo-display">
+            <div class="ds-logo-icon">Sk</div>
+            <div class="ds-logo-text">sko<span>len</span></div>
+          </div>
+          <p style="font-size:var(--font-size-xs);color:var(--color-muted-foreground)">Versão escura — uso em fundos escuros</p>
+        </div>
+        <div>
+          <div class="ds-logo-display ds-logo-display-light">
+            <div class="ds-logo-icon">Sk</div>
+            <div class="ds-logo-text" style="color:var(--color-gray-900)">sko<span style="color:var(--color-amber-500)">len</span></div>
+          </div>
+          <p style="font-size:var(--font-size-xs);color:var(--color-muted-foreground)">Versão clara — uso em fundos claros</p>
+        </div>
+      </div>
+
+      <!-- Brand Values -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Pilares da Marca</h3>
+      <div class="ds-brand-grid">
+        <div class="ds-brand-card">
+          <h4>Missão</h4>
+          <div class="big-text">Transformar vidas</div>
+          <p>Não ensinamos conteúdo — criamos caminhos. Cada aluno que conclui um curso da Skolen sai com uma conquista real, não apenas um certificado.</p>
+        </div>
+        <div class="ds-brand-card">
+          <h4>Posicionamento</h4>
+          <div class="big-text">Educação que chega</div>
+          <p>Acessível, relevante e aplicável. A Skolen existe para quem quer crescer de verdade — sem barreiras de linguagem, tempo ou dinheiro.</p>
+        </div>
+        <div class="ds-brand-card">
+          <h4>Tagline Principal</h4>
+          <div class="big-text" style="color:var(--color-primary)">Aprenda. Cresça. Transforme.</div>
+          <p>Três verbos em progressão. Do conhecimento à conquista. Use em headlines de campanha e materiais de apresentação.</p>
+        </div>
+        <div class="ds-brand-card">
+          <h4>Tagline Alternativa</h4>
+          <div class="big-text" style="font-size:var(--font-size-xl)">O lugar onde o aprendizado vira conquista.</div>
+          <p>Use em landing pages, materiais de vendas e peças de conversão. Foco no resultado, não no processo.</p>
+        </div>
+      </div>
+
+      <!-- Personality -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Personalidade</h3>
+      <div style="display:flex;gap:var(--space-3);flex-wrap:wrap;margin-bottom:var(--space-8)">
+        <span class="badge badge-primary">Educativo</span>
+        <span class="badge badge-accent">Inspirador</span>
+        <span class="badge badge-success">Próximo</span>
+        <span class="badge badge-secondary" style="background:var(--color-blue-50);color:var(--color-blue-700);border:1px solid var(--color-blue-200)">Confiável</span>
+        <span class="badge badge-secondary" style="background:var(--color-amber-50);color:var(--color-amber-700);border:1px solid var(--color-amber-200)">Transformador</span>
+        <span class="badge badge-secondary">Acessível</span>
+        <span class="badge badge-secondary" style="background:var(--color-gray-100);color:var(--color-gray-700)">Direto</span>
+      </div>
+
+      <!-- Color Psychology -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Psicologia das Cores</h3>
+      <div class="grid-2">
+        <div class="ds-brand-card" style="border-left:4px solid var(--color-blue-600)">
+          <h4>Skolen Blue — #1E4ADB</h4>
+          <p><strong>Confiança, conhecimento, profundidade.</strong> O azul é a cor do saber. Remete a clareza, inteligência e propósito. É a cor que comunica "você pode confiar em nós para aprender".</p>
+        </div>
+        <div class="ds-brand-card" style="border-left:4px solid var(--color-amber-400)">
+          <h4>Skolen Amber — #F5A623</h4>
+          <p><strong>Energia, conquista, otimismo.</strong> O âmbar é a cor da realização. Aquece, motiva e acende o desejo de avançar. Representa o "brilho" do momento em que algo faz sentido.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── VOICE & TONE ── -->
+    <section class="ds-section" id="voice">
+      <h2 class="ds-section-title">Voz & Tom</h2>
+      <p class="ds-section-subtitle">A Skolen fala como um mentor experiente que trata o aluno como igual — nunca condescendente, sempre próximo e focado no que o aluno conquista.</p>
+      <div class="ds-divider"></div>
+
+      <div class="voice-grid mb-8">
+        <div class="voice-card do">
+          <div class="voice-card-label">✓ Use assim</div>
+          <p>"Você já sabe mais do que imagina. Agora é hora de organizar esse conhecimento e ir além."</p>
+          <p>"Em 4 semanas, você vai dominar o que leva anos para aprender no mercado."</p>
+          <p>"Não é sobre estudar mais — é sobre estudar certo."</p>
+        </div>
+        <div class="voice-card dont">
+          <div class="voice-card-label">✗ Evite assim</div>
+          <p>"Nossa plataforma utiliza metodologias pedagógicas inovadoras baseadas em frameworks educacionais."</p>
+          <p>"Adquira nosso produto e obtenha acesso ao conteúdo premium da nossa solução de e-learning."</p>
+          <p>"Clique aqui para se cadastrar e aproveitar nossas funcionalidades."</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="ds-brand-card">
+          <h4>Conscientização</h4>
+          <p>Tom inspirador e empático. Fale sobre o problema ou sonho do aluno — não sobre a Skolen. "Você merece crescer."</p>
+        </div>
+        <div class="ds-brand-card">
+          <h4>Consideração</h4>
+          <p>Tom educativo e confiante. Mostre o caminho, não o produto. "Veja como funciona na prática."</p>
+        </div>
+        <div class="ds-brand-card">
+          <h4>Conversão</h4>
+          <p>Tom direto e urgente. Foco na conquista específica. "Comece hoje. Sua próxima versão te espera."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── COLORS ── -->
+    <section class="ds-section" id="colors">
+      <h2 class="ds-section-title">Cores</h2>
+      <p class="ds-section-subtitle">Paleta completa com escalas primitivas e tokens semânticos. Sempre use tokens semânticos nos componentes — nunca valores hexadecimais diretamente.</p>
+      <div class="ds-divider"></div>
+
+      <!-- Blue Scale -->
+      <div class="ds-color-group">
+        <div class="ds-color-group-title">Skolen Blue — Escala Primitiva</div>
+        <div class="ds-color-scale">
+          <div class="ds-color-swatch light" style="background:#EEF3FD"><div class="ds-color-swatch-label">50<br>#EEF3FD</div></div>
+          <div class="ds-color-swatch light" style="background:#D5E2FB"><div class="ds-color-swatch-label">100<br>#D5E2FB</div></div>
+          <div class="ds-color-swatch light" style="background:#ABBFF7"><div class="ds-color-swatch-label">200<br>#ABBFF7</div></div>
+          <div class="ds-color-swatch light" style="background:#7799F1"><div class="ds-color-swatch-label">300<br>#7799F1</div></div>
+          <div class="ds-color-swatch dark" style="background:#4D75EB"><div class="ds-color-swatch-label">400<br>#4D75EB</div></div>
+          <div class="ds-color-swatch dark" style="background:#2D5FE8"><div class="ds-color-swatch-label">500<br>#2D5FE8</div></div>
+          <div class="ds-color-swatch dark" style="background:#1E4ADB;outline:3px solid var(--color-amber-400);outline-offset:-3px;position:relative"><div class="ds-color-swatch-label">600★<br>#1E4ADB</div></div>
+          <div class="ds-color-swatch dark" style="background:#1638C4"><div class="ds-color-swatch-label">700<br>#1638C4</div></div>
+          <div class="ds-color-swatch dark" style="background:#112DA0"><div class="ds-color-swatch-label">800<br>#112DA0</div></div>
+          <div class="ds-color-swatch dark" style="background:#0B1E6B"><div class="ds-color-swatch-label">900<br>#0B1E6B</div></div>
+        </div>
+      </div>
+
+      <!-- Amber Scale -->
+      <div class="ds-color-group">
+        <div class="ds-color-group-title">Skolen Amber — Escala Primitiva</div>
+        <div class="ds-color-scale">
+          <div class="ds-color-swatch light" style="background:#FFF9EC"><div class="ds-color-swatch-label">50<br>#FFF9EC</div></div>
+          <div class="ds-color-swatch light" style="background:#FEF0CA"><div class="ds-color-swatch-label">100<br>#FEF0CA</div></div>
+          <div class="ds-color-swatch light" style="background:#FDD888"><div class="ds-color-swatch-label">200<br>#FDD888</div></div>
+          <div class="ds-color-swatch light" style="background:#FCC44A"><div class="ds-color-swatch-label">300<br>#FCC44A</div></div>
+          <div class="ds-color-swatch light" style="background:#F5A623;outline:3px solid var(--color-blue-600);outline-offset:-3px"><div class="ds-color-swatch-label">400★<br>#F5A623</div></div>
+          <div class="ds-color-swatch dark" style="background:#E8920A"><div class="ds-color-swatch-label">500<br>#E8920A</div></div>
+          <div class="ds-color-swatch dark" style="background:#C97607"><div class="ds-color-swatch-label">600<br>#C97607</div></div>
+          <div class="ds-color-swatch dark" style="background:#A85C05"><div class="ds-color-swatch-label">700<br>#A85C05</div></div>
+          <div class="ds-color-swatch dark" style="background:#854508"><div class="ds-color-swatch-label">800<br>#854508</div></div>
+          <div class="ds-color-swatch dark" style="background:#5C2E09"><div class="ds-color-swatch-label">900<br>#5C2E09</div></div>
+        </div>
+      </div>
+
+      <!-- Gray Scale -->
+      <div class="ds-color-group">
+        <div class="ds-color-group-title">Neutros — Escala Primitiva</div>
+        <div class="ds-color-scale">
+          <div class="ds-color-swatch light" style="background:#F8FAFC"><div class="ds-color-swatch-label">50<br>#F8FAFC</div></div>
+          <div class="ds-color-swatch light" style="background:#F1F4F8"><div class="ds-color-swatch-label">100<br>#F1F4F8</div></div>
+          <div class="ds-color-swatch light" style="background:#E2E8F0"><div class="ds-color-swatch-label">200<br>#E2E8F0</div></div>
+          <div class="ds-color-swatch light" style="background:#CBD5E1"><div class="ds-color-swatch-label">300<br>#CBD5E1</div></div>
+          <div class="ds-color-swatch light" style="background:#94A3B8"><div class="ds-color-swatch-label">400<br>#94A3B8</div></div>
+          <div class="ds-color-swatch dark" style="background:#64748B"><div class="ds-color-swatch-label">500<br>#64748B</div></div>
+          <div class="ds-color-swatch dark" style="background:#475569"><div class="ds-color-swatch-label">600<br>#475569</div></div>
+          <div class="ds-color-swatch dark" style="background:#334155"><div class="ds-color-swatch-label">700<br>#334155</div></div>
+          <div class="ds-color-swatch dark" style="background:#1E293B"><div class="ds-color-swatch-label">800<br>#1E293B</div></div>
+          <div class="ds-color-swatch dark" style="background:#0F172A"><div class="ds-color-swatch-label">900<br>#0F172A</div></div>
+        </div>
+      </div>
+
+      <!-- Semantic Colors -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Tokens Semânticos de Cor</h3>
+      <div class="ds-semantic-grid mb-6">
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-primary)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Primary</div>
+            <div class="ds-semantic-token">--color-primary</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-accent)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Accent</div>
+            <div class="ds-semantic-token">--color-accent</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-background);border:1px solid var(--color-border)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Background</div>
+            <div class="ds-semantic-token">--color-background</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-foreground)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Foreground</div>
+            <div class="ds-semantic-token">--color-foreground</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-success)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Success</div>
+            <div class="ds-semantic-token">--color-success</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-warning)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Warning</div>
+            <div class="ds-semantic-token">--color-warning</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-destructive)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Destructive</div>
+            <div class="ds-semantic-token">--color-destructive</div>
+          </div>
+        </div>
+        <div class="ds-semantic-swatch">
+          <div class="ds-semantic-color" style="background:var(--color-muted)"></div>
+          <div class="ds-semantic-info">
+            <div class="ds-semantic-name">Muted</div>
+            <div class="ds-semantic-token">--color-muted</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TYPOGRAPHY ── -->
+    <section class="ds-section" id="typography">
+      <h2 class="ds-section-title">Tipografia</h2>
+      <p class="ds-section-subtitle"><strong>Nunito</strong> para títulos — moderna, geométrica, com personalidade. <strong>Inter</strong> para corpo — máxima legibilidade em qualquer tamanho.</p>
+      <div class="ds-divider"></div>
+
+      <!-- Font Pairing Display -->
+      <div class="ds-brand-card mb-8" style="padding:var(--space-8)">
+        <h4>Dupla Tipográfica</h4>
+        <div style="margin-top:var(--space-4)">
+          <p style="font-size:var(--font-size-xs);color:var(--color-muted-foreground);margin-bottom:var(--space-1)">Heading — Nunito ExtraBold</p>
+          <p style="font-family:var(--font-heading);font-size:var(--font-size-4xl);font-weight:800;line-height:1.1;letter-spacing:-0.03em;color:var(--color-gray-900)">Aprenda mais rápido.</p>
+          <div style="height:1px;background:var(--color-border);margin:var(--space-4) 0"></div>
+          <p style="font-size:var(--font-size-xs);color:var(--color-muted-foreground);margin-bottom:var(--space-1)">Body — Inter Regular</p>
+          <p style="font-family:var(--font-body);font-size:var(--font-size-base);line-height:1.625;color:var(--color-gray-600)">A Skolen centraliza toda a gestão escolar em um só lugar — matrículas, secretaria, comunicação com pais e relatórios. Desenvolvida para simplificar a rotina e dar mais tempo ao que importa.</p>
+        </div>
+      </div>
+
+      <!-- Type Scale -->
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-6xl);font-weight:800;letter-spacing:-0.04em;line-height:1;color:var(--color-gray-900)">Heading 6XL</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>800</span><span>60px / 3.75rem</span><span>--font-size-6xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-5xl);font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:var(--color-gray-900)">Heading 5XL</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>800</span><span>48px / 3rem</span><span>--font-size-5xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-4xl);font-weight:700;letter-spacing:-0.025em;line-height:1.2;color:var(--color-gray-900)">Heading 4XL — Títulos de Página</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>700</span><span>36px / 2.25rem</span><span>--font-size-4xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-3xl);font-weight:700;letter-spacing:-0.02em;line-height:1.25;color:var(--color-gray-900)">Heading 3XL — Seções Principais</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>700</span><span>30px / 1.875rem</span><span>--font-size-3xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-2xl);font-weight:600;letter-spacing:-0.015em;line-height:1.3;color:var(--color-gray-900)">Heading 2XL — Subseções</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>600</span><span>24px / 1.5rem</span><span>--font-size-2xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-heading);font-size:var(--font-size-xl);font-weight:600;color:var(--color-gray-900)">Heading XL — Cards e Componentes</p>
+        <div class="ds-type-meta"><span>Nunito</span><span>600</span><span>20px / 1.25rem</span><span>--font-size-xl</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-body);font-size:var(--font-size-lg);line-height:1.625;color:var(--color-gray-700)">Body Large — Lead paragraphs e descrições de destaque. Ideal para primeiro parágrafo de landing pages e textos de apresentação do sistema de gestão escolar.</p>
+        <div class="ds-type-meta"><span>Inter</span><span>400</span><span>18px / 1.125rem</span><span>--font-size-lg</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-body);font-size:var(--font-size-base);line-height:1.625;color:var(--color-gray-700)">Body Base — Texto principal de conteúdo. Este é o tamanho padrão para toda a comunicação corrida — comunicados à secretaria, e-mails para pais, páginas de gestão e materiais de apoio da Skolen.</p>
+        <div class="ds-type-meta"><span>Inter</span><span>400</span><span>16px / 1rem</span><span>--font-size-base</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-body);font-size:var(--font-size-sm);line-height:1.5;color:var(--color-gray-600)">Body Small — Labels, metadados, helpers. Usado em badges, legendas de imagem, texto de rodapé e informações secundárias de componentes.</p>
+        <div class="ds-type-meta"><span>Inter</span><span>400</span><span>14px / 0.875rem</span><span>--font-size-sm</span></div>
+      </div>
+      <div class="ds-type-sample">
+        <p style="font-family:var(--font-body);font-size:var(--font-size-xs);letter-spacing:0.05em;text-transform:uppercase;font-weight:600;color:var(--color-gray-500)">EYEBROW / CAPTION — 12PX UPPERCASE</p>
+        <div class="ds-type-meta"><span>Inter</span><span>600</span><span>12px / 0.75rem</span><span>--font-size-xs + tracking-wider</span></div>
+      </div>
+    </section>
+
+    <!-- ── SPACING ── -->
+    <section class="ds-section" id="spacing">
+      <h2 class="ds-section-title">Espaçamento</h2>
+      <p class="ds-section-subtitle">Sistema de 4px. Todos os valores são múltiplos de 4px para garantir consistência visual em toda a interface.</p>
+      <div class="ds-divider"></div>
+
+      <table class="ds-spacing-table mb-8">
+        <thead>
+          <tr>
+            <th>Token</th>
+            <th>rem</th>
+            <th>px</th>
+            <th>Uso semântico</th>
+            <th>Visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>--space-1</td><td>0.25rem</td><td>4px</td><td>Gaps mínimos, ícone-texto</td><td><span class="ds-spacing-bar" style="width:4px"></span></td></tr>
+          <tr><td>--space-2</td><td>0.5rem</td><td>8px</td><td>Padding interno pequeno</td><td><span class="ds-spacing-bar" style="width:8px"></span></td></tr>
+          <tr><td>--space-3</td><td>0.75rem</td><td>12px</td><td>Padding de badge, ícones</td><td><span class="ds-spacing-bar" style="width:12px"></span></td></tr>
+          <tr><td>--space-4</td><td>1rem</td><td>16px</td><td>Padding de input, gap entre itens</td><td><span class="ds-spacing-bar" style="width:16px"></span></td></tr>
+          <tr><td>--space-5</td><td>1.25rem</td><td>20px</td><td>Padding de botão, espaço interno</td><td><span class="ds-spacing-bar" style="width:20px"></span></td></tr>
+          <tr><td>--space-6</td><td>1.5rem</td><td>24px</td><td>Padding de card, seções internas</td><td><span class="ds-spacing-bar" style="width:24px"></span></td></tr>
+          <tr><td>--space-8</td><td>2rem</td><td>32px</td><td>Gap entre cards, espaço de seção</td><td><span class="ds-spacing-bar" style="width:32px"></span></td></tr>
+          <tr><td>--space-10</td><td>2.5rem</td><td>40px</td><td>Altura de botão, padding de navbar</td><td><span class="ds-spacing-bar" style="width:40px"></span></td></tr>
+          <tr><td>--space-12</td><td>3rem</td><td>48px</td><td>Espaçamento entre seções</td><td><span class="ds-spacing-bar" style="width:48px"></span></td></tr>
+          <tr><td>--space-16</td><td>4rem</td><td>64px</td><td>Seções grandes de página</td><td><span class="ds-spacing-bar" style="width:64px"></span></td></tr>
+          <tr><td>--space-20</td><td>5rem</td><td>80px</td><td>Seções hero, padding de página</td><td><span class="ds-spacing-bar" style="width:80px"></span></td></tr>
+          <tr><td>--space-24</td><td>6rem</td><td>96px</td><td>Espaço máximo entre blocos</td><td><span class="ds-spacing-bar" style="width:96px"></span></td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Semântica de Espaçamento</h3>
+      <table class="token-table">
+        <thead><tr><th>Token Semântico</th><th>Referência</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td>--spacing-component-sm</td><td>--space-2 (8px)</td><td>Espaço interno de componentes pequenos</td></tr>
+          <tr><td>--spacing-component</td><td>--space-3 (12px)</td><td>Espaço padrão dentro de componentes</td></tr>
+          <tr><td>--spacing-component-lg</td><td>--space-4 (16px)</td><td>Espaço interno de componentes grandes</td></tr>
+          <tr><td>--spacing-section-sm</td><td>--space-8 (32px)</td><td>Espaço entre subseções</td></tr>
+          <tr><td>--spacing-section</td><td>--space-12 (48px)</td><td>Espaço padrão entre seções</td></tr>
+          <tr><td>--spacing-section-lg</td><td>--space-16 (64px)</td><td>Espaço entre grandes blocos de página</td></tr>
+          <tr><td>--spacing-page-x</td><td>--space-6 (24px)</td><td>Margin horizontal de página (mobile)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── RADIUS ── -->
+    <section class="ds-section" id="radius">
+      <h2 class="ds-section-title">Border Radius</h2>
+      <p class="ds-section-subtitle">A Skolen usa bordas arredondadas generosas para comunicar acolhimento e modernidade — sem exagero.</p>
+      <div class="ds-divider"></div>
+
+      <div class="radius-demo mb-8">
+        <div class="radius-sample" style="border-radius:var(--radius-none)"><span>none</span><span>0</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-sm)"><span>sm</span><span>2px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-default)"><span>default</span><span>4px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-md)"><span>md</span><span>6px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-lg)"><span>lg</span><span>8px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-xl)"><span>xl</span><span>12px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-2xl)"><span>2xl</span><span>16px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-3xl)"><span>3xl</span><span>24px</span></div>
+        <div class="radius-sample" style="border-radius:var(--radius-full);width:64px"><span>full</span><span>∞</span></div>
+      </div>
+
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Valor</th><th>Uso padrão</th></tr></thead>
+        <tbody>
+          <tr><td>--radius-sm</td><td>2px</td><td>Divisores, barras de progresso</td></tr>
+          <tr><td>--radius-md</td><td>6px</td><td>Tags pequenas, tooltips</td></tr>
+          <tr><td>--radius-lg</td><td>8px</td><td>Selects, dropdowns</td></tr>
+          <tr><td>--radius-xl</td><td>12px</td><td>Inputs, botões, badges — padrão Skolen</td></tr>
+          <tr><td>--radius-2xl</td><td>16px</td><td>Cards — padrão Skolen</td></tr>
+          <tr><td>--radius-3xl</td><td>24px</td><td>Modais, hero sections</td></tr>
+          <tr><td>--radius-full</td><td>9999px</td><td>Avatares, badges de status, botões pill</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── SHADOWS ── -->
+    <section class="ds-section" id="shadows">
+      <h2 class="ds-section-title">Sombras</h2>
+      <p class="ds-section-subtitle">Sombras sutis criam hierarquia visual sem poluição. Use a sombra menor para elementos passivos e maior para elementos em destaque ou hover.</p>
+      <div class="ds-divider"></div>
+
+      <div class="shadow-grid mb-8">
+        <div class="shadow-sample" style="box-shadow:var(--shadow-sm)">sm</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-default)">default</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-md)">md</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-lg)">lg</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-xl)">xl</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-2xl)">2xl</div>
+        <div class="shadow-sample" style="box-shadow:var(--shadow-inner)">inner</div>
+        <div class="shadow-sample">none</div>
+      </div>
+
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td>--shadow-sm</td><td>Navbar, inputs em repouso</td></tr>
+          <tr><td>--shadow-default</td><td>Cards padrão</td></tr>
+          <tr><td>--shadow-md</td><td>Cards em hover, dropdowns</td></tr>
+          <tr><td>--shadow-lg</td><td>Modais, tooltips grandes</td></tr>
+          <tr><td>--shadow-xl</td><td>Elementos flutuantes, drawers</td></tr>
+          <tr><td>--shadow-inner</td><td>Inputs focados, campos de busca</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── MOTION ── -->
+    <section class="ds-section" id="motion">
+      <h2 class="ds-section-title">Movimento</h2>
+      <p class="ds-section-subtitle">Transições rápidas para feedback de interação, lentas para mudanças de estado significativas. Passe o mouse sobre os exemplos abaixo.</p>
+      <div class="ds-divider"></div>
+
+      <div class="motion-demo mb-8">
+        <div class="motion-box" style="transition-duration:var(--duration-75)">75ms</div>
+        <div class="motion-box" style="transition-duration:var(--duration-150)">150ms · fast</div>
+        <div class="motion-box" style="transition-duration:var(--duration-200)">200ms · normal</div>
+        <div class="motion-box" style="transition-duration:var(--duration-300)">300ms · slow</div>
+        <div class="motion-box" style="transition-duration:var(--duration-500)">500ms</div>
+      </div>
+
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Valor</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td>--duration-fast</td><td>150ms</td><td>Hover de botões, badges, micro-interações</td></tr>
+          <tr><td>--duration-normal</td><td>200ms</td><td>Cards, inputs, transições padrão</td></tr>
+          <tr><td>--duration-slow</td><td>300ms</td><td>Modais, sidebars, animações de entrada</td></tr>
+          <tr><td>--duration-500</td><td>500ms</td><td>Animações de progresso, onboarding</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── BUTTONS ── -->
+    <section class="ds-section" id="buttons">
+      <h2 class="ds-section-title">Botões</h2>
+      <p class="ds-section-subtitle">Hierarquia clara de ação. Primary para ação principal, Accent para CTAs de conversão, Outline para ações secundárias, Ghost para ações terciárias.</p>
+      <div class="ds-divider"></div>
+
+      <div class="ds-component-preview">
+        <button class="btn btn-primary">Começar agora</button>
+        <button class="btn btn-accent">Quero me inscrever</button>
+        <button class="btn btn-outline">Ver detalhes</button>
+        <button class="btn btn-ghost">Cancelar</button>
+      </div>
+      <div class="ds-component-preview" style="border-radius:0">
+        <button class="btn btn-primary btn-lg">CTA Grande — Matricule-se</button>
+        <button class="btn btn-accent btn-lg">Comece grátis</button>
+      </div>
+      <div class="ds-component-preview" style="border-radius:0 0 var(--radius-2xl) var(--radius-2xl)">
+        <button class="btn btn-primary btn-sm">Pequeno</button>
+        <button class="btn btn-outline btn-sm">Outline SM</button>
+        <button class="btn btn-accent btn-sm">Accent SM</button>
+      </div>
+
+      <table class="token-table" style="margin-top:var(--space-4)">
+        <thead><tr><th>Token</th><th>Valor</th><th>Uso</th></tr></thead>
+        <tbody>
+          <tr><td>--button-bg</td><td>--color-primary</td><td>Fundo do botão primário</td></tr>
+          <tr><td>--button-fg</td><td>white</td><td>Texto do botão primário</td></tr>
+          <tr><td>--button-hover-bg</td><td>--color-primary-hover</td><td>Hover do botão primário</td></tr>
+          <tr><td>--button-accent-bg</td><td>--color-accent</td><td>Fundo do botão de conversão (CTA)</td></tr>
+          <tr><td>--button-radius</td><td>--radius-xl (12px)</td><td>Border-radius de todos os botões</td></tr>
+          <tr><td>--button-font-weight</td><td>600 (semibold)</td><td>Peso da fonte nos botões</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── BADGES ── -->
+    <section class="ds-section" id="badges">
+      <h2 class="ds-section-title">Badges</h2>
+      <p class="ds-section-subtitle">Usados para categorias de curso, status de matrícula, nível de dificuldade e indicadores de destaque.</p>
+      <div class="ds-divider"></div>
+
+      <div class="ds-component-preview mb-6">
+        <span class="badge badge-primary">Novo</span>
+        <span class="badge badge-accent">Em destaque</span>
+        <span class="badge badge-success">Concluído</span>
+        <span class="badge badge-warning">Em andamento</span>
+        <span class="badge badge-secondary">Marketing</span>
+        <span class="badge badge-destructive">Esgotado</span>
+        <span class="badge" style="background:var(--color-blue-50);color:var(--color-blue-700);border:1px solid var(--color-blue-200);padding:var(--badge-padding-y) var(--badge-padding-x);border-radius:var(--badge-radius);font-size:var(--badge-font-size);font-weight:var(--badge-font-weight)">Tecnologia</span>
+        <span class="badge" style="background:var(--color-gray-100);color:var(--color-gray-600);padding:var(--badge-padding-y) var(--badge-padding-x);border-radius:var(--badge-radius);font-size:var(--badge-font-size);font-weight:var(--badge-font-weight)">Vendas</span>
+      </div>
+    </section>
+
+    <!-- ── INPUTS ── -->
+    <section class="ds-section" id="inputs">
+      <h2 class="ds-section-title">Inputs</h2>
+      <p class="ds-section-subtitle">Campos limpos com feedback visual claro. Ring azul no foco, borda vermelha no erro.</p>
+      <div class="ds-divider"></div>
+
+      <div class="ds-component-preview" style="flex-direction:column;align-items:stretch">
+        <div>
+          <label style="font-size:var(--font-size-sm);font-weight:500;color:var(--color-gray-700);display:block;margin-bottom:var(--space-1-5)">E-mail</label>
+          <input class="input" type="email" placeholder="seu@email.com.br" style="max-width:400px">
+        </div>
+        <div>
+          <label style="font-size:var(--font-size-sm);font-weight:500;color:var(--color-gray-700);display:block;margin-bottom:var(--space-1-5)">Nome completo</label>
+          <input class="input" type="text" value="Renato Kusterneto" style="max-width:400px">
+        </div>
+        <div>
+          <label style="font-size:var(--font-size-sm);font-weight:500;color:var(--color-gray-700);display:block;margin-bottom:var(--space-1-5)">Campo com erro</label>
+          <input class="input" type="text" value="valor inválido" style="max-width:400px;border-color:var(--color-destructive);box-shadow:0 0 0 3px rgba(220,38,38,0.15)">
+          <p style="font-size:var(--font-size-xs);color:var(--color-destructive);margin-top:var(--space-1)">Este campo é obrigatório.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CARDS ── -->
+    <section class="ds-section" id="cards">
+      <h2 class="ds-section-title">Cards</h2>
+      <p class="ds-section-subtitle">Containers versáteis para informação agrupada. Radius generoso (16px) é a assinatura visual Skolen.</p>
+      <div class="ds-divider"></div>
+
+      <div class="grid-3 mb-6">
+        <div class="card">
+          <div class="card-title">Card Padrão</div>
+          <div class="card-description">Container estático para agrupar informações. Sem interação.</div>
+        </div>
+        <div class="card card-interactive">
+          <div class="card-title">Card Interativo ↗</div>
+          <div class="card-description">Clicável. Eleva com sombra e translada no hover. Passe o mouse.</div>
+        </div>
+        <div class="card" style="border-left:4px solid var(--color-primary)">
+          <div class="card-title">Card Destacado</div>
+          <div class="card-description">Borda lateral colorida para indicar categoria ou status especial.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── ALERTS ── -->
+    <section class="ds-section" id="alerts">
+      <h2 class="ds-section-title">Alertas</h2>
+      <p class="ds-section-subtitle">Feedback contextual inline — informativo, sucesso, aviso ou erro.</p>
+      <div class="ds-divider"></div>
+
+      <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-6)">
+        <div class="alert alert-info">
+          <span class="alert-icon">ℹ️</span>
+          <div><div class="alert-title">Inscrição aberta</div>A próxima turma começa em 15 de abril. Vagas limitadas.</div>
+        </div>
+        <div class="alert alert-success">
+          <span class="alert-icon">✅</span>
+          <div><div class="alert-title">Aula concluída!</div>Você completou "Fundamentos de Marketing Digital". Próxima: Tráfego Pago.</div>
+        </div>
+        <div class="alert alert-warning">
+          <span class="alert-icon">⚠️</span>
+          <div><div class="alert-title">Apenas 3 vagas restantes</div>Esta turma está quase esgotada. Garanta sua vaga agora.</div>
+        </div>
+        <div class="alert alert-destructive">
+          <span class="alert-icon">❌</span>
+          <div><div class="alert-title">Pagamento recusado</div>Verifique os dados do cartão e tente novamente.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PATTERNS ── -->
+    <section class="ds-section" id="patterns">
+      <h2 class="ds-section-title">Skolen UI Patterns</h2>
+      <p class="ds-section-subtitle">Componentes compostos específicos da Skolen — curso card, stat card, progress bar.</p>
+      <div class="ds-divider"></div>
+
+      <!-- Course Cards -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Course Cards</h3>
+      <div class="grid-3 mb-8">
+        <div class="course-card">
+          <div class="course-card-thumb">📊</div>
+          <div class="course-card-body">
+            <div class="course-card-category">Marketing Digital</div>
+            <div class="course-card-title">Tráfego Pago do Zero ao Avançado</div>
+            <div class="card-description" style="font-size:var(--font-size-xs)">12 módulos · 48 aulas · Certificado</div>
+            <div class="course-card-footer">
+              <div class="course-card-price">R$ 297</div>
+              <button class="btn btn-accent btn-sm">Inscrever</button>
+            </div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-card-thumb" style="background:linear-gradient(135deg,var(--color-amber-500),var(--color-amber-700))">💼</div>
+          <div class="course-card-body">
+            <div class="course-card-category">Vendas</div>
+            <div class="course-card-title">Fechamento de Vendas de Alto Valor</div>
+            <div class="card-description" style="font-size:var(--font-size-xs)">8 módulos · 32 aulas · Certificado</div>
+            <div class="progress-bar"><div class="progress-bar-fill" style="width:65%"></div></div>
+            <div style="font-size:var(--font-size-xs);color:var(--color-muted-foreground);margin-top:var(--space-1)">65% concluído</div>
+          </div>
+        </div>
+        <div class="course-card">
+          <div class="course-card-thumb" style="background:linear-gradient(135deg,var(--color-green-500),var(--color-green-600))">🎯</div>
+          <div class="course-card-body">
+            <div class="course-card-category">Estratégia</div>
+            <div class="course-card-title">Planejamento e OKRs para Educadores</div>
+            <div class="card-description" style="font-size:var(--font-size-xs)">6 módulos · 24 aulas · Certificado</div>
+            <div class="course-card-footer">
+              <span class="badge badge-success">Novo</span>
+              <button class="btn btn-primary btn-sm">Ver curso</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Stat Cards</h3>
+      <div class="grid-4 mb-8">
+        <div class="stat-card">
+          <div class="stat-card-label">Alunos Ativos</div>
+          <div class="stat-card-value">12.4k</div>
+          <div class="stat-card-change up">↑ +18% este mês</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Cursos Vendidos</div>
+          <div class="stat-card-value">847</div>
+          <div class="stat-card-change up">↑ +32% vs último mês</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">Taxa de Conclusão</div>
+          <div class="stat-card-value">73%</div>
+          <div class="stat-card-change down">↓ -2% vs média</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-label">NPS</div>
+          <div class="stat-card-value" style="color:var(--color-success)">89</div>
+          <div class="stat-card-change up">↑ Excelente</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TOKEN REFERENCE ── -->
+    <section class="ds-section" id="tokens-ref">
+      <h2 class="ds-section-title">Referência CSS Completa</h2>
+      <p class="ds-section-subtitle">Copie estes tokens para o arquivo <code style="background:var(--color-gray-100);padding:2px 6px;border-radius:4px;font-size:0.85em">design-tokens.css</code> do seu projeto. Importe antes de qualquer outro CSS.</p>
+      <div class="ds-divider"></div>
+
+      <div class="code-block">
+<span class="c-comment">/* ============================================
+   SKOLEN DESIGN TOKENS — v1.0
+   skolen.com.br · 2026
+   ============================================ */</span>
+
+<span class="c-comment">/* LAYER 1: PRIMITIVES */</span>
+<span class="c-selector">:root</span> {
+  <span class="c-comment">/* Brand Colors */</span>
+  <span class="c-prop">--color-blue-600</span>:  <span class="c-val">#1E4ADB</span>;
+  <span class="c-prop">--color-amber-400</span>: <span class="c-val">#F5A623</span>;
+
+  <span class="c-comment">/* Typography */</span>
+  <span class="c-prop">--font-family-heading</span>: <span class="c-val">'Nunito', sans-serif</span>;
+  <span class="c-prop">--font-family-body</span>:    <span class="c-val">'Inter', sans-serif</span>;
+
+  <span class="c-comment">/* Spacing (4px base) */</span>
+  <span class="c-prop">--space-4</span>: <span class="c-num">1rem</span>;       <span class="c-comment">/* 16px */</span>
+  <span class="c-prop">--space-6</span>: <span class="c-num">1.5rem</span>;     <span class="c-comment">/* 24px */</span>
+}
+
+<span class="c-comment">/* LAYER 2: SEMANTIC */</span>
+<span class="c-selector">:root</span> {
+  <span class="c-prop">--color-primary</span>:   <span class="c-var">var(--color-blue-600)</span>;
+  <span class="c-prop">--color-accent</span>:    <span class="c-var">var(--color-amber-400)</span>;
+  <span class="c-prop">--color-background</span>:<span class="c-var">var(--color-gray-50)</span>;
+}
+
+<span class="c-comment">/* LAYER 3: COMPONENTS */</span>
+<span class="c-selector">:root</span> {
+  <span class="c-prop">--button-bg</span>:     <span class="c-var">var(--color-primary)</span>;
+  <span class="c-prop">--button-radius</span>: <span class="c-var">var(--radius-xl)</span>;     <span class="c-comment">/* 12px */</span>
+  <span class="c-prop">--card-radius</span>:   <span class="c-var">var(--radius-2xl)</span>;    <span class="c-comment">/* 16px */</span>
+  <span class="c-prop">--input-radius</span>:  <span class="c-var">var(--radius-xl)</span>;     <span class="c-comment">/* 12px */</span>
+}
+
+<span class="c-comment">/* DARK MODE */</span>
+<span class="c-selector">.dark</span> {
+  <span class="c-prop">--color-background</span>: <span class="c-var">var(--color-gray-900)</span>;
+  <span class="c-prop">--color-foreground</span>: <span class="c-var">var(--color-gray-50)</span>;
+}
+      </div>
+
+      <!-- Tailwind config hint -->
+      <h3 style="font-family:var(--font-heading);font-size:var(--font-size-lg);font-weight:var(--font-weight-bold);margin-bottom:var(--space-4);color:var(--color-gray-700)">Integração Tailwind CSS</h3>
+      <div class="code-block">
+<span class="c-comment">// tailwind.config.js</span>
+<span class="c-selector">module.exports</span> = {
+  theme: {
+    extend: {
+      colors: {
+        primary:  <span class="c-val">'#1E4ADB'</span>,
+        accent:   <span class="c-val">'#F5A623'</span>,
+        skolen: {
+          blue:  { <span class="c-val">DEFAULT: '#1E4ADB'</span>, hover: <span class="c-val">'#1638C4'</span> },
+          amber: { <span class="c-val">DEFAULT: '#F5A623'</span>, hover: <span class="c-val">'#E8920A'</span> },
+        }
+      },
+      fontFamily: {
+        heading: [<span class="c-val">'Nunito'</span>, <span class="c-val">'sans-serif'</span>],
+        body:    [<span class="c-val">'Inter'</span>, <span class="c-val">'sans-serif'</span>],
+      },
+      borderRadius: {
+        <span class="c-val">'card'</span>:   <span class="c-val">'1rem'</span>,    <span class="c-comment">/* 16px */</span>
+        <span class="c-val">'button'</span>: <span class="c-val">'0.75rem'</span>, <span class="c-comment">/* 12px */</span>
+      }
+    }
+  }
+}
+      </div>
+    </section>
+
+    <div style="height:var(--space-16)"></div>
+
+  </main>
+</div>
+
+<button class="dark-toggle" onclick="document.documentElement.classList.toggle('dark')">
+  🌙 Dark Mode
+</button>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Carrossel Slide 5 · Text · 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #F5C842;
+  --teal:   #5ECBA8;
+  --pink:   #E87DB0;
+  --blue:   #5A8ED4;
+  --text:   #2B3641;
+  --white:  #FFFFFF;
+  --gray-bg: #F4F5F7;
+  --gray-mid: #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: #ECEEF2; }
+
+.circle { border-radius: 50%; position: absolute; }
+
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+#canvas .c-tl { width: 220px; height: 220px; background: var(--blue);   top:  -65px; left: -65px; }
+#canvas .c-tr { width: 200px; height: 200px; background: var(--yellow); top:  -58px; right: -58px; }
+#canvas .c-bl { width: 240px; height: 240px; background: var(--pink);   bottom: -70px; left: -70px; }
+#canvas .c-br { width: 200px; height: 200px; background: var(--blue);   bottom: -58px; right: -58px; }
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 120px 120px;
+  text-align: center;
+  z-index: 2;
+  gap: 0;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  background: rgba(94,203,168,0.12);
+  padding: 10px 24px;
+  border-radius: 999px;
+}
+
+.headline {
+  font-size: 78px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 40px;
+}
+.headline em { font-style: normal; color: var(--teal); }
+
+.body-text {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.65;
+  line-height: 1.5;
+  max-width: 820px;
+}
+.body-text strong { color: var(--text); opacity: 1; font-weight: 900; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="body">
+    <p class="label">A lógica certa</p>
+
+    <h2 class="headline">
+      Não basta saber<br>que o aluno <em>sumiu.</em>
+    </h2>
+
+    <p class="body-text">
+      A escola precisa ver o <strong>enfraquecimento antes do cancelamento.</strong><br>Isso separa gestão reativa<br>de gestão inteligente.
+    </p>
+  </div>
+</div>
+</body>
+</html>

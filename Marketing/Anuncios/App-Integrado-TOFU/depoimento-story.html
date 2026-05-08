@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Story · Depoimento App · MOFU · 1080×1920</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow:     #F5C842;
+  --teal:       #5ECBA8;
+  --pink:       #E87DB0;
+  --blue:       #5A8ED4;
+  --text:       #2B3641;
+  --white:      #FFFFFF;
+  --gray-mid:   #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: #ECEEF2; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.ad-logo-mark.sz56 { width: 56px; height: 56px; }
+.ad-logo-mark.sz56 span { width: 24px; height: 24px; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+.ad-logo-text.sz44 { font-size: 44px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+
+#t5-canvas {
+  width: 1080px;
+  height: 1920px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#t5-canvas .c-tl {
+  width: 440px; height: 440px;
+  background: var(--pink);
+  top: -140px; left: -140px;
+}
+#t5-canvas .c-tr {
+  width: 280px; height: 280px;
+  background: var(--yellow);
+  top: -70px; right: -70px;
+}
+#t5-canvas .c-bl {
+  width: 320px; height: 320px;
+  background: var(--yellow);
+  bottom: -100px; left: -100px;
+}
+#t5-canvas .c-br {
+  width: 400px; height: 400px;
+  background: var(--pink);
+  bottom: -120px; right: -120px;
+}
+#t5-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 200px 100px 180px;
+  text-align: center;
+  gap: 56px;
+  z-index: 2;
+}
+.t5-stars {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 36px;
+}
+.t5-star {
+  width: 52px; height: 52px;
+  flex-shrink: 0;
+}
+.t5-quote-card {
+  background: #FEF6FA;
+  border: 2px solid rgba(232,125,176,0.25);
+  border-radius: 32px;
+  padding: 72px 80px;
+  max-width: 880px;
+  width: 100%;
+}
+.t5-quote-text {
+  font-size: 64px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+}
+.t5-quote-text em { font-style: normal; color: var(--pink); }
+.t5-attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+.t5-avatar {
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--yellow));
+  flex-shrink: 0;
+  box-shadow: 0 8px 28px rgba(232,125,176,0.35);
+}
+.t5-attr-info { text-align: left; }
+.t5-attr-name { font-size: 40px; font-weight: 900; color: var(--text); }
+.t5-attr-role { font-size: 28px; font-weight: 600; color: var(--gray-mid); margin-top: 4px; }
+.t5-cta-btn {
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Nunito', sans-serif;
+  font-size: 34px;
+  font-weight: 800;
+  padding: 26px 68px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 12px 36px rgba(232,125,176,0.35);
+}
+#t5-logo {
+  position: absolute;
+  bottom: 100px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<div id="t5-canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="t5-body">
+    <div class="t5-attribution">
+      <div class="t5-avatar"></div>
+      <div class="t5-attr-info">
+        <p class="t5-attr-name">Diretora Ana Paula S.</p>
+        <p class="t5-attr-role">Escola Privada · São Paulo</p>
+      </div>
+    </div>
+
+    <div class="t5-quote-card">
+      <p class="t5-quote-text">
+        Os pais pararam de ligar.<br>
+        <em>Têm tudo no app.</em>
+      </p>
+      <div class="t5-stars">
+        <svg class="t5-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="t5-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="t5-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="t5-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="t5-star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <button class="t5-cta-btn">Veja como funciona</button>
+  </div>
+
+  <div id="t5-logo">
+    <div class="ad-logo-mark sz56">
+      <span class="lm-tl"></span>
+      <span class="lm-tr"></span>
+      <span class="lm-bl"></span>
+      <span class="lm-br"></span>
+    </div>
+    <span class="ad-logo-text sz44">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

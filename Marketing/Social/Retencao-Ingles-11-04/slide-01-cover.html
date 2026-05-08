@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Carrossel Slide 1 · Cover · 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #F5C842;
+  --teal:   #5ECBA8;
+  --pink:   #E87DB0;
+  --blue:   #5A8ED4;
+  --text:   #2B3641;
+  --white:  #FFFFFF;
+  --gray-bg: #F4F5F7;
+  --gray-mid: #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: #ECEEF2; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+#canvas .c-tl { width: 320px; height: 320px; background: var(--pink);   top: -100px; left: -100px; }
+#canvas .c-tr { width: 220px; height: 220px; background: var(--yellow); top:  -65px; right: -65px; }
+#canvas .c-bl { width: 160px; height: 160px; background: var(--blue);   bottom: -45px; left: -45px; }
+#canvas .c-br { width: 240px; height: 240px; background: var(--teal);   bottom: -70px; right: -70px; }
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 110px 160px;
+  text-align: center;
+  z-index: 2;
+  gap: 0;
+}
+
+.eyebrow {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--pink);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.big-logo-mark {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 48px;
+}
+.big-logo-mark span {
+  display: block;
+  border-radius: 50%;
+  width: 53px;
+  height: 53px;
+}
+
+.headline {
+  font-size: 84px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 36px;
+}
+.headline em { font-style: normal; color: var(--pink); }
+
+.subhead {
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.65;
+  line-height: 1.35;
+  margin-bottom: 64px;
+}
+
+.swipe-hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--pink);
+  letter-spacing: 0.5px;
+}
+.swipe-hint .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--pink);
+  border-radius: 50%;
+}
+.swipe-hint .arrow svg { display: block; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="body">
+    <p class="eyebrow">Escolas de Inglês</p>
+
+    <h1 class="headline">
+      Sua escola perde alunos<br>no final do ano <em>sem perceber.</em>
+    </h1>
+
+    <p class="subhead">
+      O vínculo já enfraqueceu antes<br>do cancelamento chegar.
+    </p>
+
+    <div class="swipe-hint">
+      <span>deslize para ver</span>
+      <div class="arrow">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

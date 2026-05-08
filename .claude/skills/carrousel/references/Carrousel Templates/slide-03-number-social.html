@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Carrossel Slide 3 · Número + Social · 1080×1080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow: #F5C842;
+  --teal:   #5ECBA8;
+  --pink:   #E87DB0;
+  --blue:   #5A8ED4;
+  --text:   #2B3641;
+  --white:  #FFFFFF;
+  --gray-bg: #F4F5F7;
+  --gray-mid: #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 1080px; height: 1080px; overflow: hidden; background: #FFFFFF; }
+body { font-family: 'Nunito', sans-serif; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+
+/* ── Canvas ── */
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slide 3 — c-tl conecta com c-tr do slide 2 (teal), c-bl conecta com c-br do slide 2 (blue) */
+#canvas .c-tl { width: 200px; height: 200px; background: var(--teal);   top:  -58px; left: -58px; }
+#canvas .c-tr { width: 180px; height: 180px; background: var(--pink);   top:  -52px; right: -52px; }
+#canvas .c-bl { width: 200px; height: 200px; background: var(--blue);   bottom: -58px; left: -58px; }
+#canvas .c-br { width: 220px; height: 220px; background: var(--yellow); bottom: -65px; right: -65px; }
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 100px 130px;
+  text-align: center;
+  z-index: 2;
+  gap: 0;
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--gray-mid);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.stat {
+  font-size: 200px;
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 0.85;
+  letter-spacing: -8px;
+  margin-bottom: 28px;
+}
+
+.stat-label {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+.stat-label em { font-style: normal; color: var(--teal); }
+
+.divider {
+  width: 80px;
+  height: 5px;
+  background: var(--teal);
+  border-radius: 3px;
+  margin: 0 auto 36px;
+}
+
+/* Quote card */
+.quote-card {
+  background: rgba(94,203,168,0.08);
+  border: 2px solid rgba(94,203,168,0.28);
+  border-radius: 24px;
+  padding: 36px 48px;
+  max-width: 840px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-align: left;
+}
+.avatar {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--blue));
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(94,203,168,0.30);
+}
+.quote-content { flex: 1; }
+.quote-text {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.quote-text em { font-style: normal; color: var(--teal); }
+.quote-author {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-mid);
+}
+
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="body">
+    <p class="label">Sinal #2 · Inadimplência</p>
+
+    <div class="stat">68%</div>
+
+    <h2 class="stat-label">
+      de redução na <em>inadimplência</em><br>em menos de 60 dias
+    </h2>
+
+    <div class="divider"></div>
+  </div>
+</div>
+</body>
+</html>

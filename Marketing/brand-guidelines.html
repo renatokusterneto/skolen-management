@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skolen — Brand Guidelines</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --blue-50: #EEF3FD; --blue-100: #D5E2FB; --blue-200: #ABBFF7;
+  --blue-500: #2D5FE8; --blue-600: #1E4ADB; --blue-700: #1638C4;
+  --blue-800: #112DA0; --blue-900: #0B1E6B;
+  --amber-50: #FFF9EC; --amber-100: #FEF0CA; --amber-200: #FDD888;
+  --amber-300: #FCC44A; --amber-400: #F5A623; --amber-500: #E8920A;
+  --amber-700: #A85C05;
+  --gray-0:#fff; --gray-50:#F8FAFC; --gray-100:#F1F4F8;
+  --gray-200:#E2E8F0; --gray-300:#CBD5E1; --gray-400:#94A3B8;
+  --gray-500:#64748B; --gray-600:#475569; --gray-700:#334155;
+  --gray-800:#1E293B; --gray-900:#0F172A;
+  --green-50:#ECFDF5; --green-500:#10B981; --green-600:#059669;
+  --red-50:#FEF2F2; --red-500:#EF4444; --red-600:#DC2626;
+  --font-heading:'Nunito',sans-serif;
+  --font-body:'Inter',sans-serif;
+  --font-mono:'Fira Code','Courier New',monospace;
+  --radius-xl:0.75rem; --radius-2xl:1rem; --radius-3xl:1.5rem; --radius-full:9999px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:#fff;color:var(--gray-900);font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased}
+
+/* ── LAYOUT ── */
+.wrapper{display:flex;min-height:100vh}
+.sidebar{width:256px;flex-shrink:0;background:var(--gray-900);position:sticky;top:0;height:100vh;overflow-y:auto;padding:2rem 0}
+.sidebar-brand{padding:0 1.5rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:1rem}
+.sidebar-brand-name{font-family:var(--font-heading);font-size:1.25rem;font-weight:800;color:#fff;letter-spacing:-0.03em}
+.sidebar-brand-name span{color:var(--amber-400)}
+.sidebar-brand-sub{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.25rem;letter-spacing:.05em;text-transform:uppercase}
+.sidebar nav ul{list-style:none}
+.sidebar nav ul li a{display:block;padding:.375rem 1.5rem;font-size:.8125rem;color:rgba(255,255,255,.55);text-decoration:none;transition:all .15s;border-left:2px solid transparent}
+.sidebar nav ul li a:hover{color:#fff;border-left-color:var(--amber-400);background:rgba(255,255,255,.05)}
+.sidebar-section{font-size:.625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);padding:.75rem 1.5rem .25rem}
+.main{flex:1;overflow:auto}
+
+/* ── SECTIONS ── */
+.section{padding:4rem 4rem;border-bottom:1px solid var(--gray-100);max-width:900px}
+.section:last-child{border-bottom:none}
+.section-eyebrow{font-size:.6875rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:.75rem}
+.section-title{font-family:var(--font-heading);font-size:2.25rem;font-weight:800;color:var(--gray-900);letter-spacing:-.03em;line-height:1.15;margin-bottom:.75rem}
+.section-lead{font-size:1.0625rem;color:var(--gray-500);line-height:1.7;margin-bottom:2.5rem;max-width:640px}
+.divider{height:1px;background:var(--gray-200);margin-bottom:2rem}
+
+/* ── COVER ── */
+.cover{background:var(--gray-900);padding:5rem 4rem;max-width:900px;position:relative;overflow:hidden}
+.cover::before{content:'';position:absolute;top:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(245,166,35,.12) 0%,transparent 65%);pointer-events:none}
+.cover::after{content:'';position:absolute;bottom:-150px;left:0;width:400px;height:400px;background:radial-gradient(circle,rgba(30,74,219,.25) 0%,transparent 65%);pointer-events:none}
+.cover-version{font-size:.6875rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:2rem}
+.cover-title{font-family:var(--font-heading);font-size:4rem;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:.5rem}
+.cover-title span{color:var(--amber-400)}
+.cover-subtitle{font-family:var(--font-heading);font-size:1.5rem;font-weight:400;color:rgba(255,255,255,.5);margin-bottom:3rem;letter-spacing:-.01em}
+.cover-tagline{font-size:1.125rem;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:3rem;padding-left:1rem;border-left:3px solid var(--amber-400)}
+.cover-meta{display:flex;gap:2rem;flex-wrap:wrap}
+.cover-meta-item{font-size:.75rem;color:rgba(255,255,255,.4)}
+.cover-meta-item strong{color:rgba(255,255,255,.8);display:block;font-size:.875rem;margin-bottom:.125rem}
+
+/* ── QUICK REF ── */
+.quickref{background:var(--blue-50);border:1px solid var(--blue-200);border-radius:var(--radius-2xl);padding:1.5rem 2rem;margin-bottom:2.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.quickref-item label{font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-600);display:block;margin-bottom:.375rem}
+.quickref-item value{font-family:var(--font-heading);font-size:.9375rem;font-weight:700;color:var(--gray-900)}
+
+/* ── LOGO SECTION ── */
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.logo-frame{border-radius:var(--radius-2xl);padding:2.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;min-height:160px}
+.logo-frame.dark{background:var(--gray-900)}
+.logo-frame.light{background:#fff;border:1px solid var(--gray-200)}
+.logo-frame.color{background:var(--blue-600)}
+.logo-frame.amber{background:var(--amber-400)}
+.logo-frame.minimal{background:var(--gray-50);border:1px solid var(--gray-200)}
+.logo-cap{font-size:.625rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-top:.5rem;text-align:center}
+
+.logo-inline{display:flex;align-items:center;gap:.75rem}
+.logo-mark{width:44px;height:44px;background:linear-gradient(135deg,var(--blue-500),var(--blue-700));border-radius:.75rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:#fff;letter-spacing:-.05em;flex-shrink:0;box-shadow:0 4px 12px rgba(30,74,219,.35)}
+.logo-mark.amber-bg{background:linear-gradient(135deg,var(--amber-300),var(--amber-500));box-shadow:0 4px 12px rgba(245,166,35,.35)}
+.logo-wordmark{font-family:var(--font-heading);font-size:1.5rem;font-weight:800;letter-spacing:-.03em}
+.logo-wordmark.on-dark{color:#fff}
+.logo-wordmark.on-dark span{color:var(--amber-400)}
+.logo-wordmark.on-light{color:var(--gray-900)}
+.logo-wordmark.on-light span{color:var(--blue-600)}
+.logo-wordmark.on-color{color:#fff}
+.logo-mark-only{width:44px;height:44px;background:linear-gradient(135deg,var(--blue-500),var(--blue-700));border-radius:.75rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:#fff;letter-spacing:-.05em;box-shadow:0 4px 12px rgba(30,74,219,.35)}
+
+.logo-donts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem}
+.dont-item{border-radius:var(--radius-xl);padding:1.25rem;background:var(--red-50);border:1px solid #FECACA;text-align:center}
+.dont-item-rule{font-size:.75rem;font-weight:600;color:var(--red-600);margin-top:.75rem}
+.dont-sample{display:flex;align-items:center;justify-content:center;min-height:50px}
+
+/* ── COLOR SECTION ── */
+.color-hero{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.color-hero-swatch{border-radius:var(--radius-2xl);overflow:hidden}
+.color-main{height:160px;display:flex;align-items:flex-end;padding:1.25rem}
+.color-main-info{color:#fff}
+.color-main-name{font-family:var(--font-heading);font-size:1.125rem;font-weight:800}
+.color-main-hex{font-family:var(--font-mono);font-size:.8125rem;opacity:.7;margin-top:.25rem}
+.color-main-use{font-size:.75rem;opacity:.6;margin-top:.125rem}
+.color-row{display:flex;height:40px;border-top:1px solid rgba(0,0,0,.06)}
+.color-chip{flex:1}
+
+.color-table{width:100%;border-collapse:collapse;font-size:.875rem;margin-bottom:1.5rem}
+.color-table th{text-align:left;padding:.5rem 1rem;background:var(--gray-100);font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-500)}
+.color-table th:first-child{border-radius:.375rem 0 0 .375rem}
+.color-table th:last-child{border-radius:0 .375rem .375rem 0}
+.color-table td{padding:.625rem 1rem;border-bottom:1px solid var(--gray-100);vertical-align:middle}
+.color-dot{width:24px;height:24px;border-radius:.375rem;display:inline-block;border:1px solid rgba(0,0,0,.08);vertical-align:middle;margin-right:.5rem}
+.hex-code{font-family:var(--font-mono);font-size:.8125rem;color:var(--gray-600)}
+.contrast-pass{display:inline-flex;align-items:center;gap:.25rem;font-size:.75rem;font-weight:600;color:var(--green-600);background:var(--green-50);padding:.125rem .5rem;border-radius:var(--radius-full)}
+.contrast-fail{display:inline-flex;align-items:center;gap:.25rem;font-size:.75rem;font-weight:600;color:var(--red-600);background:var(--red-50);padding:.125rem .5rem;border-radius:var(--radius-full)}
+
+.color-ratio-vis{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:1.5rem;margin-bottom:1.5rem}
+.color-ratio-title{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-500);margin-bottom:1rem}
+.ratio-bar{height:48px;border-radius:.5rem;overflow:hidden;display:flex;margin-bottom:.75rem}
+.ratio-seg{display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:rgba(255,255,255,.9);transition:flex .3s}
+.ratio-legend{display:flex;gap:1rem;flex-wrap:wrap}
+.ratio-legend-item{display:flex;align-items:center;gap:.375rem;font-size:.75rem;color:var(--gray-600)}
+.ratio-dot{width:10px;height:10px;border-radius:50%}
+
+/* ── TYPOGRAPHY SECTION ── */
+.type-sample{margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid var(--gray-100)}
+.type-sample:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.type-specimen{margin-bottom:.5rem}
+.type-meta-row{display:flex;gap:.5rem;flex-wrap:wrap}
+.type-tag{font-family:var(--font-mono);font-size:.6875rem;color:var(--gray-500);background:var(--gray-100);padding:.125rem .5rem;border-radius:.25rem}
+
+.font-pair-demo{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-2xl);padding:2rem;margin-bottom:1.5rem}
+.font-pair-demo h2{font-family:var(--font-heading);font-size:1.875rem;font-weight:700;color:var(--gray-900);letter-spacing:-.025em;margin-bottom:.75rem}
+.font-pair-demo p{font-family:var(--font-body);font-size:1rem;color:var(--gray-600);line-height:1.7}
+
+/* ── VOICE SECTION ── */
+.voice-chart{width:100%;border-collapse:collapse;font-size:.875rem;margin-bottom:2rem}
+.voice-chart th{padding:.625rem 1rem;background:var(--gray-900);color:#fff;font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-align:left}
+.voice-chart th:first-child{border-radius:.375rem 0 0 .375rem}
+.voice-chart th:last-child{border-radius:0 .375rem .375rem 0}
+.voice-chart td{padding:.875rem 1rem;border-bottom:1px solid var(--gray-100);vertical-align:top;line-height:1.5}
+.voice-chart td:first-child{font-family:var(--font-heading);font-weight:700;color:var(--blue-600)}
+
+.funnel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-bottom:2rem}
+.funnel-card{border-radius:var(--radius-xl);overflow:hidden;border:1px solid var(--gray-200)}
+.funnel-header{padding:.875rem 1rem;font-size:.6875rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:.5rem}
+.funnel-header.awareness{background:var(--blue-50);color:var(--blue-700)}
+.funnel-header.consideration{background:var(--amber-50);color:var(--amber-700)}
+.funnel-header.conversion{background:var(--green-50);color:var(--green-600)}
+.funnel-body{padding:1rem;background:#fff}
+.funnel-example{font-size:.8125rem;color:var(--gray-700);line-height:1.6;font-style:italic;border-left:3px solid;padding-left:.75rem;margin-bottom:.75rem}
+.funnel-example.do{border-color:var(--green-500);background:var(--green-50);padding:.5rem .75rem;border-radius:0 .375rem .375rem 0}
+.funnel-example.dont{border-color:var(--red-400);background:var(--red-50);padding:.5rem .75rem;border-radius:0 .375rem .375rem 0}
+.funnel-label{font-size:.625rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:.25rem}
+.funnel-label.do{color:var(--green-600)}
+.funnel-label.dont{color:var(--red-600)}
+
+.prohibited-list{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.prohibited-tag{background:var(--red-50);border:1px solid #FECACA;color:var(--red-700);font-size:.75rem;font-weight:600;padding:.25rem .75rem;border-radius:var(--radius-full);display:flex;align-items:center;gap:.25rem}
+
+/* ── MESSAGING SECTION ── */
+.message-card{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:1.5rem;margin-bottom:1rem}
+.message-card h4{font-family:var(--font-heading);font-size:.875rem;font-weight:700;color:var(--blue-600);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.625rem}
+.message-card p{font-size:.9375rem;color:var(--gray-700);line-height:1.65}
+.message-card .formula{font-family:var(--font-mono);font-size:.8125rem;color:var(--gray-500);margin-bottom:.5rem}
+
+.pitch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+.pitch-card{border-radius:var(--radius-xl);padding:1.25rem;border:1px solid var(--gray-200);background:#fff}
+.pitch-card h5{font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gray-400);margin-bottom:.75rem}
+.pitch-card p{font-size:.875rem;color:var(--gray-700);line-height:1.65}
+
+.audience-table{width:100%;border-collapse:collapse;font-size:.8125rem}
+.audience-table th{padding:.5rem .875rem;background:var(--gray-900);color:#fff;font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:left}
+.audience-table th:first-child{border-radius:.375rem 0 0 .375rem}
+.audience-table th:last-child{border-radius:0 .375rem .375rem 0}
+.audience-table td{padding:.75rem .875rem;border-bottom:1px solid var(--gray-100);vertical-align:top;line-height:1.5}
+.audience-table td:first-child{font-weight:600;color:var(--gray-900)}
+
+/* ── VISUAL PATTERNS ── */
+.gradient-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+.gradient-swatch{height:120px;border-radius:var(--radius-xl);display:flex;align-items:flex-end;padding:1rem}
+.gradient-name{font-size:.6875rem;font-weight:700;color:rgba(255,255,255,.9);text-shadow:0 1px 2px rgba(0,0,0,.3)}
+.gradient-code{font-family:var(--font-mono);font-size:.5625rem;color:rgba(255,255,255,.6);display:block;margin-top:.125rem}
+
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+.photo-example{border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/3;position:relative;display:flex;align-items:center;justify-content:center;font-size:2.5rem}
+.photo-example.approved{background:linear-gradient(135deg,var(--blue-800),var(--blue-900));border:2px solid var(--green-500)}
+.photo-example.rejected{background:linear-gradient(135deg,var(--gray-300),var(--gray-500));border:2px solid var(--red-400);opacity:.7}
+.photo-label{position:absolute;bottom:.625rem;left:.625rem;right:.625rem;text-align:center;font-size:.6875rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.25rem .5rem;border-radius:.375rem}
+.photo-label.ok{background:var(--green-500);color:#fff}
+.photo-label.no{background:var(--red-500);color:#fff}
+
+.pattern-demos{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
+.pattern-cell{height:120px;border-radius:var(--radius-xl);overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:.6875rem;font-weight:600;color:rgba(255,255,255,.8)}
+
+/* ── SOCIAL SECTION ── */
+.social-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:2rem}
+.social-post{border-radius:var(--radius-xl);overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.social-post-img{aspect-ratio:1/1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem;text-align:center;position:relative;overflow:hidden}
+.social-post-label{font-size:.6875rem;font-weight:600;color:var(--gray-500);padding:.5rem .875rem;background:var(--gray-100);border-top:1px solid var(--gray-200);text-align:center}
+.social-post-post-type{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:.75rem}
+.social-post-headline{font-family:var(--font-heading);font-size:1rem;font-weight:800;color:#fff;line-height:1.25;letter-spacing:-.02em;margin-bottom:.5rem}
+.social-post-body{font-size:.6875rem;color:rgba(255,255,255,.7);line-height:1.5;margin-bottom:.875rem}
+.social-post-cta{font-size:.6875rem;font-weight:700;color:var(--amber-400);text-transform:uppercase;letter-spacing:.06em}
+
+.sizes-table{width:100%;border-collapse:collapse;font-size:.8125rem;margin-bottom:1.5rem}
+.sizes-table th{padding:.5rem .875rem;background:var(--gray-100);color:var(--gray-500);font-size:.6875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:left}
+.sizes-table th:first-child{border-radius:.375rem 0 0 .375rem}
+.sizes-table th:last-child{border-radius:0 .375rem .375rem 0}
+.sizes-table td{padding:.625rem .875rem;border-bottom:1px solid var(--gray-100)}
+.sizes-table td:first-child{font-weight:600;color:var(--gray-900)}
+.sizes-table td:nth-child(2){font-family:var(--font-mono);color:var(--gray-600);font-size:.75rem}
+
+/* ── COPY FRAMEWORKS ── */
+.copy-framework{background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:1.25rem 1.5rem;margin-bottom:1rem}
+.copy-framework h5{font-family:var(--font-heading);font-size:.8125rem;font-weight:700;color:var(--blue-600);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.375rem}
+.copy-framework .formula{font-size:.8125rem;color:var(--gray-500);font-style:italic;margin-bottom:.625rem}
+.copy-framework .example{font-size:.9375rem;font-weight:600;color:var(--gray-900);line-height:1.5;border-left:3px solid var(--blue-400);padding-left:.75rem}
+
+.headline-bank{display:flex;flex-direction:column;gap:.625rem;margin-bottom:2rem}
+.headline-item{padding:.75rem 1rem;background:#fff;border:1px solid var(--gray-200);border-radius:var(--radius-xl);font-size:.9375rem;color:var(--gray-800);display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.headline-tag{font-size:.6rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.125rem .5rem;border-radius:var(--radius-full);white-space:nowrap;flex-shrink:0}
+.headline-tag.tofu{background:var(--blue-50);color:var(--blue-700)}
+.headline-tag.mofu{background:var(--amber-50);color:var(--amber-700)}
+.headline-tag.bofu{background:var(--green-50);color:var(--green-600)}
+
+.cta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.875rem;margin-bottom:2rem}
+.cta-btn{padding:.625rem 1rem;border-radius:var(--radius-xl);font-family:var(--font-heading);font-size:.875rem;font-weight:700;text-align:center;border:none;cursor:default;transition:transform .15s}
+.cta-btn.primary{background:var(--blue-600);color:#fff}
+.cta-btn.accent{background:var(--amber-400);color:var(--gray-900)}
+.cta-btn.outline{background:transparent;color:var(--blue-600);border:2px solid var(--blue-600)}
+.cta-btn.ghost{background:var(--gray-100);color:var(--gray-700)}
+.cta-context{font-size:.625rem;color:var(--gray-400);text-align:center;margin-top:.25rem}
+
+/* ── APPLICATIONS ── */
+.app-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:2rem}
+.app-frame{border-radius:var(--radius-2xl);overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.12)}
+.app-label{font-size:.6875rem;font-weight:600;color:var(--gray-500);padding:.625rem 1rem;background:var(--gray-50);border-top:1px solid var(--gray-200);text-align:center}
+
+/* Email header */
+.email-header{background:var(--gray-900);padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.email-content{padding:1.5rem;background:#fff}
+.email-hero-text{font-family:var(--font-heading);font-size:1.25rem;font-weight:800;color:var(--gray-900);letter-spacing:-.02em;margin-bottom:.375rem}
+.email-body-text{font-size:.8125rem;color:var(--gray-500);line-height:1.6;margin-bottom:1rem}
+.email-cta{display:inline-block;background:var(--blue-600);color:#fff;font-family:var(--font-heading);font-size:.8125rem;font-weight:700;padding:.5rem 1.25rem;border-radius:.75rem;text-decoration:none}
+
+/* Ad creative */
+.ad-creative{aspect-ratio:1/1;background:linear-gradient(135deg,var(--blue-800) 0%,var(--blue-600) 100%);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.ad-creative::before{content:'';position:absolute;top:-30%;right:-20%;width:250px;height:250px;background:radial-gradient(circle,rgba(245,166,35,.18) 0%,transparent 70%)}
+.ad-eyebrow{font-size:.5625rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.ad-headline{font-family:var(--font-heading);font-size:1.0625rem;font-weight:800;color:#fff;letter-spacing:-.02em;line-height:1.2}
+.ad-headline span{color:var(--amber-400)}
+.ad-sub{font-size:.6875rem;color:rgba(255,255,255,.65);line-height:1.5;margin-top:.375rem}
+.ad-cta-row{display:flex;align-items:center;justify-content:space-between}
+.ad-cta{background:var(--amber-400);color:var(--gray-900);font-family:var(--font-heading);font-size:.6875rem;font-weight:800;padding:.375rem .875rem;border-radius:.5rem}
+.ad-logo-sm{display:flex;align-items:center;gap:.375rem}
+.ad-logo-sm-mark{width:24px;height:24px;background:rgba(255,255,255,.15);border-radius:.375rem;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:.625rem;font-weight:800;color:#fff}
+.ad-logo-sm-text{font-family:var(--font-heading);font-size:.75rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+
+/* Story */
+.story-frame{aspect-ratio:9/16;background:linear-gradient(170deg,var(--blue-900) 0%,var(--blue-700) 60%,var(--amber-500) 120%);padding:1.5rem;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.story-frame::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(circle at 70% 30%,rgba(245,166,35,.2) 0%,transparent 50%)}
+.story-top{display:flex;justify-content:space-between;align-items:center}
+.story-brand{font-family:var(--font-heading);font-size:.8125rem;font-weight:800;color:#fff;letter-spacing:-.02em}
+.story-brand span{color:var(--amber-400)}
+.story-mid{text-align:center;padding:1rem 0}
+.story-big{font-family:var(--font-heading);font-size:2rem;font-weight:800;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:.5rem}
+.story-big span{color:var(--amber-400)}
+.story-desc{font-size:.6875rem;color:rgba(255,255,255,.7);line-height:1.5}
+.story-bottom{text-align:center}
+.story-cta{display:inline-block;background:var(--amber-400);color:var(--gray-900);font-family:var(--font-heading);font-size:.75rem;font-weight:800;padding:.375rem 1rem;border-radius:var(--radius-full)}
+
+/* Checklist */
+.checklist{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:2rem}
+.checklist li{display:flex;align-items:flex-start;gap:.625rem;font-size:.875rem;color:var(--gray-700);line-height:1.5}
+.checklist li::before{content:'✓';color:var(--green-600);font-weight:700;font-size:.875rem;flex-shrink:0;margin-top:.05rem}
+.checklist li.no::before{content:'✗';color:var(--red-500)}
+
+/* ── MISC ── */
+.badge{display:inline-flex;align-items:center;font-size:.6875rem;font-weight:700;padding:.2rem .625rem;border-radius:var(--radius-full)}
+.badge-blue{background:var(--blue-50);color:var(--blue-700);border:1px solid var(--blue-200)}
+.badge-amber{background:var(--amber-50);color:var(--amber-700);border:1px solid var(--amber-200)}
+.badge-green{background:var(--green-50);color:var(--green-600);border:1px solid #A7F3D0}
+.note{background:var(--amber-50);border:1px solid var(--amber-200);border-radius:var(--radius-xl);padding:1rem 1.25rem;font-size:.875rem;color:var(--amber-700);margin-bottom:1.5rem;display:flex;gap:.625rem}
+.note::before{content:'💡';flex-shrink:0}
+
+h3.sub{font-family:var(--font-heading);font-size:1.125rem;font-weight:700;color:var(--gray-800);margin-bottom:1rem;margin-top:2rem}
+h3.sub:first-child{margin-top:0}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="sidebar-brand-name">Sk<span>.</span></div>
+    <div class="sidebar-brand-sub">Brand Guidelines · v1.0</div>
+  </div>
+  <nav>
+    <div class="sidebar-section">Fundação</div>
+    <ul>
+      <li><a href="#story">História & Posicionamento</a></li>
+      <li><a href="#messaging">Mensagem Central</a></li>
+    </ul>
+    <div class="sidebar-section">Identidade Visual</div>
+    <ul>
+      <li><a href="#logo">Sistema de Logo</a></li>
+      <li><a href="#colors">Cores</a></li>
+      <li><a href="#typography">Tipografia</a></li>
+      <li><a href="#patterns">Padrões Visuais</a></li>
+    </ul>
+    <div class="sidebar-section">Comunicação</div>
+    <ul>
+      <li><a href="#voice">Voz & Tom</a></li>
+      <li><a href="#copy">Copy Frameworks</a></li>
+    </ul>
+    <div class="sidebar-section">Aplicações</div>
+    <ul>
+      <li><a href="#social">Social Media</a></li>
+      <li><a href="#applications">Brand in Action</a></li>
+      <li><a href="#checklist">Checklist</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<!-- ── MAIN ── -->
+<main class="main">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-version">Brand Guidelines · Versão 1.0 · Março 2026</div>
+    <h1 class="cover-title">Skolen<span>.</span></h1>
+    <p class="cover-subtitle">Manual de Identidade de Marca</p>
+    <p class="cover-tagline">Aprenda. Cresça. Transforme.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>#1E4ADB</strong>Skolen Blue</div>
+      <div class="cover-meta-item"><strong>#F5A623</strong>Skolen Amber</div>
+      <div class="cover-meta-item"><strong>Nunito</strong>Heading</div>
+      <div class="cover-meta-item"><strong>Inter</strong>Body</div>
+    </div>
+  </div>
+
+  <!-- QUICK REFERENCE -->
+  <div class="section" style="padding-top:2rem;padding-bottom:2rem">
+    <div class="quickref">
+      <div class="quickref-item"><label>Cor Primária</label><value style="color:#1E4ADB">■ #1E4ADB</value></div>
+      <div class="quickref-item"><label>Cor Accent</label><value style="color:#E8920A">■ #F5A623</value></div>
+      <div class="quickref-item"><label>Fonte Heading</label><value style="font-family:var(--font-heading)">Nunito</value></div>
+      <div class="quickref-item"><label>Fonte Body</label><value>Inter</value></div>
+    </div>
+  </div>
+
+  <!-- ── STORY ── -->
+  <div class="section" id="story">
+    <div class="section-eyebrow">Fundação da Marca</div>
+    <h2 class="section-title">História & Posicionamento</h2>
+    <p class="section-lead">A Skolen nasceu de uma constatação simples: a gestão escolar no Brasil é fragmentada, burocrática e consome o tempo que deveria ir para os alunos. A Skolen existe para mudar isso.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Missão</h3>
+    <div class="message-card" style="border-left:4px solid var(--blue-600)">
+      <p style="font-size:1.0625rem;color:var(--gray-800);line-height:1.7">Simplificamos a gestão escolar para que diretores, secretarias e professores foquem no que realmente importa: o desenvolvimento dos alunos.</p>
+    </div>
+
+    <h3 class="sub">Visão</h3>
+    <div class="message-card" style="border-left:4px solid var(--amber-400)">
+      <p style="font-size:1.0625rem;color:var(--gray-800);line-height:1.7">Ser o sistema de gestão escolar mais confiado pelas escolas brasileiras — do ensino básico ao médio — que querem mais eficiência e menos burocracia.</p>
+    </div>
+
+    <h3 class="sub">Proposta de Valor</h3>
+    <div class="message-card">
+      <div class="formula">Para [diretores e gestores de escolas] que [perdem horas em processos manuais e sistemas dispersos],</div>
+      <p>a Skolen é uma empresa de EdTech — sistema de gestão escolar SaaS que <strong>centraliza matrícula, secretaria e comunicação com pais em um só lugar</strong>. Diferente de sistemas legados, a Skolen foi construída para a realidade das escolas brasileiras.</p>
+    </div>
+
+    <h3 class="sub">Posicionamento</h3>
+    <div class="message-card">
+      <p>A Skolen é o sistema de gestão escolar para escolas brasileiras que querem eficiência real — porque cada funcionalidade foi desenhada para eliminar burocracia, não para aumentá-la.</p>
+    </div>
+
+    <h3 class="sub">Por que "Skolen"?</h3>
+    <div style="background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);padding:1.5rem;margin-bottom:1.5rem">
+      <p style="font-size:.9375rem;color:var(--gray-700);line-height:1.7"><em>Skolen</em> é a palavra para "escola" nas línguas escandinavas — regiões reconhecidas mundialmente pela excelência em educação e qualidade de vida. O nome carrega autoridade acadêmica com pronúncia acessível ao ouvido brasileiro. É incomum o suficiente para ser memorável, familiar o suficiente para ser confiável.</p>
+    </div>
+  </div>
+
+  <!-- ── MESSAGING ── -->
+  <div class="section" id="messaging">
+    <div class="section-eyebrow">Framework de Mensagem</div>
+    <h2 class="section-title">Mensagem Central</h2>
+    <p class="section-lead">Tudo o que a Skolen comunica parte de uma ideia central e se adapta ao momento do funil. Nunca o produto em primeiro lugar — sempre o resultado da escola e de seus gestores.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Elevadores de Pitch</h3>
+    <div class="pitch-grid">
+      <div class="pitch-card">
+        <h5>10 segundos</h5>
+        <p>A Skolen transforma a gestão da sua escola — do caos burocrático à eficiência real.</p>
+      </div>
+      <div class="pitch-card">
+        <h5>30 segundos</h5>
+        <p>Muitos gestores escolares passam mais tempo preenchendo planilhas do que gerindo pessoas. A Skolen centraliza matrículas, secretaria e comunicação com pais em um sistema intuitivo — para que a escola funcione com mais eficiência e menos estresse.</p>
+      </div>
+      <div class="pitch-card">
+        <h5>60 segundos</h5>
+        <p>O maior obstáculo para uma escola eficiente não é falta de dedicação dos gestores — é falta de um sistema que conecte secretaria, financeiro e comunicação em um único lugar. A Skolen resolve isso com uma plataforma SaaS construída para a realidade escolar brasileira: matrícula digital, secretaria integrada, comunicação com pais centralizada. Mais de 300 escolas já simplificaram sua gestão com a Skolen.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">Mensagem por Público</h3>
+    <table class="audience-table">
+      <thead>
+        <tr><th>Público</th><th>Dor Principal</th><th>Mensagem-chave</th><th>CTA</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Diretor de escola particular</td>
+          <td>Perde horas em processos manuais e sistemas desconectados</td>
+          <td>"Gerencie toda a sua escola em um único sistema — sem planilhas, sem retrabalho."</td>
+          <td>Ver demonstração</td>
+        </tr>
+        <tr>
+          <td>Coordenador / secretaria</td>
+          <td>Matrícula e rotinas administrativas tomam tempo que deveria ir para os alunos</td>
+          <td>"Matrícula digital, secretaria integrada e comunicação com pais em um só lugar."</td>
+          <td>Conhecer o sistema</td>
+        </tr>
+        <tr>
+          <td>Gestor de rede de escolas</td>
+          <td>Dificuldade de padronizar processos e ter visibilidade consolidada</td>
+          <td>"Gestão unificada para toda a sua rede — relatórios em tempo real, processos padronizados."</td>
+          <td>Falar com consultor</td>
+        </tr>
+        <tr>
+          <td>Escola em crescimento</td>
+          <td>Sistemas atuais não escalam com o número de alunos e turmas</td>
+          <td>"A Skolen cresce com a sua escola — do ensino fundamental ao médio, sem limite de matrículas."</td>
+          <td>Testar grátis</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">Pontos de Prova</h3>
+    <div style="display:flex;flex-direction:column;gap:.625rem;margin-bottom:1.5rem">
+      <div style="display:flex;gap:.875rem;padding:.875rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);align-items:center">
+        <span style="font-family:var(--font-heading);font-size:1.25rem;font-weight:800;color:var(--blue-600);white-space:nowrap">300+</span>
+        <span style="font-size:.875rem;color:var(--gray-600)">escolas ativas gerenciando matrículas, secretaria e comunicação com pais na Skolen</span>
+      </div>
+      <div style="display:flex;gap:.875rem;padding:.875rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);align-items:center">
+        <span style="font-family:var(--font-heading);font-size:1.25rem;font-weight:800;color:var(--blue-600);white-space:nowrap">68%</span>
+        <span style="font-size:.875rem;color:var(--gray-600)">redução no tempo de secretaria — gestores relatam menos retrabalho e menos erros administrativos</span>
+      </div>
+      <div style="display:flex;gap:.875rem;padding:.875rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:var(--radius-xl);align-items:center">
+        <span style="font-family:var(--font-heading);font-size:1.25rem;font-weight:800;color:var(--blue-600);white-space:nowrap">NPS 89</span>
+        <span style="font-size:.875rem;color:var(--gray-600)">nota de promotores — diretores e coordenadores que indicariam a Skolen para outras escolas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LOGO ── -->
+  <div class="section" id="logo">
+    <div class="section-eyebrow">Identidade Visual</div>
+    <h2 class="section-title">Sistema de Logo</h2>
+    <p class="section-lead">O logo da Skolen é composto por um símbolo geométrico (mark) e um wordmark em Nunito ExtraBold. A inicial maiúscula "Sk" na marca sinaliza autoridade; o "len" em âmbar sinaliza calor.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Variantes Aprovadas</h3>
+    <div class="logo-grid">
+      <div>
+        <div class="logo-frame dark">
+          <div class="logo-inline">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-dark">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="logo-cap">Versão Principal · Fundo Escuro</div>
+      </div>
+      <div>
+        <div class="logo-frame light">
+          <div class="logo-inline">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="logo-cap">Versão Principal · Fundo Claro</div>
+      </div>
+      <div>
+        <div class="logo-frame color">
+          <div class="logo-inline">
+            <div class="logo-mark" style="background:rgba(255,255,255,.2);box-shadow:none">Sk</div>
+            <div class="logo-wordmark on-color">skolen</div>
+          </div>
+        </div>
+        <div class="logo-cap">Versão Monocromática · Fundo Primário</div>
+      </div>
+      <div>
+        <div class="logo-frame minimal">
+          <div class="logo-mark-only">Sk</div>
+        </div>
+        <div class="logo-cap">Símbolo / Ícone · Uso em espaços pequenos</div>
+      </div>
+    </div>
+
+    <h3 class="sub">Espaço de Proteção & Tamanho Mínimo</h3>
+    <div class="note">O espaço de proteção mínimo ao redor do logo é igual à altura do símbolo "Sk". Nunca posicione outro elemento dentro dessa área.</div>
+    <table class="color-table" style="margin-bottom:1.5rem">
+      <thead><tr><th>Aplicação</th><th>Tamanho Mínimo</th><th>Observação</th></tr></thead>
+      <tbody>
+        <tr><td>Digital — logo completo</td><td>120px de largura</td><td>Abaixo disso, use somente o símbolo</td></tr>
+        <tr><td>Digital — símbolo</td><td>24px × 24px</td><td>Favicon, ícone de app</td></tr>
+        <tr><td>Impresso — logo completo</td><td>30mm de largura</td><td>Mínimo para legibilidade</td></tr>
+        <tr><td>Impresso — símbolo</td><td>8mm × 8mm</td><td>Carimbo, bordado</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">Não Faça</h3>
+    <div class="logo-donts">
+      <div class="dont-item">
+        <div class="dont-sample">
+          <div class="logo-inline" style="transform:rotate(-15deg);opacity:.7">
+            <div class="logo-mark" style="width:28px;height:28px;font-size:.75rem">Sk</div>
+            <div class="logo-wordmark on-light" style="font-size:1rem">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não rotacione</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-sample">
+          <div class="logo-inline" style="filter:hue-rotate(120deg)">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light" style="color:#16A34A">sko<span style="color:#CA8A04">len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não altere as cores</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-sample">
+          <div class="logo-inline" style="transform:scaleX(1.5);opacity:.7">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não distorça proporções</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-sample" style="background:repeating-linear-gradient(45deg,var(--blue-200),var(--blue-200) 5px,var(--amber-200) 5px,var(--amber-200) 10px);padding:.5rem;border-radius:.375rem">
+          <div class="logo-inline">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não use em fundo complexo</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-sample">
+          <div class="logo-inline" style="filter:drop-shadow(0 0 8px var(--amber-400))">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não adicione efeitos</div>
+      </div>
+      <div class="dont-item">
+        <div class="dont-sample">
+          <div class="logo-inline" style="opacity:.25">
+            <div class="logo-mark">Sk</div>
+            <div class="logo-wordmark on-light">sko<span>len</span></div>
+          </div>
+        </div>
+        <div class="dont-item-rule">✗ Não use transparência</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── COLORS ── -->
+  <div class="section" id="colors">
+    <div class="section-eyebrow">Identidade Visual</div>
+    <h2 class="section-title">Sistema de Cores</h2>
+    <p class="section-lead">Duas cores de marca fortes, uma paleta neutra clean. A regra 60/30/10 garante equilíbrio e hierarquia em todos os materiais.</p>
+    <div class="divider"></div>
+
+    <!-- Main swatches -->
+    <div class="color-hero">
+      <div class="color-hero-swatch">
+        <div class="color-main" style="background:#1E4ADB">
+          <div class="color-main-info">
+            <div class="color-main-name">Skolen Blue</div>
+            <div class="color-main-hex">#1E4ADB · rgb(30,74,219)</div>
+            <div class="color-main-use">Primária · 60% dos materiais</div>
+          </div>
+        </div>
+        <div class="color-row">
+          <div class="color-chip" style="background:#EEF3FD"></div>
+          <div class="color-chip" style="background:#D5E2FB"></div>
+          <div class="color-chip" style="background:#ABBFF7"></div>
+          <div class="color-chip" style="background:#7799F1"></div>
+          <div class="color-chip" style="background:#2D5FE8"></div>
+          <div class="color-chip" style="background:#1E4ADB"></div>
+          <div class="color-chip" style="background:#1638C4"></div>
+          <div class="color-chip" style="background:#112DA0"></div>
+          <div class="color-chip" style="background:#0B1E6B"></div>
+        </div>
+      </div>
+      <div class="color-hero-swatch">
+        <div class="color-main" style="background:#F5A623">
+          <div class="color-main-info" style="color:var(--gray-900)">
+            <div class="color-main-name" style="color:var(--gray-900)">Skolen Amber</div>
+            <div class="color-main-hex" style="color:var(--gray-700)">#F5A623 · rgb(245,166,35)</div>
+            <div class="color-main-use" style="color:var(--gray-600)">Accent · 30% dos materiais</div>
+          </div>
+        </div>
+        <div class="color-row">
+          <div class="color-chip" style="background:#FFF9EC"></div>
+          <div class="color-chip" style="background:#FEF0CA"></div>
+          <div class="color-chip" style="background:#FDD888"></div>
+          <div class="color-chip" style="background:#FCC44A"></div>
+          <div class="color-chip" style="background:#F5A623"></div>
+          <div class="color-chip" style="background:#E8920A"></div>
+          <div class="color-chip" style="background:#C97607"></div>
+          <div class="color-chip" style="background:#A85C05"></div>
+          <div class="color-chip" style="background:#5C2E09"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 60/30/10 Rule -->
+    <h3 class="sub">Regra 60 / 30 / 10</h3>
+    <div class="color-ratio-vis">
+      <div class="color-ratio-title">Distribuição de Cor por Material</div>
+      <div class="ratio-bar">
+        <div class="ratio-seg" style="flex:6;background:#1E4ADB">60%<br><span style="font-size:.5rem;opacity:.7">Blue</span></div>
+        <div class="ratio-seg" style="flex:3;background:#F5A623;color:var(--gray-900)">30%<br><span style="font-size:.5rem;opacity:.7;color:rgba(0,0,0,.6)">Amber</span></div>
+        <div class="ratio-seg" style="flex:1;background:#0F172A">10%<br><span style="font-size:.5rem;opacity:.7">Dark</span></div>
+      </div>
+      <div class="ratio-legend">
+        <div class="ratio-legend-item"><div class="ratio-dot" style="background:#1E4ADB"></div><strong>60% Skolen Blue</strong> — fundos, headers, seções principais</div>
+        <div class="ratio-legend-item"><div class="ratio-dot" style="background:#F5A623"></div><strong>30% Skolen Amber</strong> — CTAs, destaques, números, resultados</div>
+        <div class="ratio-legend-item"><div class="ratio-dot" style="background:#0F172A"></div><strong>10% Dark Navy</strong> — headlines, texto sobre fundo claro</div>
+      </div>
+    </div>
+
+    <!-- Color table -->
+    <h3 class="sub">Especificações Completas</h3>
+    <table class="color-table">
+      <thead><tr><th>Nome</th><th>Hex</th><th>RGB</th><th>CMYK (Print)</th><th>Contraste AA</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="color-dot" style="background:#1E4ADB"></span>Skolen Blue</td>
+          <td class="hex-code">#1E4ADB</td>
+          <td class="hex-code">30, 74, 219</td>
+          <td class="hex-code">86, 66, 0, 14</td>
+          <td><span class="contrast-pass">✓ AA 4.8:1</span></td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#F5A623"></span>Skolen Amber</td>
+          <td class="hex-code">#F5A623</td>
+          <td class="hex-code">245, 166, 35</td>
+          <td class="hex-code">0, 32, 86, 4</td>
+          <td><span class="contrast-pass">✓ AA (sobre escuro)</span></td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#0F172A"></span>Dark Navy</td>
+          <td class="hex-code">#0F172A</td>
+          <td class="hex-code">15, 23, 42</td>
+          <td class="hex-code">64, 45, 0, 84</td>
+          <td><span class="contrast-pass">✓ AAA 18:1</span></td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#F8FAFC"></span>Background</td>
+          <td class="hex-code">#F8FAFC</td>
+          <td class="hex-code">248, 250, 252</td>
+          <td class="hex-code">2, 1, 0, 1</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#64748B"></span>Muted Text</td>
+          <td class="hex-code">#64748B</td>
+          <td class="hex-code">100, 116, 139</td>
+          <td class="hex-code">28, 17, 0, 45</td>
+          <td><span class="contrast-pass">✓ AA 4.7:1</span></td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#E2E8F0"></span>Border</td>
+          <td class="hex-code">#E2E8F0</td>
+          <td class="hex-code">226, 232, 240</td>
+          <td class="hex-code">6, 3, 0, 6</td>
+          <td>—</td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#10B981"></span>Success</td>
+          <td class="hex-code">#10B981</td>
+          <td class="hex-code">16, 185, 129</td>
+          <td>—</td>
+          <td><span class="contrast-pass">✓ AA</span></td>
+        </tr>
+        <tr>
+          <td><span class="color-dot" style="background:#EF4444"></span>Erro / Alerta</td>
+          <td class="hex-code">#EF4444</td>
+          <td class="hex-code">239, 68, 68</td>
+          <td>—</td>
+          <td><span class="contrast-pass">✓ AA</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── TYPOGRAPHY ── -->
+  <div class="section" id="typography">
+    <div class="section-eyebrow">Identidade Visual</div>
+    <h2 class="section-title">Tipografia</h2>
+    <p class="section-lead">Dois typefaces complementares: <strong>Nunito</strong> para impacto e personalidade nos títulos; <strong>Inter</strong> para máxima legibilidade no corpo do texto.</p>
+    <div class="divider"></div>
+
+    <div class="font-pair-demo">
+      <h2>Educação que transforma, não apenas informa.</h2>
+      <p>A Skolen foi construída para pessoas que querem crescer de verdade — com conteúdo direto ao ponto, metodologia pensada para quem tem uma rotina cheia, e foco total no que o aluno conquista ao final de cada curso.</p>
+    </div>
+
+    <h3 class="sub">Escala Tipográfica</h3>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-heading);font-size:3rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:var(--gray-900)">Display — Aprenda</div>
+      <div class="type-meta-row"><span class="type-tag">Nunito</span><span class="type-tag">ExtraBold 800</span><span class="type-tag">48px</span><span class="type-tag">Leading 1.0</span><span class="type-tag">Tracking -0.04em</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: hero headlines, capas de apresentação, banners principais</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-heading);font-size:2.25rem;font-weight:800;letter-spacing:-.03em;line-height:1.15;color:var(--gray-900)">H1 — Transforme sua carreira</div>
+      <div class="type-meta-row"><span class="type-tag">Nunito</span><span class="type-tag">ExtraBold 800</span><span class="type-tag">36px</span><span class="type-tag">Leading 1.15</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: título principal de página, seção hero de landing page</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-heading);font-size:1.875rem;font-weight:700;letter-spacing:-.025em;line-height:1.25;color:var(--gray-900)">H2 — O que você vai conquistar</div>
+      <div class="type-meta-row"><span class="type-tag">Nunito</span><span class="type-tag">Bold 700</span><span class="type-tag">30px</span><span class="type-tag">Leading 1.25</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: seções principais de página, headers de email</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-heading);font-size:1.5rem;font-weight:700;letter-spacing:-.02em;line-height:1.3;color:var(--gray-900)">H3 — Módulo 1: Fundamentos</div>
+      <div class="type-meta-row"><span class="type-tag">Nunito</span><span class="type-tag">SemiBold 600</span><span class="type-tag">24px</span><span class="type-tag">Leading 1.3</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: subseções, títulos de card, cabeçalhos de módulo</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-body);font-size:1.125rem;line-height:1.7;color:var(--gray-600)">Lead — Nossos cursos foram desenvolvidos para quem aprende melhor quando sabe exatamente por que está aprendendo.</div>
+      <div class="type-meta-row"><span class="type-tag">Inter</span><span class="type-tag">Regular 400</span><span class="type-tag">18px</span><span class="type-tag">Leading 1.7</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: parágrafo de abertura, descrições de produto</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-body);font-size:1rem;line-height:1.625;color:var(--gray-700)">Body — O certificado é a consequência. A conquista é o que você faz com o que aprendeu. Na Skolen, cada aula tem um objetivo claro e uma entrega prática definida.</div>
+      <div class="type-meta-row"><span class="type-tag">Inter</span><span class="type-tag">Regular 400</span><span class="type-tag">16px</span><span class="type-tag">Leading 1.625</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: corpo de texto, emails, conteúdo de curso</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-body);font-size:.875rem;line-height:1.5;color:var(--gray-600)">Small — 32 aulas · 8 módulos · Certificado de conclusão</div>
+      <div class="type-meta-row"><span class="type-tag">Inter</span><span class="type-tag">Regular 400</span><span class="type-tag">14px</span><span class="type-tag">Leading 1.5</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: metadados, legendas, helpers de formulário</p>
+    </div>
+    <div class="type-sample">
+      <div class="type-specimen" style="font-family:var(--font-body);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-600)">EYEBROW — MARKETING DIGITAL</div>
+      <div class="type-meta-row"><span class="type-tag">Inter</span><span class="type-tag">SemiBold 600</span><span class="type-tag">12px</span><span class="type-tag">Uppercase + Tracking 0.1em</span></div>
+      <p style="font-size:.75rem;color:var(--gray-400);margin-top:.375rem">Uso: eyebrow acima de títulos, labels de categoria, rótulos de seção</p>
+    </div>
+
+    <h3 class="sub">Regras de Uso</h3>
+    <ul class="checklist">
+      <li>Use Nunito ExtraBold (800) para todos os títulos principais</li>
+      <li>Nunca use o mesmo peso para heading e body no mesmo bloco</li>
+      <li>Tracking negativo (-0.03em) em títulos acima de 24px sempre</li>
+      <li>Texto corrido (body) em Inter, nunca em Nunito</li>
+      <li>Eyebrow (label acima de título): sempre uppercase + tracking largo + cor primária</li>
+      <li class="no">Nunca use fontes fora da dupla tipográfica definida</li>
+      <li class="no">Nunca use font-weight 300 (light) em títulos</li>
+      <li class="no">Não use tamanhos de fonte fora da escala definida</li>
+    </ul>
+  </div>
+
+  <!-- ── VOICE ── -->
+  <div class="section" id="voice">
+    <div class="section-eyebrow">Comunicação</div>
+    <h2 class="section-title">Voz & Tom</h2>
+    <p class="section-lead">A Skolen fala como um mentor experiente e acessível — nunca como uma instituição fria ou um guru inflado. A voz é consistente; o tom adapta-se ao contexto.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Mapa de Personalidade</h3>
+    <table class="voice-chart">
+      <thead><tr><th>Traço</th><th>Somos</th><th>Não somos</th><th>Exemplo prático</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Educativo</td>
+          <td>Ensinamos com clareza, exemplos reais e foco no "por quê"</td>
+          <td>Não somos didáticos no mau sentido — não subestimamos o aluno</td>
+          <td>"Entender funil não é opcional — é o que separa quem escala de quem fica na roda."</td>
+        </tr>
+        <tr>
+          <td>Próximo</td>
+          <td>Tratamos o aluno como um igual ambicioso que só precisa de direção</td>
+          <td>Não somos informais a ponto de perder credibilidade</td>
+          <td>"Você já sabe mais do que imagina. Vamos organizar isso."</td>
+        </tr>
+        <tr>
+          <td>Inspirador</td>
+          <td>Apontamos o futuro possível com base em evidências, não em hype</td>
+          <td>Não prometemos milagres, não usamos linguagem motivacional vazia</td>
+          <td>"Em 4 semanas, você vai dominar o que leva anos no mercado — sem enrolação."</td>
+        </tr>
+        <tr>
+          <td>Direto</td>
+          <td>Respeitamos o tempo do aluno — vamos ao ponto sempre</td>
+          <td>Não somos rudes nem secos — direteza com calor</td>
+          <td>"3 erros que acabam com qualquer campanha de tráfego. Aula 7."</td>
+        </tr>
+        <tr>
+          <td>Confiável</td>
+          <td>Baseamos afirmações em dados, exemplos e resultados reais</td>
+          <td>Não exageramos, não fazemos promessas impossíveis</td>
+          <td>"73% dos nossos alunos concluem os cursos. A média do setor é 13%."</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">Tom por Etapa do Funil</h3>
+    <div class="funnel-grid">
+      <div class="funnel-card">
+        <div class="funnel-header awareness">📣 Topo — Conscientização</div>
+        <div class="funnel-body">
+          <div class="funnel-label do">✓ Faça assim</div>
+          <div class="funnel-example do">"Você está aprendendo a coisa certa do jeito errado — e nem sabe."</div>
+          <div class="funnel-example do">"A maioria das pessoas estuda mais. Os melhores estudam diferente."</div>
+          <div class="funnel-label dont" style="margin-top:.75rem">✗ Evite</div>
+          <div class="funnel-example dont">"Conheça a plataforma Skolen e seus cursos exclusivos."</div>
+        </div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-header consideration">🧐 Meio — Consideração</div>
+        <div class="funnel-body">
+          <div class="funnel-label do">✓ Faça assim</div>
+          <div class="funnel-example do">"Veja como o Módulo 1 funciona na prática — sem compromisso."</div>
+          <div class="funnel-example do">"Por que 73% dos nossos alunos concluem os cursos (vs 13% da média)."</div>
+          <div class="funnel-label dont" style="margin-top:.75rem">✗ Evite</div>
+          <div class="funnel-example dont">"Nossa metodologia pedagógica inovadora garante aprendizado eficaz."</div>
+        </div>
+      </div>
+      <div class="funnel-card">
+        <div class="funnel-header conversion">🎯 Fundo — Conversão</div>
+        <div class="funnel-body">
+          <div class="funnel-label do">✓ Faça assim</div>
+          <div class="funnel-example do">"Comece hoje. Sua próxima versão te espera."</div>
+          <div class="funnel-example do">"Última chamada: turma fecha em 48h. 3 vagas."</div>
+          <div class="funnel-label dont" style="margin-top:.75rem">✗ Evite</div>
+          <div class="funnel-example dont">"Clique aqui para adquirir nosso produto e acessar o conteúdo."</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">Termos Proibidos</h3>
+    <div class="prohibited-list">
+      <span class="prohibited-tag">✗ "solução"</span>
+      <span class="prohibited-tag">✗ "plataforma"</span>
+      <span class="prohibited-tag">✗ "conteúdo premium"</span>
+      <span class="prohibited-tag">✗ "metodologia inovadora"</span>
+      <span class="prohibited-tag">✗ "adquira agora"</span>
+      <span class="prohibited-tag">✗ "aproveite essa oportunidade"</span>
+      <span class="prohibited-tag">✗ "e-learning"</span>
+      <span class="prohibited-tag">✗ "módulo gamificado"</span>
+      <span class="prohibited-tag">✗ "sua jornada começa aqui"</span>
+      <span class="prohibited-tag">✗ "transformação digital"</span>
+    </div>
+
+    <div class="note">Substitua jargão por linguagem de conquista. Troque "nossa plataforma" por "a Skolen". Troque "conteúdo" por "o que você vai aprender". Troque "adquira" por "comece".</div>
+  </div>
+
+  <!-- ── VISUAL PATTERNS ── -->
+  <div class="section" id="patterns">
+    <div class="section-eyebrow">Identidade Visual</div>
+    <h2 class="section-title">Padrões Visuais</h2>
+    <p class="section-lead">Gradientes, texturas e tratamento fotográfico que compõem a linguagem visual da Skolen. Aplicados de forma consistente em todos os materiais.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Gradientes Aprovados</h3>
+    <div class="gradient-grid">
+      <div class="gradient-swatch" style="background:linear-gradient(135deg,#0B1E6B,#1E4ADB)">
+        <div>
+          <span class="gradient-name">Deep Blue</span>
+          <span class="gradient-code">#0B1E6B → #1E4ADB · 135°</span>
+        </div>
+      </div>
+      <div class="gradient-swatch" style="background:linear-gradient(135deg,#1E4ADB,#2D5FE8,#7799F1)">
+        <div>
+          <span class="gradient-name">Bright Blue</span>
+          <span class="gradient-code">#1E4ADB → #7799F1 · 135°</span>
+        </div>
+      </div>
+      <div class="gradient-swatch" style="background:linear-gradient(135deg,#1E4ADB 0%,#0B1E6B 50%,#F5A623 130%)">
+        <div>
+          <span class="gradient-name">Brand Signature</span>
+          <span class="gradient-code">Blue → Navy → Amber · 135°</span>
+        </div>
+      </div>
+      <div class="gradient-swatch" style="background:linear-gradient(135deg,#E8920A,#F5A623,#FCC44A)">
+        <div>
+          <span class="gradient-name">Warm Amber</span>
+          <span class="gradient-code">#E8920A → #FCC44A · 135°</span>
+        </div>
+      </div>
+      <div class="gradient-swatch" style="background:linear-gradient(180deg,#0F172A 0%,#1E293B 100%)">
+        <div>
+          <span class="gradient-name">Dark Surface</span>
+          <span class="gradient-code">#0F172A → #1E293B · 180°</span>
+        </div>
+      </div>
+      <div class="gradient-swatch" style="background:linear-gradient(135deg,#F8FAFC,#EEF3FD)">
+        <div>
+          <span class="gradient-name" style="color:var(--gray-600)">Light Surface</span>
+          <span class="gradient-code" style="color:var(--gray-400)">#F8FAFC → #EEF3FD · 135°</span>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="sub">Estilo Fotográfico</h3>
+    <div class="photo-grid">
+      <div class="photo-example approved">
+        🧑‍💻
+        <div class="photo-label ok">✓ Pessoas em ação</div>
+      </div>
+      <div class="photo-example approved" style="background:linear-gradient(135deg,#1E4ADB,#112DA0)">
+        📊
+        <div class="photo-label ok">✓ Resultados / dados</div>
+      </div>
+      <div class="photo-example approved" style="background:linear-gradient(135deg,#0F172A,#334155)">
+        🤝
+        <div class="photo-label ok">✓ Conexão humana</div>
+      </div>
+      <div class="photo-example rejected">
+        🏖️
+        <div class="photo-label no">✗ Lifestyle genérico</div>
+      </div>
+      <div class="photo-example rejected" style="background:linear-gradient(135deg,#E2E8F0,#CBD5E1)">
+        📚
+        <div class="photo-label no">✗ Estoque genérico</div>
+      </div>
+      <div class="photo-example rejected" style="filter:saturate(2)">
+        🎉
+        <div class="photo-label no">✗ Supersaturado / falso</div>
+      </div>
+    </div>
+
+    <h3 class="sub">Diretrizes Fotográficas</h3>
+    <ul class="checklist">
+      <li>Pessoas reais, em contexto de trabalho ou estudo — não modelos em poses artificiais</li>
+      <li>Iluminação natural ou estúdio limpo — nunca filtros pesados ou HDR exagerado</li>
+      <li>Diversidade representativa do Brasil — raça, gênero, geração</li>
+      <li>Foco no momento de "entendimento" ou "conquista" — não apenas no produto</li>
+      <li>Tratamento de cor: levemente dessaturado + temperatura neutra-fria</li>
+      <li class="no">Não use banco de imagens com pessoas sorrindo de forma forçada</li>
+      <li class="no">Não use filtros que distorçam as cores da marca</li>
+    </ul>
+  </div>
+
+  <!-- ── COPY FRAMEWORKS ── -->
+  <div class="section" id="copy">
+    <div class="section-eyebrow">Comunicação</div>
+    <h2 class="section-title">Copy Frameworks</h2>
+    <p class="section-lead">Estruturas testadas para headlines, CTAs e assuntos de email. Use como ponto de partida — adapte ao contexto, nunca copie literalmente.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Frameworks de Headline</h3>
+    <div class="copy-framework">
+      <h5>PAS — Problema · Agitação · Solução</h5>
+      <div class="formula">Nomeia o problema → torna doloroso → apresenta a saída</div>
+      <div class="example">"Você estuda mas não evolui? A maioria estuda o conteúdo errado. Na Skolen, cada módulo foi desenhado pelo resultado — não pelo currículo."</div>
+    </div>
+    <div class="copy-framework">
+      <h5>FAB — Feature · Advantage · Benefit</h5>
+      <div class="formula">O que tem → O que isso faz → O que você conquista</div>
+      <div class="example">"Aulas de 10 minutos → cabem na sua rotina → você avança todos os dias, sem desculpa."</div>
+    </div>
+    <div class="copy-framework">
+      <h5>Número + Resultado + Prazo</h5>
+      <div class="formula">[N] [resultado concreto] em [prazo realista]</div>
+      <div class="example">"3 estratégias de conversão que você vai aplicar ainda esta semana."</div>
+    </div>
+    <div class="copy-framework">
+      <h5>Contraste / Diferenciação</h5>
+      <div class="formula">O jeito comum → o jeito Skolen</div>
+      <div class="example">"Outras plataformas te dão conteúdo. A Skolen te dá o próximo passo."</div>
+    </div>
+
+    <h3 class="sub">Banco de Headlines por Etapa</h3>
+    <div class="headline-bank">
+      <div class="headline-item">Você aprende mais quando sabe exatamente <em>por que</em> está aprendendo.<span class="headline-tag tofu">Topo</span></div>
+      <div class="headline-item">A maioria das pessoas estuda mais. Os melhores estudam diferente.<span class="headline-tag tofu">Topo</span></div>
+      <div class="headline-item">O que separa quem cresce de quem fica parado não é esforço — é direção.<span class="headline-tag tofu">Topo</span></div>
+      <div class="headline-item">Por que 73% dos nossos alunos concluem os cursos (e como isso muda tudo).<span class="headline-tag mofu">Meio</span></div>
+      <div class="headline-item">Veja o módulo 1 de graça — e entenda por que a Skolen é diferente.<span class="headline-tag mofu">Meio</span></div>
+      <div class="headline-item">O que você vai conquistar em 4 semanas de Tráfego Pago Avançado.<span class="headline-tag mofu">Meio</span></div>
+      <div class="headline-item">Comece hoje. Sua próxima versão te espera.<span class="headline-tag bofu">Fundo</span></div>
+      <div class="headline-item">Última chamada: 3 vagas. Turma fecha amanhã às 23h59.<span class="headline-tag bofu">Fundo</span></div>
+      <div class="headline-item">Invista R$ 297. Ganhe o que você aprender para sempre.<span class="headline-tag bofu">Fundo</span></div>
+    </div>
+
+    <h3 class="sub">CTAs por Contexto</h3>
+    <div class="cta-grid">
+      <div>
+        <div class="cta-btn primary">Começar agora</div>
+        <div class="cta-context">Conversão primária · Hero</div>
+      </div>
+      <div>
+        <div class="cta-btn accent">Quero me inscrever</div>
+        <div class="cta-context">Conversão de campanha</div>
+      </div>
+      <div>
+        <div class="cta-btn primary">Ver o curso</div>
+        <div class="cta-context">Consideração · Landing page</div>
+      </div>
+      <div>
+        <div class="cta-btn outline">Assistir aula grátis</div>
+        <div class="cta-context">Geração de lead</div>
+      </div>
+      <div>
+        <div class="cta-btn primary">Garantir minha vaga</div>
+        <div class="cta-context">Urgência / escassez</div>
+      </div>
+      <div>
+        <div class="cta-btn ghost">Explorar cursos</div>
+        <div class="cta-context">Descoberta / topo</div>
+      </div>
+    </div>
+
+    <h3 class="sub">Assuntos de Email</h3>
+    <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem">
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"Você está aprendendo do jeito errado (e não sabe)"</span><span class="badge badge-blue">Topo</span></div>
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"O que acontece quando você para de estudar mais e começa a estudar certo"</span><span class="badge badge-blue">Topo</span></div>
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"[NOME], sua aula grátis está esperando"</span><span class="badge badge-amber">Meio</span></div>
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"Por que nossos alunos terminam o que começam (dados reais)"</span><span class="badge badge-amber">Meio</span></div>
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"⏰ Turma fecha em 48h — 3 vagas restantes"</span><span class="badge badge-green">Fundo</span></div>
+      <div style="padding:.625rem 1rem;background:var(--gray-50);border:1px solid var(--gray-200);border-radius:.75rem;font-size:.875rem;color:var(--gray-800);display:flex;justify-content:space-between"><span>"R$ 297 que você vai agradecer amanhã"</span><span class="badge badge-green">Fundo</span></div>
+    </div>
+  </div>
+
+  <!-- ── SOCIAL MEDIA ── -->
+  <div class="section" id="social">
+    <div class="section-eyebrow">Aplicações</div>
+    <h2 class="section-title">Social Media</h2>
+    <p class="section-lead">Cada formato tem uma função no funil. Posts de feed educam e criam autoridade; stories e reels convertem; carrosséis aprofundam. A identidade visual é constante em todos.</p>
+    <div class="divider"></div>
+
+    <h3 class="sub">Tamanhos & Formatos</h3>
+    <table class="sizes-table">
+      <thead><tr><th>Formato</th><th>Dimensões</th><th>Plataforma</th><th>Objetivo</th></tr></thead>
+      <tbody>
+        <tr><td>Feed Quadrado</td><td>1080 × 1080px</td><td>Instagram, Facebook</td><td>Educação, autoridade</td></tr>
+        <tr><td>Feed Retrato</td><td>1080 × 1350px</td><td>Instagram</td><td>Destaque no feed</td></tr>
+        <tr><td>Story / Reel</td><td>1080 × 1920px</td><td>Instagram, TikTok</td><td>Conversão, engajamento</td></tr>
+        <tr><td>Capa YouTube</td><td>2560 × 1440px</td><td>YouTube</td><td>Branding de canal</td></tr>
+        <tr><td>Banner LinkedIn</td><td>1584 × 396px</td><td>LinkedIn</td><td>Credibilidade B2B</td></tr>
+        <tr><td>Post LinkedIn</td><td>1200 × 627px</td><td>LinkedIn</td><td>Conteúdo profissional</td></tr>
+        <tr><td>Ad Feed</td><td>1080 × 1080px</td><td>Meta Ads, Google</td><td>Tráfego pago</td></tr>
+        <tr><td>Ad Story</td><td>1080 × 1920px</td><td>Meta Ads</td><td>Conversão direta</td></tr>
+      </tbody>
+    </table>
+
+    <h3 class="sub">Exemplos de Post</h3>
+    <div class="social-grid">
+      <div class="social-post">
+        <div class="social-post-img" style="background:linear-gradient(135deg,#0B1E6B 0%,#1E4ADB 100%);position:relative">
+          <div style="position:absolute;top:1rem;right:1rem;opacity:.15;font-size:4rem">📊</div>
+          <div style="position:relative;z-index:1">
+            <div class="social-post-post-type">Conteúdo educativo</div>
+            <div class="social-post-headline">3 erros que<br>destroem seu ROAS<br>no Meta Ads</div>
+            <div class="social-post-body">Erro #1: Segmentação<br>Erro #2: Criativo<br>Erro #3: Oferta</div>
+            <div class="social-post-cta">→ Salva pra não esquecer</div>
+          </div>
+        </div>
+        <div class="social-post-label">Feed · Topo de funil · Educação</div>
+      </div>
+      <div class="social-post">
+        <div class="social-post-img" style="background:linear-gradient(160deg,#1E4ADB 0%,#0B1E6B 60%);position:relative">
+          <div style="position:absolute;bottom:0;right:0;width:80px;height:80px;background:radial-gradient(circle,rgba(245,166,35,.3),transparent);border-radius:50%"></div>
+          <div style="position:relative;z-index:1">
+            <div class="social-post-post-type">Prova social</div>
+            <div class="social-post-headline" style="font-size:.875rem">"Em 3 semanas<br>tripliquei meu ROI<br>com o que aprendi."</div>
+            <div class="social-post-body" style="margin-top:.5rem">— Ana Costa, aluna Skolen<br>Formada em Tráfego Pago</div>
+            <div style="margin-top:.75rem;background:var(--amber-400);color:var(--gray-900);font-size:.6rem;font-weight:800;padding:.25rem .625rem;border-radius:var(--radius-full);display:inline-block">VER CURSO →</div>
+          </div>
+        </div>
+        <div class="social-post-label">Feed · Meio de funil · Prova social</div>
+      </div>
+      <div class="social-post">
+        <div class="social-post-img" style="background:linear-gradient(135deg,#F5A623 0%,#E8920A 100%);position:relative">
+          <div style="position:relative;z-index:1;color:var(--gray-900)">
+            <div style="font-size:.5625rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(0,0,0,.5);margin-bottom:.5rem">Última chamada</div>
+            <div style="font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:var(--gray-900);line-height:1.2;margin-bottom:.375rem">Turma fecha<br>em 48 horas</div>
+            <div style="font-size:.6875rem;color:rgba(0,0,0,.6);line-height:1.5;margin-bottom:.875rem">Tráfego Pago Avançado<br>Apenas 3 vagas restantes</div>
+            <div style="background:var(--gray-900);color:#fff;font-size:.6875rem;font-weight:800;padding:.375rem .875rem;border-radius:.5rem;display:inline-block">Garantir minha vaga</div>
+          </div>
+        </div>
+        <div class="social-post-label">Feed · Fundo de funil · Urgência</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── APPLICATIONS ── -->
+  <div class="section" id="applications">
+    <div class="section-eyebrow">Aplicações</div>
+    <h2 class="section-title">Brand in Action</h2>
+    <p class="section-lead">Exemplos de aplicação da identidade em peças reais: email marketing, anúncio de feed e story de conversão.</p>
+    <div class="divider"></div>
+
+    <div class="app-grid">
+      <!-- Email -->
+      <div class="app-frame">
+        <div class="email-header">
+          <div class="logo-inline" style="transform:scale(.85);transform-origin:left">
+            <div class="logo-mark" style="width:28px;height:28px;font-size:.75rem">Sk</div>
+            <div class="logo-wordmark on-dark" style="font-size:1rem">sko<span>len</span></div>
+          </div>
+          <span style="font-size:.625rem;color:rgba(255,255,255,.3)">email marketing</span>
+        </div>
+        <div class="email-content">
+          <p style="font-size:.6875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-600);margin-bottom:.375rem">Turma abre amanhã</p>
+          <div class="email-hero-text">Tráfego Pago que<br>realmente converte.</div>
+          <div class="email-body-text">Aprenda a criar campanhas que geram resultado — não apenas cliques. 8 módulos, 32 aulas, resultado em 4 semanas.</div>
+          <a class="email-cta">Garantir minha vaga →</a>
+          <div style="margin-top:1rem;padding-top:.875rem;border-top:1px solid var(--gray-100);font-size:.6875rem;color:var(--gray-400)">Você recebeu este email porque se inscreveu na Skolen. <span style="color:var(--blue-600)">Descadastrar</span></div>
+        </div>
+        <div class="app-label">Email Marketing — Header + Hero</div>
+      </div>
+
+      <!-- Story -->
+      <div class="app-frame" style="max-width:220px">
+        <div class="story-frame">
+          <div class="story-top">
+            <div class="story-brand">sko<span>len</span></div>
+            <span style="font-size:.5625rem;color:rgba(255,255,255,.4)">patrocinado</span>
+          </div>
+          <div class="story-mid">
+            <div class="story-big">73<span>%</span></div>
+            <div style="font-family:var(--font-heading);font-size:.875rem;font-weight:700;color:#fff;margin-bottom:.375rem">de conclusão.</div>
+            <div class="story-desc">A média do mercado<br>é 13%. A diferença?<br>Método + propósito.</div>
+          </div>
+          <div class="story-bottom">
+            <div class="story-cta">Comece hoje →</div>
+            <div style="font-size:.5625rem;color:rgba(255,255,255,.4);margin-top:.375rem">skolen.com.br</div>
+          </div>
+        </div>
+        <div class="app-label">Story Ad — Conversão</div>
+      </div>
+    </div>
+
+    <!-- Ad Creative -->
+    <h3 class="sub" style="margin-top:2rem">Anúncio de Feed</h3>
+    <div style="max-width:320px">
+      <div class="app-frame">
+        <div class="ad-creative">
+          <div>
+            <div class="ad-eyebrow">Marketing Digital · Skolen</div>
+            <div style="margin-top:.625rem">
+              <div class="ad-headline">Aprenda Tráfego Pago<br><span>do zero ao avançado.</span></div>
+              <div class="ad-sub">8 módulos · 32 aulas práticas<br>Resultado em 4 semanas</div>
+            </div>
+          </div>
+          <div class="ad-cta-row">
+            <div class="ad-cta">Ver curso →</div>
+            <div class="ad-logo-sm">
+              <div class="ad-logo-sm-mark">Sk</div>
+              <div class="ad-logo-sm-text">skolen</div>
+            </div>
+          </div>
+        </div>
+        <div class="app-label">Ad Feed 1:1 — Consideração</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CHECKLIST ── -->
+  <div class="section" id="checklist">
+    <div class="section-eyebrow">Consistência</div>
+    <h2 class="section-title">Checklist de Aprovação</h2>
+    <p class="section-lead">Use este checklist antes de publicar qualquer material da Skolen — seja um post, um anúncio, um email ou uma apresentação.</p>
+    <div class="divider"></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem">
+      <div>
+        <h3 class="sub">Visual</h3>
+        <ul class="checklist">
+          <li>Logo na versão correta para o fundo (claro/escuro)</li>
+          <li>Cores apenas da paleta aprovada</li>
+          <li>Tipografia: Nunito (títulos) + Inter (corpo)</li>
+          <li>Gradientes apenas dos aprovados neste guia</li>
+          <li>Espaço de proteção respeitado ao redor do logo</li>
+          <li>Imagens dentro das diretrizes fotográficas</li>
+          <li>Proporção 60/30/10 de cores respeitada</li>
+          <li class="no">Nenhum hex fora da paleta aprovada</li>
+          <li class="no">Nenhuma fonte diferente de Jakarta + Inter</li>
+          <li class="no">Nenhum efeito no logo (sombra, glow, gradiente)</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="sub">Texto & Mensagem</h3>
+        <ul class="checklist">
+          <li>Foco na conquista do aluno, não nas funcionalidades</li>
+          <li>Linguagem direta, sem jargão de EdTech</li>
+          <li>Tom adequado à etapa do funil (topo/meio/fundo)</li>
+          <li>CTA claro e orientado a ação, não a produto</li>
+          <li>Dados e afirmações verificáveis</li>
+          <li>Português brasileiro correto e sem ambiguidade</li>
+          <li class="no">Nenhum termo da lista de proibidos</li>
+          <li class="no">Sem promessas impossíveis ou linguagem de hype</li>
+          <li class="no">Não use "solução", "plataforma", "e-learning"</li>
+          <li class="no">Não use "adquira", "oportunidade", "jornada"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:var(--gray-900);padding:2.5rem 4rem;margin-top:0">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem">
+      <div>
+        <div style="font-family:var(--font-heading);font-size:1.125rem;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:.25rem">sko<span style="color:var(--amber-400)">len</span></div>
+        <div style="font-size:.75rem;color:rgba(255,255,255,.3)">Brand Guidelines v1.0 · Março 2026</div>
+      </div>
+      <div style="font-size:.75rem;color:rgba(255,255,255,.3);text-align:right">
+        <div>skolen.com.br</div>
+        <div style="margin-top:.25rem">Uso interno — confidencial</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+</div>
+</body>
+</html>

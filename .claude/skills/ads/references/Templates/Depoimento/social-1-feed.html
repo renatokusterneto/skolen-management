@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Feed · Prova Social · MOFU · 1080×1080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow:     #F5C842;
+  --teal:       #5ECBA8;
+  --pink:       #E87DB0;
+  --blue:       #5A8ED4;
+  --text:       #2B3641;
+  --white:      #FFFFFF;
+  --gray-mid:   #8A95A3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 1080px; height: 1080px; overflow: hidden; background: var(--white); }
+body { font-family: 'Nunito', sans-serif; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+
+/* ── Canvas ── */
+#canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#canvas .c-tl {
+  width: 260px; height: 260px;
+  background: var(--pink);
+  top: -80px; left: -80px;
+}
+#canvas .c-tr {
+  width: 180px; height: 180px;
+  background: var(--yellow);
+  top: -50px; right: -50px;
+}
+#canvas .c-bl {
+  width: 200px; height: 200px;
+  background: var(--yellow);
+  bottom: -60px; left: -60px;
+}
+#canvas .c-br {
+  width: 240px; height: 240px;
+  background: var(--pink);
+  bottom: -70px; right: -70px;
+}
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 90px 100px;
+  text-align: center;
+  gap: 36px;
+  z-index: 2;
+}
+
+/* Attribution */
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.avatar {
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink), var(--yellow));
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(232,125,176,0.35);
+}
+.attr-info { text-align: left; }
+.attr-name { font-size: 28px; font-weight: 900; color: var(--text); }
+.attr-role { font-size: 20px; font-weight: 600; color: var(--gray-mid); margin-top: 3px; }
+
+/* Quote card */
+.quote-card {
+  background: #FEF6FA;
+  border: 2px solid rgba(232,125,176,0.25);
+  border-radius: 28px;
+  padding: 48px 60px;
+  max-width: 860px;
+  width: 100%;
+}
+.quote-text {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 0;
+}
+.quote-text em { font-style: normal; color: var(--pink); }
+
+.stars {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.star { width: 34px; height: 34px; flex-shrink: 0; }
+
+/* CTA */
+.cta-btn {
+  background: var(--pink);
+  color: var(--white);
+  font-family: 'Nunito', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  padding: 20px 56px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 10px 28px rgba(232,125,176,0.35);
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  bottom: 52px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 3;
+}
+.logo-text { font-size: 36px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="body">
+    <div class="attribution">
+      <div class="avatar"></div>
+      <div class="attr-info">
+        <p class="attr-name">Diretora Carla M.</p>
+        <p class="attr-role">Escola Privada · Minas Gerais</p>
+      </div>
+    </div>
+
+    <div class="quote-card">
+      <p class="quote-text">
+        A secretária quis usar<br>
+        desde o <em>primeiro dia.</em>
+      </p>
+      <div class="stars">
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="star" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L14.6 9H22L16 13.4L18.2 20.5L12 16.3L5.8 20.5L8 13.4L2 9H9.4Z" fill="#F5C842" stroke="#F5C842" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+
+    <button class="cta-btn">Agende uma demonstração</button>
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark" style="width:40px;height:40px;gap:4px;">
+      <span class="lm-tl" style="width:17px;height:17px"></span>
+      <span class="lm-tr" style="width:17px;height:17px"></span>
+      <span class="lm-bl" style="width:17px;height:17px"></span>
+      <span class="lm-br" style="width:17px;height:17px"></span>
+    </div>
+    <span class="logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Feed 2 · App dos Pais · MOFU · 1080×1080</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --yellow:     #F5C842;
+  --teal:       #5ECBA8;
+  --pink:       #E87DB0;
+  --blue:       #5A8ED4;
+  --text:       #2B3641;
+  --white:      #FFFFFF;
+  --gray-bg:    #F4F5F7;
+  --gray-mid:   #8A95A3;
+  --gray-light: #E8EAED;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Nunito', sans-serif; margin: 0; padding: 0; background: #ECEEF2; }
+
+.circle { border-radius: 50%; position: absolute; }
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.ad-logo-mark.sz40 { width: 40px; height: 40px; }
+.ad-logo-mark.sz40 span { width: 17px; height: 17px; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+.ad-logo-text { font-size: 36px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+
+/* ── Canvas ── */
+#t2-canvas {
+  width: 1080px;
+  height: 1080px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+#t2-canvas .c-tl {
+  width: 260px; height: 260px;
+  background: var(--teal);
+  top: -80px; left: -80px;
+}
+#t2-canvas .c-tr {
+  width: 190px; height: 190px;
+  background: var(--blue);
+  top: -50px; right: -50px;
+}
+#t2-canvas .c-bl {
+  width: 230px; height: 230px;
+  background: var(--blue);
+  bottom: -60px; left: -60px;
+}
+#t2-canvas .c-br {
+  width: 300px; height: 300px;
+  background: var(--teal);
+  bottom: -80px; right: -80px;
+}
+#t2-body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 80px;
+  z-index: 2;
+}
+.t2-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.t2-left .eyebrow {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.t2-left .headline {
+  font-size: 66px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 56px;
+}
+.t2-left .headline em { font-style: normal; color: var(--blue); }
+.t2-left .feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 52px;
+}
+.t2-left .feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+}
+.feature-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Phone mockup */
+.phone-mockup {
+  width: 280px;
+  height: 500px;
+  background: var(--text);
+  border-radius: 36px;
+  padding: 16px 12px;
+  box-shadow: 0 32px 80px rgba(43,54,65,0.28);
+  position: relative;
+  flex-shrink: 0;
+}
+.phone-notch {
+  width: 80px; height: 20px;
+  background: #1a2630;
+  border-radius: 10px;
+  margin: 0 auto 12px;
+}
+.phone-screen {
+  background: var(--white);
+  border-radius: 22px;
+  height: calc(100% - 48px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.phone-topbar {
+  background: var(--pink);
+  padding: 14px 16px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phone-topbar-logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  width: 18px; height: 18px;
+}
+.phone-topbar-logo span { display: block; border-radius: 50%; }
+.phone-topbar-text { font-size: 11px; font-weight: 900; color: var(--white); }
+.phone-tabs {
+  display: flex;
+  border-bottom: 2px solid var(--gray-light);
+  background: var(--white);
+}
+.phone-tab {
+  flex: 1;
+  padding: 8px 4px;
+  font-size: 8px;
+  font-weight: 800;
+  text-align: center;
+  color: var(--gray-mid);
+}
+.phone-tab.active { color: var(--pink); border-bottom: 2px solid var(--pink); margin-bottom: -2px; }
+.phone-content {
+  flex: 1;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.phone-card {
+  background: var(--gray-bg);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phone-card-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.phone-card-lines { flex: 1; display: flex; flex-direction: column; gap: 4px; }
+.phone-line { height: 5px; border-radius: 3px; background: var(--gray-light); }
+.phone-line.accent { background: var(--pink); opacity: 0.5; }
+.phone-line.short { width: 60%; }
+.phone-notif {
+  background: var(--teal);
+  border-radius: 6px;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.phone-notif-icon { width: 14px; height: 14px; background: rgba(255,255,255,0.3); border-radius: 50%; }
+.phone-notif-text { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.phone-notif-text .pl1 { height: 4px; background: rgba(255,255,255,0.7); border-radius: 2px; }
+.phone-notif-text .pl2 { height: 4px; width: 70%; background: rgba(255,255,255,0.4); border-radius: 2px; }
+
+#t2-logo {
+  position: absolute;
+  bottom: 56px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<div id="t2-canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+
+  <div id="t2-body">
+    <div class="t2-left">
+      <p class="eyebrow">App para Famílias</p>
+      <h2 class="headline">
+        Seus pais merecem<br>um <em>app dedicado.</em>
+      </h2>
+      <ul class="feature-list">
+        <li>
+          <span class="feature-dot" style="background:var(--teal)"></span>
+          Comunicados instantâneos
+        </li>
+        <li>
+          <span class="feature-dot" style="background:var(--blue)"></span>
+          Boletos e pagamentos
+        </li>
+        <li>
+          <span class="feature-dot" style="background:var(--pink)"></span>
+          Notas e presença
+        </li>
+      </ul>
+    </div>
+
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="phone-topbar">
+          <div class="phone-topbar-logo">
+            <span style="background:var(--yellow)"></span>
+            <span style="background:var(--teal)"></span>
+            <span style="background:var(--pink)"></span>
+            <span style="background:var(--blue)"></span>
+          </div>
+          <span class="phone-topbar-text">Skolen</span>
+        </div>
+        <div class="phone-tabs">
+          <div class="phone-tab active">Início</div>
+          <div class="phone-tab">Notas</div>
+          <div class="phone-tab">Financeiro</div>
+        </div>
+        <div class="phone-content">
+          <div class="phone-notif">
+            <div class="phone-notif-icon"></div>
+            <div class="phone-notif-text">
+              <div class="pl1"></div>
+              <div class="pl2"></div>
+            </div>
+          </div>
+          <div class="phone-card">
+            <span class="phone-card-dot" style="background:var(--teal)"></span>
+            <div class="phone-card-lines">
+              <div class="phone-line accent"></div>
+              <div class="phone-line short"></div>
+            </div>
+          </div>
+          <div class="phone-card">
+            <span class="phone-card-dot" style="background:var(--blue)"></span>
+            <div class="phone-card-lines">
+              <div class="phone-line" style="background:var(--blue);opacity:0.4"></div>
+              <div class="phone-line short"></div>
+            </div>
+          </div>
+          <div class="phone-card">
+            <span class="phone-card-dot" style="background:var(--yellow)"></span>
+            <div class="phone-card-lines">
+              <div class="phone-line" style="background:var(--yellow);opacity:0.5"></div>
+              <div class="phone-line short"></div>
+            </div>
+          </div>
+          <div class="phone-card">
+            <span class="phone-card-dot" style="background:var(--pink)"></span>
+            <div class="phone-card-lines">
+              <div class="phone-line" style="background:var(--pink);opacity:0.4"></div>
+              <div class="phone-line short"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="t2-logo">
+    <div class="ad-logo-mark sz40">
+      <span class="lm-tl"></span>
+      <span class="lm-tr"></span>
+      <span class="lm-bl"></span>
+      <span class="lm-br"></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>
