@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/felipe.fadel/vivavr-claude/**)",
+      "mcp__meta-mcp__meta_debug_token",
+      "mcp__meta-mcp__ig_get_account_insights",
+      "mcp__meta-mcp__meta_exchange_token",
+      "mcp__meta-mcp__ig_get_media_list",
+      "Bash(python3 -c ' *)",
+      "Edit(/.claude/skills/sheets-post/**)"
+    ]
+  }
+}
