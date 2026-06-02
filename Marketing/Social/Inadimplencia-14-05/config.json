@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/Inadimplencia-14-05",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Financeira",
+      "headline": "Inadimplência não é só<br>problema financeiro. É <em>sinal.</em>",
+      "subhead": "Atraso no pagamento é sinal de<br>que o aluno já está de saída."
+    },
+    {
+      "tipo": "text",
+      "label": "A crença comum",
+      "headline": "Inadimplência parece<br>um problema de <em>cobrança.</em>",
+      "body": "A maioria das escolas trata como financeiro.<br>Liga, cobra, negocia. Mas o vínculo já foi."
+    },
+    {
+      "tipo": "number",
+      "label": "O sinal que a escola ignora",
+      "stat": "72%",
+      "stat_label": "dos alunos que cancelam<br>tiveram atraso nos 60 dias antes"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Sinal de risco, não só dívida",
+      "headline": "Inadimplência lida cedo<br><em>vira retenção.</em>",
+      "features": [
+        "Atraso como alerta de risco",
+        "Ação antes do cancelamento",
+        "Retenção e cobrança integradas"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A lógica real",
+      "headline": "O atraso é sintoma.<br>O risco veio <em>antes.</em>",
+      "body": "Quando o aluno atrasa, o vínculo já está enfraquecendo.<br>Quem age só na cobrança chega tarde demais."
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas que leem o sinal cedo",
+      "stat": "40%",
+      "stat_label": "menos evasão entre alunos<br>com risco de inadimplência"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Inadimplência como sinal",
+      "headline": "O sinal estava lá.<br>Agora você pode <em>ver.</em>",
+      "subhead": "Veja risco de evasão<br>antes de virar cancelamento.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/IndicacoesPerdidas-14-05",
+  "cor_dominante": "yellow",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "O aluno insatisfeito<br>não indica. <em>Nunca indicou.</em>",
+      "subhead": "O problema não é só o aluno que saiu.<br>É o que ele não trouxe."
+    },
+    {
+      "tipo": "text",
+      "label": "O custo invisível",
+      "headline": "Cada cancelamento esconde<br>uma indicação <em>perdida.</em>",
+      "body": "O aluno que saiu insatisfeito não só parou de pagar.<br>Deixou de trazer familiares, amigos, colegas de trabalho."
+    },
+    {
+      "tipo": "number",
+      "label": "Crescimento orgânico escolar",
+      "stat": "65%",
+      "stat_label": "das matrículas vêm de<br>indicação em escolas de idiomas"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "O que retenção gera",
+      "headline": "Aluno retido indica.<br><em>Aluno perdido, não.</em>",
+      "features": [
+        "Mais matrículas por indicação",
+        "Custo de aquisição menor",
+        "Crescimento orgânico constante"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "O efeito cascata",
+      "headline": "Um aluno perdido vale<br><em>mais que uma matrícula.</em>",
+      "body": "Além da mensalidade perdida, a escola perde as indicações,<br>as renovações e o boca a boca que ele teria gerado."
+    },
+    {
+      "tipo": "number",
+      "label": "Boca a boca no setor",
+      "stat": "3+",
+      "stat_label": "novos alunos indicados<br>por cada aluno retido"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Retenção que cresce sozinha",
+      "headline": "Quer que seus alunos<br><em>tragam novos alunos?</em>",
+      "subhead": "Skolen identifica risco<br>antes da indicação se perder.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

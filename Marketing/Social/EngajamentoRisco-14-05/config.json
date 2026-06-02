@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/EngajamentoRisco-14-05",
+  "cor_dominante": "yellow",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Frequência não é só presença.<br>É <em>sinal de risco.</em>",
+      "subhead": "O aluno que falta mais está dizendo algo.<br>Sua escola está ouvindo?"
+    },
+    {
+      "tipo": "text",
+      "label": "A leitura comum",
+      "headline": "Falta significa falta.<br><em>Só isso, certo?</em>",
+      "body": "A escola registra presença. Marca falta. Notifica os pais.<br>Mas não conecta a frequência com risco de evasão."
+    },
+    {
+      "tipo": "number",
+      "label": "O que a falta realmente diz",
+      "stat": "80%",
+      "stat_label": "dos alunos que cancelam<br>reduziram frequência antes"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Engajamento como indicador",
+      "headline": "Frequência lida cedo<br><em>evita cancelamento.</em>",
+      "features": [
+        "Frequência como sinal de risco",
+        "Ação antes do afastamento",
+        "Leitura contínua, não pontual"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "Por que importa",
+      "headline": "Afastamento começa antes<br>da <em>primeira falta.</em>",
+      "body": "O vínculo enfraquece antes da frequência cair.<br>Quando a escola monitora ambos, age antes da perda."
+    },
+    {
+      "tipo": "number",
+      "label": "Monitoramento contínuo",
+      "stat": "2×",
+      "stat_label": "mais cedo ao monitorar<br>frequência continuamente"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Da presença ao engajamento",
+      "headline": "Quer ler frequência<br>como <em>sinal de risco?</em>",
+      "subhead": "Skolen lê frequência<br>como sinal de retenção.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

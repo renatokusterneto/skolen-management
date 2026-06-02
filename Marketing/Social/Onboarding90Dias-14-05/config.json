@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/Onboarding90Dias-14-05",
+  "cor_dominante": "yellow",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Os primeiros 90 dias<br>definem quem <em>fica.</em>",
+      "subhead": "A escola só descobre isso<br>quando o aluno já foi embora."
+    },
+    {
+      "tipo": "text",
+      "label": "O período crítico",
+      "headline": "Novo aluno não significa<br><em>aluno retido.</em>",
+      "body": "Os primeiros meses são o momento em que o vínculo se forma.<br>Ou não. E quando não se forma, o cancelamento vem rápido."
+    },
+    {
+      "tipo": "number",
+      "label": "Evasão no início do vínculo",
+      "stat": "45%",
+      "stat_label": "dos cancelamentos acontecem<br>nos primeiros 6 meses"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Onboarding como retenção",
+      "headline": "Os 90 dias que definem<br><em>quem fica por anos.</em>",
+      "features": [
+        "Primeiras semanas monitoradas",
+        "Vínculo formado com intenção",
+        "Risco de saída detectado cedo"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "O ponto cego",
+      "headline": "A escola recebe o aluno.<br>Não <em>forma o vínculo.</em>",
+      "body": "Matrícula feita, a escola segue em frente. Mas o novo aluno<br>ainda está descobrindo se vale a pena ficar."
+    },
+    {
+      "tipo": "number",
+      "label": "Com onboarding estruturado",
+      "stat": "30%",
+      "stat_label": "menos evasão precoce<br>nos primeiros 6 meses"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "90 dias que fazem a diferença",
+      "headline": "Quer que o aluno novo<br><em>queira ficar?</em>",
+      "subhead": "O início define quem fica.<br>Skolen monitora esse período.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/GestaoPeloFeeling-14-05",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Intuição não é gestão.<br>É <em>risco disfarçado.</em>",
+      "subhead": "Decidir pelo feeling é normal.<br>Mas caro."
+    },
+    {
+      "tipo": "text",
+      "label": "A crença do gestor",
+      "headline": "Experiência basta<br>para <em>decidir bem.</em>",
+      "body": "A maioria dos diretores tem anos de experiência.<br>E mesmo assim perde alunos que deram sinais claros."
+    },
+    {
+      "tipo": "number",
+      "label": "Sinais ignorados no feeling",
+      "stat": "8/10",
+      "stat_label": "cancelamentos tiveram sinais<br>visíveis antes de acontecer"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Dado acionável, não feeling",
+      "headline": "Gestão forte começa<br><em>onde o dado fala.</em>",
+      "features": [
+        "Sinais visíveis para o time",
+        "Decisão baseada em padrão",
+        "Menos surpresa, mais previsão"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "O custo do feeling",
+      "headline": "Sem dado, a decisão<br><em>chega tarde.</em>",
+      "body": "O gestor experiente ainda erra quando não tem leitura.<br>Não por falta de vontade. Por falta de dado acionável."
+    },
+    {
+      "tipo": "number",
+      "label": "Com leitura acionável",
+      "stat": "3×",
+      "stat_label": "mais assertivo ao identificar<br>risco de evasão com dado"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Do feeling para o dado",
+      "headline": "Quer decidir com<br><em>clareza, não intuição?</em>",
+      "subhead": "Skolen transforma sinais<br>em decisão acionável.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

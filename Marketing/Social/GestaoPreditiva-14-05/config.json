@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/GestaoPreditiva-14-05",
+  "cor_dominante": "pink",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Sua escola ainda reage.<br>Poderia <em>prever.</em>",
+      "subhead": "A diferença entre reter e perder alunos<br>está em quando você age."
+    },
+    {
+      "tipo": "text",
+      "label": "Estado atual",
+      "headline": "A escola corre atrás<br>do que <em>já aconteceu.</em>",
+      "body": "Relatório chega tarde. Cancelamento é surpresa.<br>A equipe apaga incêndio. O risco não foi lido antes."
+    },
+    {
+      "tipo": "number",
+      "label": "O custo da reação tardia",
+      "stat": "5×",
+      "stat_label": "mais caro recuperar<br>do que reter antes de cancelar"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Gestão preditiva na prática",
+      "headline": "Ver risco cedo<br><em>muda o resultado.</em>",
+      "features": [
+        "Risco visível antes da evasão",
+        "Ação com prioridade clara",
+        "Decisão antes do cancelamento"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "Novo estado",
+      "headline": "A escola que prevê<br>retém <em>mais.</em>",
+      "body": "Quando a gestão acompanha sinais de engajamento,<br>a equipe sabe onde agir antes de perder o aluno."
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas com visão antecipada",
+      "stat": "3×",
+      "stat_label": "mais efetivas para reter alunos<br>em risco de evasão"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "De reativa para preditiva",
+      "headline": "Quer agir antes<br>do <em>cancelamento?</em>",
+      "subhead": "Skolen mostra o risco<br>antes de virar custo.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

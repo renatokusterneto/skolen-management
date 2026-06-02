@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/EquipeSemPrioridade-14-05",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Cada setor vê uma parte.<br>Ninguém vê o <em>todo.</em>",
+      "subhead": "Quando a visão é fragmentada,<br>a equipe age sem prioridade."
+    },
+    {
+      "tipo": "text",
+      "label": "O problema real",
+      "headline": "Sua escola trabalha muito.<br>Age <em>pouco.</em>",
+      "body": "Cada setor registra informações separadas.<br>Sem conexão, sem leitura, sem ação compartilhada."
+    },
+    {
+      "tipo": "number",
+      "label": "Dado solto não gera ação",
+      "stat": "3+",
+      "stat_label": "sistemas separados para<br>gerir o mesmo aluno"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Quando ninguém vê o todo",
+      "headline": "A prioridade se perde<br><em>no meio do ruído.</em>",
+      "features": [
+        "Coordenação apaga incêndios",
+        "Riscos ficam sem resposta",
+        "Decisão fica no feeling"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "Custo invisível",
+      "headline": "A equipe corre.<br>Mas não <em>sabe onde.</em>",
+      "body": "Quando cada setor enxerga só o que é seu,<br>ninguém vê o risco antes de virar urgência."
+    },
+    {
+      "tipo": "number",
+      "label": "Visão centralizada muda isso",
+      "stat": "2×",
+      "stat_label": "mais rápido para identificar<br>risco antes da evasão"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "De setor para visão total",
+      "headline": "Sua equipe merece ver<br><em>o todo, não partes.</em>",
+      "subhead": "O Skolen une os sinais.<br>Sua equipe age com prioridade.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

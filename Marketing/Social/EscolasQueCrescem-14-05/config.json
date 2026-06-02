@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/EscolasQueCrescem-14-05",
+  "cor_dominante": "pink",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Mesma cidade. Mesmo esforço.<br>Uma cresce. A outra <em>não.</em>",
+      "subhead": "O que separa escolas que crescem<br>das que estacionam não é talento."
+    },
+    {
+      "tipo": "text",
+      "label": "Escola reativa",
+      "headline": "Reage ao resultado.<br>Não vê o <em>caminho.</em>",
+      "body": "Capta muito. Perde muito. Repete o ciclo.<br>A operação funciona — mas a escola não avança."
+    },
+    {
+      "tipo": "number",
+      "label": "O custo do ciclo vicioso",
+      "stat": "40%",
+      "stat_label": "do esforço de captação<br>recupera perda de retenção"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Escola que cresce",
+      "headline": "Vê risco antes.<br><em>Age, não reage.</em>",
+      "features": [
+        "Retenção como prioridade real",
+        "Sinais lidos antes da evasão",
+        "Crescimento com base sólida"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "Novo estado",
+      "headline": "Crescimento orgânico<br>começa na <em>retenção.</em>",
+      "body": "Quando a escola retém mais, capta menos para crescer.<br>O ciclo vira vantagem — não corrida."
+    },
+    {
+      "tipo": "number",
+      "label": "Retenção como vantagem",
+      "stat": "5×",
+      "stat_label": "mais barato reter<br>do que substituir um aluno perdido"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "De estagnada para crescente",
+      "headline": "Quer crescer retendo,<br><em>não só captando?</em>",
+      "subhead": "Skolen mostra onde está o risco<br>antes de virar perda.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

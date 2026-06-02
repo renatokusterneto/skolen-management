@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/Retencao-Ingles-11-04",
+  "cor_dominante": "pink",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Sua escola perde alunos<br>no final do ano <em>sem perceber.</em>",
+      "subhead": "O vínculo já enfraqueceu antes<br>do cancelamento chegar."
+    },
+    {
+      "tipo": "text",
+      "label": "O problema real",
+      "headline": "A evasão começa<br><em>antes do aviso.</em>",
+      "body": "Quando o aluno cancela em dezembro,<br>o distanciamento <strong>começou meses antes.</strong><br>Sua escola estava vendo esse sinal?"
+    },
+    {
+      "tipo": "number",
+      "label": "Final de ano · Retenção",
+      "stat": "70%",
+      "stat_label": "dos alunos que cancelam<br><em>deram sinais</em> semanas antes"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Retenção de Ponta a Ponta",
+      "headline": "Engajamento como<br><em>indicador de risco</em>",
+      "features": [
+        "Sinais de risco por aluno",
+        "Acompanhamento em tempo real",
+        "Ação antes da evasão"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A lógica certa",
+      "headline": "Não basta saber<br>que o aluno <em>sumiu.</em>",
+      "body": "A escola precisa ver o <strong>enfraquecimento antes do cancelamento.</strong><br>Isso separa gestão reativa<br>de gestão inteligente."
+    },
+    {
+      "tipo": "number",
+      "label": "O custo da demora",
+      "stat": "5×",
+      "stat_label": "mais caro recuperar<br><em>do que ter retido</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Quer ver risco de evasão<br><em>antes que aconteça?</em>",
+      "subhead": "Demonstração gratuita em 30 minutos.<br>Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

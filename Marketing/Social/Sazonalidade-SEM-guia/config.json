@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/Sazonalidade-SEM-guia",
+  "cor_dominante": "pink",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Sua escola perde mais<br>alunos no<br><em>fim do ano.</em>",
+      "subhead": "Todo ano o mesmo<br>ciclo se repete."
+    },
+    {
+      "tipo": "text",
+      "label": "O padrão que ninguém vê",
+      "headline": "Evasão não é<br><em>aleatória.</em>",
+      "body": "Ela segue um calendário.<br>Férias, troca de semestre,<br>final de ano — os mesmos meses, sempre."
+    },
+    {
+      "tipo": "number",
+      "label": "Concentração do risco",
+      "stat": "60%",
+      "stat_label": "dos cancelamentos acontecem<br><em>em apenas 3 meses do ano</em>"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "O que o Skolen monitora",
+      "headline": "Risco antes<br>do<br><em>pico chegar</em>",
+      "features": [
+        "Alertas por periodo do ano",
+        "Historico de evasao por mes",
+        "Acao preventiva antecipada"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A virada",
+      "headline": "Agir antes<br><em>muda o resultado.</em>",
+      "body": "Escola que conhece seus picos de risco<br>age com antecedencia.<br><strong>Nao espera o cancelamento chegar.</strong>"
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas que monitoram sazonalidade",
+      "stat": "3×",
+      "stat_label": "mais retencao<br><em>nos meses criticos</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Prepare sua escola",
+      "headline": "Quer ver seus<br>picos de<br><em>risco?</em>",
+      "subhead": "Demonstracao gratuita.<br>Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

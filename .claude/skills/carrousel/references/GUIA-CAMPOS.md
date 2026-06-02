@@ -3,186 +3,186 @@
 
 ---
 
+## Regra de equilíbrio visual (leia antes de escrever qualquer headline)
+
+A quebra de linha (`<br>`) num headline **não é uma decisão de texto — é uma decisão visual.**
+Uma linha muito curta isolada num headline quebra o ritmo e distrai o leitor.
+
+### A regra dos 40%
+
+Nenhuma linha pode ter menos de **40% do comprimento da linha mais longa** do mesmo campo.
+
+```
+ERRADO — "muito." fica isolado
+
+  Sua equipe trabalha    <- 20 chars
+  muito.                 <- 6 chars   <- 30% da maior = QUEBRA ERRADA
+  Mas no lugar certo?    <- 19 chars
+
+CERTO — duas linhas equilibradas
+
+  Sua equipe trabalha muito.   <- 26 chars
+  Mas no lugar certo?          <- 19 chars  (73% da maior = OK)
+```
+
+### Como aplicar na prática
+
+1. Escreva o texto completo sem `<br>`.
+2. Identifique o ponto de pausa natural (virgula, ponto, contraste de ideia).
+3. Conte os chars de cada linha resultante.
+4. Se a linha mais curta for menor que 40% da mais longa, mova o `<br>` uma palavra para frente ou para tras.
+5. A palavra com `<em>` deve ficar **na ultima linha** — reforca o destaque visual.
+
+### Exemplos rapidos
+
+| Errado | Certo | Por que |
+|--------|-------|---------|
+| `Sua escola<br>perdeu alunos<br><em>sem perceber.</em>` | `Sua escola perdeu<br>alunos <em>sem perceber.</em>` | 2x `<br>` no cover deixa o texto minusculo |
+| `O aluno ja<br>deu <em>sinais.</em>` | `O aluno ja deu <em>sinais.</em>` | Ambas as linhas sao curtas — melhor uma linha so |
+| `Enxergar<br>antes de <em>perder.</em>` | `Enxergar antes<br>de <em>perder.</em>` | "Enxergar" isolado (9 chars) vs 20 = 45% — no limite, evitar |
+
+### Checklist antes de salvar o config.json
+
+- [ ] Nenhuma linha do headline tem menos de 40% da linha mais longa
+- [ ] A palavra com `<em>` esta na ultima linha
+- [ ] Headline do cover e CTA tem no maximo 1 `<br>`
+- [ ] Subhead tem no maximo 1 `<br>`
+- [ ] Nenhum campo ultrapassa o limite de caracteres da tabela do seu slide
+
+---
+
 ## SLIDE 01 — Cover
 
-### Opções de arquivo
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Eyebrow** | 22 chars | — | Nao |
+| **Headline** | 55 chars | 30 chars | Max. 1 |
+| **Subhead** | 65 chars | 35 chars | Max. 1 |
 
-| Arquivo | Layout |
-|---------|--------|
-| `slide-01-cover.html` | Só texto, centralizado |
-| `slide-01-cover-imagem.html` | Imagem vertical (esquerda) + texto (direita) |
-| `slide-01-cover-imagem-b.html` | Imagem horizontal (topo) + texto (baixo) |
-| `slide-01-cover-imagem-c.html` | Texto (topo) + imagem horizontal (baixo) |
-
-### Campos editáveis
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Eyebrow** (título superior) | `.eyebrow` | **22 chars** | `Gestão Escolar` |
-| **Headline** (título principal) | `<h1 class="headline">` | **55 chars** (com `<br>`) | `Sua escola ainda perde tempo com papel?` |
-| **Subhead** (descrição) | `<p class="subhead">` | **65 chars** (com `<br>`) | `Descubra os 5 sinais que pedem modernização urgente` |
-| **Seta** (texto fixo) | `.swipe-hint > span` | **22 chars** | `deslize para ver` |
-| **Imagem** *(versões com imagem)* | atributo `src` da `<img>` | URL ou caminho local | `photo-....jpg` |
-
-> **Headline na versão imagem (A):** máx. **35 chars por linha**, até 3 linhas  
-> **Headline na versão imagem (B e C):** máx. **45 chars**, até 2 linhas
+Exemplo valido:
+```json
+{
+  "tipo": "cover",
+  "eyebrow": "Gestao Escolar",
+  "headline": "Sua escola ja perdeu<br>alunos <em>sem perceber.</em>",
+  "subhead": "A evasao comeca antes do cancelamento."
+}
+```
 
 ---
 
 ## SLIDE 02 — Texto
 
-### Opções de arquivo
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Label** | 22 chars | — | Nao |
+| **Headline** | 40 chars | 22 chars | Max. 1 |
+| **Body** | 130 chars | 45 chars | Max. 2 · quebrar em virgula ou ponto |
 
-| Arquivo | Layout |
-|---------|--------|
-| `slide-02-text.html` | Label + Headline + Card com 3 bullets |
-| `slide-02-text-sem-card.html` | Label + Headline + Texto corrido |
-| `slide-02-text-sem-card-b.html` | Idem (cópia para conteúdo alternativo) |
-
-### Campos editáveis
-
-**`slide-02-text.html` (com card)**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Label** (pílula superior) | `.label` | **18 chars** | `Sinal #1` |
-| **Headline** | `<h2 class="headline">` | **40 chars** (com `<br>`) | `Tempo perdido em tarefas manuais` |
-| **Bullet 1** | 1º `.bullet-item > span` | **32 chars** | `Dados digitados várias vezes` |
-| **Bullet 2** | 2º `.bullet-item > span` | **32 chars** | `Erros e retrabalho frequentes` |
-| **Bullet 3** | 3º `.bullet-item > span` | **32 chars** | `Gestão no apagar incêndios` |
-
-**`slide-02-text-sem-card.html` (sem card)**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Label** | `.label` | **18 chars** | `Sinal #1` |
-| **Headline** | `<h2 class="headline">` | **40 chars** (com `<br>`) | `Tempo perdido em tarefas manuais` |
-| **Texto corrido** | `<p class="body-text">` | **130 chars** (com `<br>`) | `Sua secretaria não pode gastar o dia inteiro em planilhas...` |
+Exemplo valido:
+```json
+{
+  "tipo": "text",
+  "label": "O problema real",
+  "headline": "A evasao comeca<br><em>antes do aviso.</em>",
+  "body": "Quando o aluno cancela em dezembro,<br>o distanciamento <strong>comecou meses antes.</strong><br>Sua escola estava vendo esse sinal?"
+}
+```
 
 ---
 
-## SLIDE 03 — Número ou Texto
+## SLIDE 03 — Numero
 
-### Opções de arquivo
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Label** | 30 chars | — | Nao |
+| **Stat** | 6 chars | — | Nao |
+| **Stat label** | 55 chars | 30 chars | Max. 1 · `<em>` na ultima linha |
 
-| Arquivo | Layout |
-|---------|--------|
-| `slide-03-number-social.html` | Número grande + label + divisor |
-| `slide-03-text-sem-card.html` | Label + Headline + Texto corrido |
-| `slide-03-text-sem-card-b.html` | Idem (cópia para conteúdo alternativo) |
-
-### Campos editáveis
-
-**`slide-03-number-social.html` (número)**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Label** (topo) | `.label` | **30 chars** | `Sinal #2 · Inadimplência` |
-| **Número/Stat** | `<div class="stat">` | **6 chars** | `68%` |
-| **Descrição do stat** | `<h2 class="stat-label">` | **55 chars** (com `<br>`) | `de redução na inadimplência em menos de 60 dias` |
-
-**`slide-03-text-sem-card.html` (texto)** → mesmos campos do slide 02 sem card
+Exemplo valido:
+```json
+{
+  "tipo": "number",
+  "label": "Quando a escola descobre",
+  "stat": "8/10",
+  "stat_label": "alunos deram sinais<br><em>antes de cancelar</em>"
+}
+```
 
 ---
 
-## SLIDE 04 — App ou Imagem
+## SLIDE 04 — App
 
-### Opções de arquivo
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Eyebrow** | 30 chars | — | Nao |
+| **Headline** | 38 chars | 22 chars | Max. 1 · regra 40% |
+| **Feature 1/2/3** | 30 chars cada | — | Nao — cada feature e uma linha unica |
 
-| Arquivo | Layout |
-|---------|--------|
-| `slide-04-app.html` | Texto + lista de features + mockup de app |
-| `slide-04-cover-imagem.html` | Imagem vertical (esquerda) + texto (direita) |
-| `slide-04-cover-imagem-b.html` | Imagem horizontal (topo) + texto (baixo) |
-| `slide-04-cover-imagem-c.html` | Texto (topo) + imagem horizontal (baixo) |
-
-### Campos editáveis
-
-**`slide-04-app.html`**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Eyebrow** | `.eyebrow` | **30 chars** | `Sinal #3 · App para Famílias` |
-| **Headline** | `<h2 class="headline">` | **38 chars** (com `<br>`) | `Pais conectados, escola organizada` |
-| **Feature 1** | 1º `.feature-list li` | **30 chars** | `Comunicados em tempo real` |
-| **Feature 2** | 2º `.feature-list li` | **30 chars** | `Boletos e pagamentos no app` |
-| **Feature 3** | 3º `.feature-list li` | **30 chars** | `Notas e presença na palma da mão` |
-
-**Versões com imagem** → mesmos campos do Slide 01 versões com imagem
+Exemplo valido:
+```json
+{
+  "tipo": "app",
+  "eyebrow": "O que passa invisivel",
+  "headline": "Sinais que a escola<br><em>nao ve</em>",
+  "features": [
+    "Queda de presenca semanal",
+    "Sem resposta a comunicados",
+    "Menos engajamento no dia a dia"
+  ]
+}
+```
 
 ---
 
-## SLIDE 05 — Social (Quote) ou Texto
+## SLIDE 05 — Texto
 
-### Opções de arquivo
-
-| Arquivo | Layout |
-|---------|--------|
-| `slide-05-number-social.html` | Quote limpa centralizada (sem card, sem avatar) |
-| `slide-05-text-sem-card.html` | Label + Headline + Texto corrido |
-| `slide-05-text-sem-card-b.html` | Idem (cópia para conteúdo alternativo) |
-
-### Campos editáveis
-
-**`slide-05-number-social.html` (quote)**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Citação** | `<p class="quote-text">` | **85 chars** (com `<br>`) | `"Agora tenho tempo pra atender bem os pais, em vez de digitar planilha."` |
-| **Autor** | `<p class="quote-author">` | **55 chars** | `Carla S., Secretária · Escola em Belo Horizonte` |
-
-**`slide-05-text-sem-card.html`** → mesmos campos do slide 02 sem card
+Mesmos campos e regras do Slide 02.
 
 ---
 
-## SLIDE 06 — Número ou Texto
+## SLIDE 06 — Numero
 
-### Opções de arquivo
-
-| Arquivo | Layout |
-|---------|--------|
-| `slide-06-number-social.html` | Número grande + label + divisor |
-| `slide-06-text-sem-card.html` | Label + Headline + Texto corrido |
-| `slide-06-text-sem-card-b.html` | Idem (cópia para conteúdo alternativo) |
-
-### Campos editáveis
-
-**`slide-06-number-social.html` (número)**
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Label** (topo) | `.label` | **30 chars** | `Sinal #5 · Matrículas` |
-| **Número/Stat** | `<div class="stat">` | **6 chars** | `3×` |
-| **Descrição do stat** | `<h2 class="stat-label">` | **55 chars** (com `<br>`) | `mais rápido para fechar matrículas online` |
-
-**`slide-06-text-sem-card.html`** → mesmos campos do slide 02 sem card
+Mesmos campos e regras do Slide 03.
 
 ---
 
 ## SLIDE 07 — CTA
 
-### Opções de arquivo
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Eyebrow** | 28 chars | — | Nao |
+| **Headline** | 45 chars | 25 chars | Max. 1 · `<em>` na ultima linha |
+| **Subhead** | 55 chars | 30 chars | Max. 1 · regra 40% |
+| **Button** | 28 chars | — | Nao |
 
-| Arquivo | Layout |
-|---------|--------|
-| `slide-07-cta.html` | Fundo branco, headline, subhead, botão verde |
-
-### Campos editáveis
-
-| Campo | Onde editar | Máx. caracteres | Exemplo atual |
-|-------|-------------|-----------------|---------------|
-| **Eyebrow** (título superior) | `.eyebrow` | **28 chars** | `Transforme sua escola` |
-| **Headline** | `<h2 class="headline">` | **45 chars** (com `<br>`) | `Pronto para modernizar sua gestão?` |
-| **Subhead** (descrição) | `<p class="subhead">` | **55 chars** (com `<br>`) | `Demonstração gratuita em 30 minutos. Sem compromisso.` |
-| **Botão** | `<button class="cta-btn">` | **28 chars** | `Agendar Demonstração` |
+Exemplo valido:
+```json
+{
+  "tipo": "cta",
+  "eyebrow": "Sua escola pode chegar antes",
+  "headline": "Quer ver risco de<br><em>evasao antes?</em>",
+  "subhead": "Mostre como o Skolen<br>funciona na pratica.",
+  "button": "Solicitar Demonstracao"
+}
+```
 
 ---
 
-## Regras gerais
+## Formatacao inline
 
-- **Negrito / destaque** no texto: usar `<em>` (itálico desabilitado, renderiza na cor de destaque do slide)  
-  Ex: `perde tempo com <em>papel?</em>`
-- **Quebra de linha manual**: usar `<br>` dentro das tags de texto
-- **Cor dos bullets** (slides 02/04): trocar `background:var(--yellow)` por `--pink`, `--teal` ou `--blue`
-- **Imagens**: substituir o atributo `src` da `<img>` por URL ou caminho local relativo
-- **Não alterar** tamanhos de fonte, paddings ou estrutura HTML para garantir que o layout não quebre
+| Sintaxe | Efeito | Quando usar |
+|---------|--------|-------------|
+| `<em>texto</em>` | Cor dominante do slide | Palavra-chave da headline — sempre na ultima linha |
+| `<strong>texto</strong>` | Negrito extra | Apenas no campo `body` do slide de texto |
+| `<br>` | Quebra de linha | Seguir os limites por campo acima |
+
+---
+
+## O que nunca fazer
+
+- Dois `<br>` em headline de cover ou CTA
+- `<em>` em mais de uma palavra por headline
+- Feature do slide app com `<br>` — cada feature e uma linha unica
+- Headline com linha isolada de 1 a 2 palavras (`muito.` / `nao.` / `cedo.`)
+- Subhead com 3 linhas — se nao couber em 2, corte o texto

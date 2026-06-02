@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/Evasao-09-04",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Sua escola já perdeu<br>alunos <em>sem perceber.</em>",
+      "subhead": "A evasão começa antes do cancelamento."
+    },
+    {
+      "tipo": "text",
+      "label": "O problema real",
+      "headline": "O aluno já<br>deu <em>sinais.</em>",
+      "body": "Falta de presença, queda de engajamento,<br>menos interação. Os sinais existem.<br>Mas sem leitura clara, <strong>ninguém conecta os pontos.</strong>"
+    },
+    {
+      "tipo": "number",
+      "label": "Quando a escola descobre",
+      "stat": "8/10",
+      "stat_label": "alunos deram sinais<br><em>antes de cancelar</em>"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "O que passa invisível",
+      "headline": "Sinais que a escola<br><em>não vê</em>",
+      "features": [
+        "Queda de presença semanal",
+        "Sem resposta a comunicados",
+        "Menos engajamento no dia a dia"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A virada",
+      "headline": "Enxergar antes<br>de <em>perder.</em>",
+      "body": "Quando a gestão monitora engajamento<br>como risco, a equipe age antes.<br><strong>É isso que muda a retenção.</strong>"
+    },
+    {
+      "tipo": "number",
+      "label": "Escola que age cedo",
+      "stat": "5×",
+      "stat_label": "mais barato reter<br><em>do que reconquistar</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Sua escola pode chegar antes",
+      "headline": "Quer ver risco de<br><em>evasão antes?</em>",
+      "subhead": "Mostre como o Skolen<br>funciona na prática.",
+      "button": "Solicitar Demonstração"
+    }
+  ]
+}

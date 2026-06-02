@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/DadosVsVisao-14-05",
+  "cor_dominante": "yellow",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Sua escola tem dados.<br>Mas não tem <em>visão.</em>",
+      "subhead": "Informação sem leitura<br>não muda o resultado."
+    },
+    {
+      "tipo": "text",
+      "label": "A crença comum",
+      "headline": "Relatório não é<br>gestão <em>de verdade.</em>",
+      "body": "A escola olha o passado.<br>Vê o que aconteceu. Não vê o que<br>está <strong>prestes a acontecer.</strong>"
+    },
+    {
+      "tipo": "number",
+      "label": "O problema não é falta de dado",
+      "stat": "3+",
+      "stat_label": "sistemas diferentes guardam<br>dados do mesmo aluno"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "O que a visão muda",
+      "headline": "Dado disperso<br>vira <em>ação clara.</em>",
+      "features": [
+        "Risco identificado cedo",
+        "Prioridade para a equipe",
+        "Decisão antes da perda"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A virada",
+      "headline": "Não falta dado.<br>Falta <em>leitura.</em>",
+      "body": "Quando os sinais ficam espalhados,<br>a equipe reage tarde. Quando estão<br><strong>centralizados, ela age cedo.</strong>"
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas com visão centralizada",
+      "stat": "2×",
+      "stat_label": "mais rápidas para identificar<br><em>risco de evasão</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Da informação à ação",
+      "headline": "O Skolen transforma<br>dado em <em>decisão.</em>",
+      "subhead": "Visibilidade real para agir<br>antes da evasão.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

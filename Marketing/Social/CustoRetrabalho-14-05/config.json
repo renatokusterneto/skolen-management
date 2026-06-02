@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/CustoRetrabalho-14-05",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestão Escolar",
+      "headline": "Sua equipe trabalha muito.<br>Mas no <em>lugar certo?</em>",
+      "subhead": "Sem leitura central, o esforço<br>vira retrabalho — não resultado."
+    },
+    {
+      "tipo": "text",
+      "label": "O paradoxo escolar",
+      "headline": "Mais esforço não garante<br><em>mais retenção.</em>",
+      "body": "A escola se esforça. A equipe se dedica. Mas se não há<br>leitura central, o esforço vai para o lugar errado."
+    },
+    {
+      "tipo": "number",
+      "label": "O custo do trabalho sem foco",
+      "stat": "70%",
+      "stat_label": "das ações são reativas<br>sem leitura centralizada"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Com leitura central",
+      "headline": "Cada ação no lugar<br><em>certo, na hora certa.</em>",
+      "features": [
+        "Prioridade clara para o time",
+        "Ação no risco, não no sintoma",
+        "Resultado sem aumentar equipe"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "Por que acontece",
+      "headline": "O problema não é falta<br>de esforço. É <em>de foco.</em>",
+      "body": "Quando cada setor atua sem saber o que o outro vê,<br>a equipe trabalha em silos. O esforço se perde."
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas com visão centralizada",
+      "stat": "60%",
+      "stat_label": "mais eficientes ao agir<br>sobre risco de evasão"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Esforço com direção",
+      "headline": "Quer que sua equipe<br><em>aja no lugar certo?</em>",
+      "subhead": "Skolen dá leitura para<br>sua equipe agir com prioridade.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/ComunicacaoPais-14-05",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "O pai não sabe.<br>A escola <em>também não fala.</em>",
+      "subhead": "Vínculo fraco começa<br>com comunicação ausente."
+    },
+    {
+      "tipo": "text",
+      "label": "Realidade atual",
+      "headline": "A escola comunica.<br>Mas <em>não conecta.</em>",
+      "body": "Avisos são enviados. Boletos chegam. Eventos são comunicados.<br>Mas o pai não sabe se o filho está evoluindo ou em risco."
+    },
+    {
+      "tipo": "number",
+      "label": "O vínculo que enfraquece",
+      "stat": "60%",
+      "stat_label": "dos pais não sabem se<br>o filho está progredindo"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Comunicação que retém",
+      "headline": "Pai informado é<br><em>aluno que fica.</em>",
+      "features": [
+        "Progresso visível para os pais",
+        "Comunicação além do boleto",
+        "Vínculo com a escola mantido"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "O efeito invisível",
+      "headline": "Pai desconectado<br>é <em>risco de cancelamento.</em>",
+      "body": "Quando o pai não sente presença da escola, começa a questionar o valor.<br>E quem questiona o valor tem mais facilidade de cancelar."
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas com comunicação ativa",
+      "stat": "35%",
+      "stat_label": "mais retenção quando pais<br>recebem acompanhamento regular"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Comunicação que retém",
+      "headline": "Quer que os pais<br><em>sejam aliados da retenção?</em>",
+      "subhead": "Skolen une escola e família<br>com visibilidade do aluno.",
+      "button": "Fale com a gente"
+    }
+  ]
+}

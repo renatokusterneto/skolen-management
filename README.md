@@ -132,3 +132,37 @@ No início de cada mês:
 1. Verificar se todos os posts do mês anterior estão com `publicado = TRUE`
 2. A nova aba do mês (`maio_2026`, etc.) já existe — basta usar como histórico
 3. Novos posts entram sempre pela aba `pendentes`
+
+---
+
+## Setup em nova máquina
+
+Após clonar o repositório, mande o prompt abaixo para o Claude Code com as credenciais preenchidas:
+
+```
+Configure o projeto Skolen com as seguintes credenciais:
+
+**Google Sheets**
+- Sheets ID: [ID_DA_PLANILHA]
+- Service account: vou colar o conteúdo do JSON abaixo
+
+**Cloudinary**
+- Cloud name: [CLOUD_NAME]
+- API Key: [API_KEY]
+- API Secret: [API_SECRET]
+
+**Instagram / Meta**
+- Access Token: [TOKEN]
+- Instagram User ID: [USER_ID]
+- Meta App ID: [APP_ID]
+- Meta App Secret: [APP_SECRET]
+
+**Service Account JSON:**
+[COLE O CONTEÚDO DO google-service-account.json AQUI]
+
+Tarefas:
+1. Crie o .env com Google Sheets e Cloudinary
+2. Crie o .mcp.json com as credenciais do Instagram
+3. Salve o conteúdo do JSON como google-service-account.json na raiz
+4. Confirme o que foi configurado
+```
