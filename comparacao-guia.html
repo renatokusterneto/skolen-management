@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Comparacao — SEM guia vs COM guia</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0f0f23; font-family: 'Segoe UI', sans-serif; padding: 32px 24px; }
+
+h1 { color: #fff; font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+p.sub { color: #666; font-size: 13px; margin-bottom: 40px; }
+
+.grid-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 16px;
+}
+.col-label {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.col-label.sem { background: #3b1a1a; color: #f87171; border: 1px solid #7f1d1d; }
+.col-label.com { background: #0f2e1a; color: #4ade80; border: 1px solid #14532d; }
+
+.slide-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 32px;
+}
+.slide-block { display: flex; flex-direction: column; gap: 8px; }
+.slide-num {
+  font-size: 11px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.slide-block img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+.slide-block.sem img { border: 2px solid #7f1d1d; }
+.slide-block.com img { border: 2px solid #14532d; }
+
+.diff {
+  background: #1a1a2e;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 11px;
+  line-height: 1.6;
+}
+.diff .bad  { color: #f87171; }
+.diff .good { color: #4ade80; }
+.diff .label { color: #666; margin-bottom: 4px; display: block; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; font-size: 10px; }
+</style>
+</head>
+<body>
+
+<div style="max-width:1200px;margin:0 auto;">
+  <h1>SEM guia-campos vs COM guia-campos</h1>
+  <p class="sub">Mesmo tema · Mesma cor · Mesmas palavras · So a posicao do &lt;br&gt; muda</p>
+
+  <div class="grid-header">
+    <div class="col-label sem">SEM guia — quebras descuidadas</div>
+    <div class="col-label com">COM guia — regra dos 40%</div>
+  </div>
+</div>
+
+<script>
+const slides = [
+  {
+    num: "Slide 01 — Cover",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-01.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-01.png",
+    bad:  'Headline: "Sua escola perde mais<br>alunos no<br>fim do ano." — 2x quebra, linha "alunos no" fica sozinha (8 chars = 30% da maior)',
+    good: 'Headline: "Sua escola perde mais alunos<br>no fim do ano." — 1 quebra equilibrada (29 vs 14 chars = 48% ✓)'
+  },
+  {
+    num: "Slide 02 — Texto",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-02.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-02.png",
+    bad:  'Headline: "Evasao nao e<br>aleatoria." — linha 1 muito curta (11 chars) vs linha 2 (10 chars), ambas fracas',
+    good: 'Headline: "Evasao nao e aleatoria." — linha unica, headline curto nao precisa de quebra'
+  },
+  {
+    num: "Slide 03 — Numero",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-03.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-03.png",
+    bad:  'Identico — numero nao tem quebra de headline, diferenca nao se aplica aqui',
+    good: 'Identico — numero nao tem quebra de headline, diferenca nao se aplica aqui'
+  },
+  {
+    num: "Slide 04 — App",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-04.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-04.png",
+    bad:  'Headline: "Risco antes<br>do<br>pico chegar" — 2x quebra, "do" sozinho numa linha (2 chars = 15% da maior)',
+    good: 'Headline: "Risco antes do<br>pico chegar" — 1 quebra, "Risco antes do" (14) vs "pico chegar" (11) = 78% ✓'
+  },
+  {
+    num: "Slide 05 — Texto",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-05.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-05.png",
+    bad:  'Headline: "Agir antes<br>muda o resultado." — "Agir antes" (10) vs "muda o resultado." (18) = 55% — aceitavel mas fraco',
+    good: 'Headline: "Agir antes muda<br>o resultado." — "Agir antes muda" (15) vs "o resultado." (12) = 80% ✓'
+  },
+  {
+    num: "Slide 06 — Numero",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-06.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-06.png",
+    bad:  'Identico — numero nao tem quebra de headline',
+    good: 'Identico — numero nao tem quebra de headline'
+  },
+  {
+    num: "Slide 07 — CTA",
+    sem: "Marketing/Social/Sazonalidade-SEM-guia/pronto/slide-07.png",
+    com: "Marketing/Social/Sazonalidade-COM-guia/pronto/slide-07.png",
+    bad:  'Headline: "Quer ver seus<br>picos de<br>risco?" — 2x quebra, "risco?" sozinho (6 chars = 46% — no limite, visualmente fraco)',
+    good: 'Headline: "Quer ver seus<br>picos de risco?" — 1 quebra, "Quer ver seus" (13) vs "picos de risco?" (15) = 87% ✓'
+  }
+];
+
+const container = document.querySelector('body > div:last-of-type') || document.body;
+const wrap = document.createElement('div');
+wrap.style = 'max-width:1200px;margin:0 auto;';
+
+slides.forEach(s => {
+  const isSame = s.bad.startsWith('Identico');
+  wrap.innerHTML += `
+  <div class="slide-row">
+    <div class="slide-block sem">
+      <div class="slide-num">${s.num}</div>
+      <img src="${s.sem}" />
+      <div class="diff">
+        <span class="label">Problema</span>
+        <span class="${isSame ? 'good' : 'bad'}">${s.bad}</span>
+      </div>
+    </div>
+    <div class="slide-block com">
+      <div class="slide-num">${s.num}</div>
+      <img src="${s.com}" />
+      <div class="diff">
+        <span class="label">Com guia</span>
+        <span class="good">${s.good}</span>
+      </div>
+    </div>
+  </div>`;
+});
+
+document.body.appendChild(wrap);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "pasta": "Marketing/Social/TesteComunicacaoPais-16-07",
+  "cor_dominante": "pink",
+  "slides": [
+    {"tipo": "teste-capa", "headline": "Falhas <em>invisíveis</em><br>na comunicação?", "subhead": "Responda 4 perguntas rápidas e descubra.", "imagem": "Marketing/Assets/pessoas/celular_mao_app.png"},
+    {"tipo": "teste-pergunta", "headline": "Os pais só sabem do progresso quando perguntam?"},
+    {"tipo": "teste-pergunta", "headline": "A escola só fala com os pais<br>para cobrar algo?"},
+    {"tipo": "teste-pergunta", "headline": "O único canal com os pais<br>é o grupo da turma?"},
+    {"tipo": "teste-pergunta", "headline": "Quando falta um aluno,<br>os pais só sabem se perguntam?"},
+    {"tipo": "teste-resultado", "criterio": "2 ou mais respostas 'Sim'", "headline": "Os pais estão mais<br>distantes do que <em>parece.</em>", "segmentos": 3, "segmentos_total": 4},
+    {"tipo": "teste-cta", "headline": "Quer que os pais<br>sintam <em>o cuidado?</em>", "subhead": "Veja como fortalecer esse vínculo.", "button": "Falar com a Skolen", "imagem": "Marketing/Assets/pessoas/celular_mao_app2.png"}
+  ]
+}

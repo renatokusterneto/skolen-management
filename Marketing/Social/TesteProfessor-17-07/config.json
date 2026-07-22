@@ -1,0 +1,42 @@
+{
+  "pasta": "Marketing/Social/TesteProfessor-17-07",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "teste-capa",
+      "headline": "O professor esta<br>de <em>saida?</em>",
+      "subhead": "Responda 4 perguntas rapidas e descubra o risco.",
+      "imagem": "Marketing/Assets/gerado-ia/professor-retencao-capa.png"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "Algum professor trocou<br>de turma ou saiu recentemente?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "Os alunos comentam sobre<br>a troca de professor?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "A escola nunca mediu o vinculo<br>aluno-professor formalmente?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "Cancelamentos aumentaram logo<br>apos uma troca de docente?"
+    },
+    {
+      "tipo": "teste-resultado",
+      "criterio": "2 ou mais respostas 'Sim'",
+      "headline": "O vinculo com o professor<br>e um <em>risco invisivel.</em>",
+      "segmentos": 3,
+      "segmentos_total": 4
+    },
+    {
+      "tipo": "teste-cta",
+      "headline": "Quer ver o vinculo<br>virar <em>retencao?</em>",
+      "subhead": "Demonstracao gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen",
+      "imagem": "Marketing/Assets/gerado-ia/professor-retencao-cta.png"
+    }
+  ]
+}

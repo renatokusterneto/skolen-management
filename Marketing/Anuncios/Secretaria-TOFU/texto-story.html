@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Story · Secretaria Sobrecarregada · TOFU · 1080×1920</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow:     #FCD532;
+  --teal:       #00EDBF;
+  --pink:       #FF6DA0;
+  --blue:       #009CDE;
+  --text:       #253532;
+  --white:      #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--white); }
+body { font-family: 'Nunito', sans-serif; }
+
+.circle { border-radius: 50%; position: absolute; }
+
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.ad-logo-mark.sz52 { width: 96px; height: 96px; }
+.ad-logo-mark.sz52 span { width: 42px; height: 42px; }
+.lm-tl { background: var(--yellow); }
+.lm-tr { background: var(--teal); }
+.lm-bl { background: var(--pink); }
+.lm-br { background: var(--blue); }
+.ad-logo-text { font-size: 80px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+
+#canvas {
+  width: 1080px;
+  height: 1920px;
+  background: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Círculos decorativos — escala story */
+#canvas .c-tl {
+  width: 500px; height: 500px;
+  background: var(--teal);
+  top: -160px; left: -160px;
+}
+#canvas .c-tr {
+  width: 300px; height: 300px;
+  background: var(--yellow);
+  top: -80px; right: -80px;
+}
+#canvas .c-bl {
+  width: 260px; height: 260px;
+  background: var(--yellow);
+  bottom: -70px; left: -70px;
+}
+#canvas .c-br {
+  width: 460px; height: 460px;
+  background: var(--pink);
+  bottom: -130px; right: -130px;
+}
+#canvas .c-mid-top {
+  width: 160px; height: 160px;
+  background: var(--blue);
+  top: 520px; right: 130px;
+  opacity: 0.4;
+}
+#canvas .c-mid-bot {
+  width: 100px; height: 100px;
+  background: var(--pink);
+  bottom: 480px; left: 110px;
+  opacity: 0.35;
+}
+
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 100px;
+  text-align: center;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 48px;
+  filter: brightness(0.75);
+}
+
+.headline {
+  font-size: 118px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  margin-bottom: 56px;
+  letter-spacing: -3px;
+}
+.headline em { font-style: normal; color: var(--pink); }
+
+.subhead {
+  font-size: 52px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.65;
+  line-height: 1.35;
+  margin-bottom: 80px;
+}
+.subhead strong { color: var(--blue); font-weight: 900; opacity: 1; }
+
+.cta-pill {
+  display: inline-block;
+  background: var(--text);
+  color: var(--white);
+  font-size: 34px;
+  font-weight: 800;
+  padding: 22px 56px;
+  border-radius: 100px;
+  letter-spacing: 0.5px;
+}
+
+#logo {
+  position: absolute;
+  bottom: 80px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  z-index: 3;
+}
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div class="circle c-tl"></div>
+  <div class="circle c-tr"></div>
+  <div class="circle c-bl"></div>
+  <div class="circle c-br"></div>
+  <div class="circle c-mid-top"></div>
+  <div class="circle c-mid-bot"></div>
+
+  <div id="body">
+    <p class="eyebrow">Diretores de Escola</p>
+    <h1 class="headline">
+      Sua secretária<br>apaga incêndio<br><em>o dia todo?</em>
+    </h1>
+    <p class="subhead">
+      Matrícula, boleto e<br>recado de pai<br>
+      <strong>dá pra ser automático.</strong>
+    </p>
+    <span class="cta-pill">Conheça o Skolen →</span>
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark sz52">
+      <span class="lm-tl"></span>
+      <span class="lm-tr"></span>
+      <span class="lm-bl"></span>
+      <span class="lm-br"></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

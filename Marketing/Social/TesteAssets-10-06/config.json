@@ -1,0 +1,59 @@
+{
+  "pasta": "Marketing/Social/TesteAssets-10-06",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Todo mês um cancelamento.<br>Ninguém sabia <em>por quê.</em>",
+      "subhead": "Até a escola começar a enxergar o que estava acontecendo."
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "direita",
+      "imagem": "Marketing/Assets/pessoas/notebook_pessoa_sistema.png",
+      "imagem_tipo": "produto",
+      "label": "O diagnóstico",
+      "headline": "Dados estavam lá.<br>Ninguém <em>lia junto.</em>",
+      "body": "Cada setor via uma parte.<br>A direção não via o todo."
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "esquerda",
+      "imagem": "Marketing/Assets/produto/view_professor_computador_monitor.png",
+      "imagem_tipo": "produto",
+      "label": "A virada",
+      "headline": "Alunos com<br><em>risco visível.</em>",
+      "body": "Engajamento, frequência,<br>turma — num lugar só."
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "direita",
+      "imagem": "Marketing/Assets/pessoas/celular_mao_app2.png",
+      "imagem_tipo": "produto",
+      "label": "Na prática",
+      "headline": "Boletim por aluno.<br><em>Em tempo real.</em>",
+      "body": "O gestor passou a ver quem<br>precisava de atenção agora."
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "esquerda",
+      "imagem": "Marketing/Assets/produto/aplicativo_view_aluno.png",
+      "imagem_tipo": "produto",
+      "label": "O aluno também vê",
+      "headline": "Notas e avisos<br>no <em>mesmo lugar.</em>",
+      "body": "Transparência que fortalece<br>o vínculo com a escola."
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A moral",
+      "headline": "A escola que enxerga<br><em>retém mais.</em>"
+    },
+    {
+      "tipo": "cta-pergunta",
+      "headline": "Quer ver o que sua<br>escola <em>não está vendo?</em>",
+      "subhead": "Demonstração gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

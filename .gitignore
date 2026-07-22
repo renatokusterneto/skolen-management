@@ -2,3 +2,5 @@
 .env
 google-service-account.json
 skolen-management-a9a3c5297413
+__pycache__/
+*.pyc

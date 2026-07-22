@@ -1,0 +1,56 @@
+{
+  "pasta": "Marketing/Social/TurmaEsvaziando-17-07",
+  "cor_dominante": "pink",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Gestao de Turmas",
+      "headline": "Sua turma esta<br><em>esvaziando aos poucos?</em>",
+      "subhead": "A queda raramente acontece de uma vez."
+    },
+    {
+      "tipo": "text",
+      "label": "O sinal que passa batido",
+      "headline": "A turma nao<br><em>some de uma vez</em>",
+      "body": "Um aluno falta, depois outro cancela.<br>Sozinhos parecem casos isolados,<br>juntos formam um padrao."
+    },
+    {
+      "tipo": "grafico-barras",
+      "label": "Ocupacao da turma",
+      "headline": "A queda e<br><em>gradual, nao subita</em>",
+      "bars": [
+        {"label": "Mes 1", "label_val": "95%", "value": 95},
+        {"label": "Mes 2", "label_val": "88%", "value": 88},
+        {"label": "Mes 3", "label_val": "74%", "value": 74, "destaque": true},
+        {"label": "Mes 4", "label_val": "61%", "value": 61, "destaque": true}
+      ]
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "direita",
+      "imagem": "Marketing/Assets/gerado-ia/app_turma_esvaziando_contexto_v3.png",
+      "imagem_tipo": "pessoa",
+      "label": "Na pratica",
+      "headline": "Veja a turma<br><em>antes de esvaziar.</em>",
+      "body": "O gestor identifica queda de<br>engajamento aluno por aluno."
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A virada",
+      "headline": "Turma cheia nao e<br><em>sorte, e atencao.</em>"
+    },
+    {
+      "tipo": "number",
+      "label": "Turmas monitoradas de perto",
+      "stat": "3x",
+      "stat_label": "mais chance de reter<br><em>a turma inteira</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Sua turma pode ficar cheia",
+      "headline": "Quer ver sua turma<br><em>esvaziando antes?</em>",
+      "subhead": "Demonstracao gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

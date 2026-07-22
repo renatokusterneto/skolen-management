@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Teste 2 — Overlay · Feed 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #FCD532;
+  --teal:   #00EDBF;
+  --pink:   #FF6DA0;
+  --blue:   #009CDE;
+  --text:   #253532;
+  --white:  #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Nunito', sans-serif; }
+
+#canvas {
+  width: 1080px; height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Foto de fundo */
+#bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+/* Overlay gradiente — escurece mais embaixo para legibilidade do texto */
+#overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(37, 53, 50, 0.82) 0%,
+    rgba(37, 53, 50, 0.70) 50%,
+    rgba(0, 156, 222, 0.55) 100%
+  );
+}
+
+/* Círculo decorativo de marca */
+.deco-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.18;
+}
+.dc-1 { width: 420px; height: 420px; background: var(--teal);  top: -120px; right: -120px; }
+.dc-2 { width: 280px; height: 280px; background: var(--pink);  bottom: -70px; left: -70px; }
+
+/* Conteúdo */
+#body {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 90px 100px;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.headline {
+  font-size: 86px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  margin-bottom: 32px;
+}
+.headline em { font-style: normal; color: var(--yellow); }
+
+.subhead {
+  font-size: 34px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+  margin-bottom: 56px;
+  max-width: 700px;
+}
+.subhead strong { color: var(--teal); font-weight: 900; }
+
+.cta {
+  display: inline-block;
+  background: var(--yellow);
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 900;
+  padding: 18px 44px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  bottom: 52px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 3;
+}
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; width: 64px; height: 64px; }
+.ad-logo-mark span { display: block; border-radius: 50%; width: 27px; height: 27px; }
+.ad-logo-mark span:nth-child(1) { background: var(--yellow); }
+.ad-logo-mark span:nth-child(2) { background: var(--teal); }
+.ad-logo-mark span:nth-child(3) { background: var(--pink); }
+.ad-logo-mark span:nth-child(4) { background: var(--blue); }
+.ad-logo-text { font-size: 52px; font-weight: 900; color: var(--white); letter-spacing: -0.5px; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <img id="bg-img" src="file:///c:/Users/felipe.fadel/skolen-management/Marketing/Assets/pessoas/notebook_pessoa_sistema.png" alt="">
+  <div id="overlay"></div>
+  <div class="deco-circle dc-1"></div>
+  <div class="deco-circle dc-2"></div>
+
+  <div id="body">
+    <p class="eyebrow">Diretores de Escola</p>
+    <h1 class="headline">Sua secretária<br>apaga incêndio<br><em>o dia todo?</em></h1>
+    <p class="subhead">Matrícula, boleto e recado de pai<br><strong>dá pra ser automático.</strong></p>
+    <span class="cta">Conheça o Skolen →</span>
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

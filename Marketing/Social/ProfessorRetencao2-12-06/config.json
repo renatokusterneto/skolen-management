@@ -1,0 +1,57 @@
+{
+  "pasta": "Marketing/Social/ProfessorRetencao2-12-06",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Sua escola perde alunos<br>sem <em>notar o porquê?</em>",
+      "subhead": "O problema não é o aluno. É o que a escola não vê."
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A ilusão",
+      "headline": "O aluno que sai<br>sempre <em>deu sinais.</em>"
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "direita",
+      "imagem": "Marketing/Assets/pessoas/notebook_pessoa_sistema.png",
+      "imagem_tipo": "produto",
+      "label": "O que ninguém vê",
+      "headline": "O professor nota.<br><em>Gestão não ouve.</em>",
+      "body": "O sinal existe.<br>Só falta quem leia junto."
+    },
+    {
+      "tipo": "grafico-barras",
+      "label": "Onde está o risco",
+      "headline": "Turnover de professor<br><em>precede evasão.</em>",
+      "bars": [
+        {"label": "Sem troca", "label_val": "8%",  "value": 8},
+        {"label": "1 troca",  "label_val": "21%", "value": 21},
+        {"label": "2 trocas", "label_val": "38%", "value": 38, "destaque": true},
+        {"label": "3+ trocas","label_val": "61%", "value": 61, "destaque": true}
+      ]
+    },
+    {
+      "tipo": "foto-card",
+      "posicao": "esquerda",
+      "imagem": "Marketing/Assets/produto/view_professor_computador_monitor.png",
+      "imagem_tipo": "produto",
+      "label": "A solução",
+      "headline": "Lista de alunos<br>com <em>risco visível.</em>",
+      "body": "Engajamento e frequência<br>num lugar só."
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A conclusão",
+      "headline": "Professor presente,<br>aluno <em>que fica.</em>"
+    },
+    {
+      "tipo": "cta-pergunta",
+      "headline": "Sua escola enxerga<br>quem está <em>em risco?</em>",
+      "subhead": "Demonstração gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

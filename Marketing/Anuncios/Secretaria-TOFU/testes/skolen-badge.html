@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Nunito', sans-serif; }
+
+.ad {
+  position: relative;
+  width: 1080px; height: 1080px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* Fundo claro com acentos sutis da marca */
+.bg-gradient {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 110% -10%, rgba(252,213,50,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 600px 800px at -10% 110%, rgba(0,156,222,0.12) 0%, transparent 55%),
+    #ffffff;
+}
+
+/* Foto do produto — direita, destaque */
+.product-photo {
+  position: absolute;
+  right: 0; top: 80px; bottom: 0;
+  width: 580px;
+  z-index: 5;
+  overflow: hidden;
+}
+.product-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+.product-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0; z-index: 2;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.4) 30%, rgba(255,255,255,0) 60%);
+}
+.product-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 220px; z-index: 2;
+  background: linear-gradient(to bottom, transparent, #ffffff);
+}
+
+/* Conteúdo esquerdo */
+.content {
+  position: absolute;
+  top: 0; left: 0;
+  width: 560px;
+  height: 100%;
+  padding: 64px 0 64px 64px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Logo topo */
+.logo {
+  display: flex; align-items: center; gap: 12px;
+}
+.logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; width: 48px; height: 48px; }
+.logo-mark span { display: block; border-radius: 50%; width: 20px; height: 20px; }
+.logo-mark span:nth-child(1) { background: #FCD532; }
+.logo-mark span:nth-child(2) { background: #00EDBF; }
+.logo-mark span:nth-child(3) { background: #FF6DA0; }
+.logo-mark span:nth-child(4) { background: #009CDE; }
+.logo-text { font-size: 38px; font-weight: 900; color: #253532; letter-spacing: -0.5px; }
+
+/* Headline principal */
+.headline-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.eyebrow {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #009CDE;
+  margin-bottom: 24px;
+}
+
+.headline {
+  font-size: 88px;
+  font-weight: 900;
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+  color: #253532;
+  margin-bottom: 28px;
+}
+.headline em { font-style: normal; color: #FF6DA0; }
+
+.support {
+  font-size: 26px;
+  font-weight: 600;
+  color: rgba(37,53,50,0.55);
+  line-height: 1.45;
+  max-width: 420px;
+}
+
+/* Frosted glass info box */
+.info-box {
+  background: rgba(37,53,50,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(37,53,50,0.10);
+  border-radius: 20px;
+  padding: 32px 36px;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  width: fit-content;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 32px;
+  min-width: 130px;
+}
+.info-item:first-child { padding-left: 0; }
+.info-item .val {
+  font-size: 36px;
+  font-weight: 900;
+  color: #253532;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.info-item .lbl {
+  font-size: 15px;
+  font-weight: 700;
+  color: rgba(37,53,50,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  line-height: 1.3;
+}
+.info-divider {
+  width: 1px;
+  background: rgba(37,53,50,0.12);
+  flex-shrink: 0;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+/* Badge grande — canto direito superior */
+.badge {
+  position: absolute;
+  right: 52px; top: 52px;
+  z-index: 30;
+  background: #FCD532;
+  border-radius: 50%;
+  width: 200px; height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.badge .badge-num {
+  font-size: 64px;
+  font-weight: 900;
+  color: #253532;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.badge .badge-lbl {
+  font-size: 14px;
+  font-weight: 800;
+  color: #253532;
+  line-height: 1.25;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 120px;
+}
+</style>
+</head>
+<body>
+<div class="ad">
+
+  <div class="bg-gradient"></div>
+
+  <div class="product-photo">
+    <img src="file:///c:/Users/felipe.fadel/skolen-management/Marketing/Assets/pessoas/notebook_pessoa_sistema.png" alt="">
+  </div>
+
+  <div class="content">
+    <div class="logo">
+      <div class="logo-mark"><span></span><span></span><span></span><span></span></div>
+      <span class="logo-text">Skolen</span>
+    </div>
+
+    <div class="headline-block">
+      <p class="eyebrow">Controle financeiro real</p>
+      <h1 class="headline">Quantos<br>alunos estão<br>em <em>atraso</em><br>agora?</h1>
+      <p class="support">Se você não sabe o número exato, esse é o problema. O Skolen te mostra — e cobra por você.</p>
+    </div>
+
+    <div class="info-box">
+      <div class="info-item">
+        <span class="val">Boleto</span>
+        <span class="lbl">gerado auto</span>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <span class="val">Régua</span>
+        <span class="lbl">de cobrança</span>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-item">
+        <span class="val">Zero</span>
+        <span class="lbl">ligue pra cobrar</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="badge">
+    <span class="badge-num">0</span>
+    <span class="badge-lbl">ligações<br>para cobrar</span>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "pasta": "Marketing/Social/TesteEvasao-16-07",
+  "cor_dominante": "blue",
+  "slides": [
+    {
+      "tipo": "teste-capa",
+      "headline": "Sua escola tem risco<br>de <em>evasão?</em>",
+      "subhead": "Responda 4 perguntas rápidas e descubra."
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "A frequência de algum aluno<br>caiu nos últimos meses?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "Algum aluno ficou inadimplente<br>mais de uma vez esse ano?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "Pais pararam de responder<br>comunicados da escola?"
+    },
+    {
+      "tipo": "teste-pergunta",
+      "headline": "A equipe só descobre um<br>cancelamento depois que acontece?"
+    },
+    {
+      "tipo": "teste-resultado",
+      "criterio": "2 ou mais respostas 'Sim'",
+      "headline": "Sua escola tem sinais<br><em>ativos de risco.</em>",
+      "segmentos": 3,
+      "segmentos_total": 4
+    },
+    {
+      "tipo": "teste-cta",
+      "headline": "Quer ver esse risco<br>antes de <em>virar evasão?</em>",
+      "subhead": "Ganhe visibilidade antes do cancelamento.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

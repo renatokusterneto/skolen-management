@@ -1,0 +1,55 @@
+{
+  "pasta": "Marketing/Social/ProfessorRetencao-10-06",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover",
+      "eyebrow": "Escolas de Inglês",
+      "headline": "Sua escola sabe quem<br>retém <em>mais alunos?</em>",
+      "subhead": "A resposta pode estar no professor, não no produto."
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A crença errada",
+      "headline": "Retenção não é<br>problema de <em>preço.</em>"
+    },
+    {
+      "tipo": "text",
+      "label": "O que os dados mostram",
+      "headline": "O aluno cancela<br>o <em>professor,</em> não a escola.",
+      "body": "Quando o vínculo com o docente enfraquece,<br>o aluno já começou a sair.<br><strong>Isso acontece antes do aviso de cancelamento.</strong>"
+    },
+    {
+      "tipo": "grafico-barras",
+      "label": "Motivo real do cancelamento",
+      "headline": "Vínculo com professor<br><em>define a retenção</em>",
+      "bars": [
+        {"label": "Preço",     "label_val": "18%", "value": 18},
+        {"label": "Distância", "label_val": "12%", "value": 12},
+        {"label": "Tempo",     "label_val": "21%", "value": 21},
+        {"label": "Professor", "label_val": "49%", "value": 49, "destaque": true}
+      ]
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "O que o Skolen acompanha",
+      "headline": "Engajamento por<br><em>turma e docente</em>",
+      "features": [
+        "Frequência por professor e turma",
+        "Alunos em risco por vínculo",
+        "Alertas antes do cancelamento"
+      ]
+    },
+    {
+      "tipo": "afirmacao",
+      "label": "A virada",
+      "headline": "Retenção melhora<br>quando a escola<br><em>vê o vínculo.</em>"
+    },
+    {
+      "tipo": "cta-pergunta",
+      "headline": "Sua escola sabe qual<br>professor <em>retém mais?</em>",
+      "subhead": "Demonstração gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

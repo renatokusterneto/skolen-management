@@ -46,7 +46,25 @@
       "Bash(Test-Path \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\.claude\\\\skills\\\\carrousel\\\\references\\\\guia-campos.md\")",
       "Bash(type nul *)",
       "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/Sazonalidade-SEM-guia/config.json)",
-      "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/Sazonalidade-COM-guia/config.json)"
+      "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/Sazonalidade-COM-guia/config.json)",
+      "Bash(start \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\comparacao-guia.html\")",
+      "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/ProfessorRetencao-10-06/config.json)",
+      "Bash(del \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\Marketing\\\\Assets\\\\_teste-placeholder.html\" \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\Marketing\\\\Assets\\\\_teste-placeholder.png\" \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\Marketing\\\\Assets\\\\_teste-produto.html\" \"c:\\\\Users\\\\felipe.fadel\\\\skolen-management\\\\Marketing\\\\Assets\\\\_teste-produto.png\")",
+      "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/TesteAssets-10-06/config.json)",
+      "Bash(python .claude/skills/carrousel/generate_carousel.py Marketing/Social/ProfessorRetencao2-12-06/config.json)",
+      "Bash(npm create *)",
+      "Bash(npm install *)",
+      "Bash(npx remotion *)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s http://localhost:3002 -o /dev/null -w \"%{http_code}\")",
+      "Bash(cat /tmp/remotion-studio.log 2>&1)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:3000 -o /dev/null -w \"%{http_code}\")",
+      "Read(//c/tmp/**)",
+      "Read(//d/felipe.fadel/viva-vr-cofre/VivaVr/outputs/creatives/static/002-b2b-diretor-resultado/**)",
+      "Bash(node render-testes.js)",
+      "WebFetch(domain:pixabay.com)",
+      "WebFetch(domain:freesound.org)"
     ],
     "additionalDirectories": [
       "c:\\Users\\felipe.fadel\\skolen-management\\.claude\\skills\\carrousel\\references"

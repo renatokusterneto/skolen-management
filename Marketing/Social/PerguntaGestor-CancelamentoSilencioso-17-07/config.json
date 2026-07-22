@@ -1,0 +1,53 @@
+{
+  "pasta": "Marketing/Social/PerguntaGestor-CancelamentoSilencioso-17-07",
+  "cor_dominante": "teal",
+  "slides": [
+    {
+      "tipo": "cover-dm",
+      "imagem": "Marketing/Assets/gerado-ia/app_risco_cancelamento_contexto_v2.png",
+      "prompt": "Pergunte algo sobre sua escola",
+      "headline": "Como sei que um aluno<br>vai <em>cancelar</em> antes dele avisar?"
+    },
+    {
+      "tipo": "text",
+      "label": "Por que isso acontece",
+      "headline": "O sinal chega<br><em>tarde demais.</em>",
+      "body": "A decisao de sair amadurece semanas antes,<br>mas <strong>a coordenacao so descobre</strong><br>quando o aluno ja avisou."
+    },
+    {
+      "tipo": "number",
+      "label": "Quando o risco aparece",
+      "stat": "8/10",
+      "stat_label": "alunos dao sinais<br><em>antes de cancelar</em>"
+    },
+    {
+      "tipo": "app",
+      "eyebrow": "Como o Skolen responde",
+      "headline": "Sinais que viram<br><em>alerta cedo</em>",
+      "features": [
+        "Queda de frequencia",
+        "Atraso recorrente no pagamento",
+        "Silencio nos comunicados"
+      ]
+    },
+    {
+      "tipo": "text",
+      "label": "A resposta pratica",
+      "headline": "A escola age<br><em>antes do aviso.</em>",
+      "body": "Com o risco visivel por aluno,<br>a coordenacao liga <strong>antes de virar cancelamento,</strong><br>nao depois."
+    },
+    {
+      "tipo": "number",
+      "label": "Escolas que monitoram risco cedo",
+      "stat": "3x",
+      "stat_label": "mais chance<br><em>de reter o aluno</em>"
+    },
+    {
+      "tipo": "cta",
+      "eyebrow": "Sua escola pode chegar antes",
+      "headline": "Quer ver o risco<br><em>antes de cancelar?</em>",
+      "subhead": "Demonstracao gratuita. Sem compromisso.",
+      "button": "Falar com a Skolen"
+    }
+  ]
+}

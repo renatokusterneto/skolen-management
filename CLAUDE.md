@@ -41,3 +41,12 @@ Skolen/
 ## Idioma
 
 Português brasileiro, exceto quando explicitamente solicitado em outro idioma.
+
+## Segurança de Credenciais
+
+Sempre que uma tarefa envolver chaves de API, tokens, secrets ou qualquer credencial:
+
+1. Nunca escreva o valor real da credencial em arquivos versionados (código, documentação, configs de exemplo).
+2. Antes de criar ou editar qualquer arquivo que vá conter uma credencial real, verifique se ele (ou o padrão dele, ex. `.env`) já está no `.gitignore`. Se não estiver, adicione a entrada ao `.gitignore` **antes** de escrever a credencial.
+3. Use `.env.example` (ou equivalente) como template público, apenas com placeholders — nunca com valores reais.
+4. Antes de qualquer `git add`/commit, revise os arquivos staged em busca de segredos, mesmo em arquivos com nome inofensivo.

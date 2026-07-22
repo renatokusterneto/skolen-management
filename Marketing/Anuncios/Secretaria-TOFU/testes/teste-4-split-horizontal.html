@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Teste 4 — Split horizontal · Feed 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #FCD532;
+  --teal:   #00EDBF;
+  --pink:   #FF6DA0;
+  --blue:   #009CDE;
+  --text:   #253532;
+  --white:  #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Nunito', sans-serif; background: var(--white); }
+
+#canvas {
+  width: 1080px; height: 1080px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Metade superior — foto */
+#top {
+  height: 520px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+#top img {
+  width: 110%;
+  height: 110%;
+  object-fit: fill;
+  margin-left: -5%;
+  margin-top: -5%;
+}
+#top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, transparent, var(--white));
+}
+
+/* Metade inferior — texto */
+#bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 80px 100px;
+  text-align: center;
+  position: relative;
+}
+
+/* Círculos decorativos */
+.circle { border-radius: 50%; position: absolute; }
+.c-bl { width: 180px; height: 180px; background: var(--yellow); bottom: 60px; left: -55px; opacity: 0.4; }
+.c-br { width: 220px; height: 220px; background: var(--pink);   bottom: 40px; right: -65px; opacity: 0.4; }
+
+.eyebrow {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  filter: brightness(0.75);
+}
+
+.headline {
+  font-size: 80px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  letter-spacing: -2.5px;
+  margin-bottom: 20px;
+}
+.headline em { font-style: normal; color: var(--pink); }
+
+.subhead {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.6;
+  line-height: 1.35;
+  margin-bottom: 36px;
+}
+.subhead strong { color: var(--blue); opacity: 1; font-weight: 900; }
+
+.cta {
+  display: inline-block;
+  background: var(--text);
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 800;
+  padding: 16px 42px;
+  border-radius: 100px;
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  bottom: 40px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 3;
+}
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: 56px; height: 56px; }
+.ad-logo-mark span { display: block; border-radius: 50%; width: 24px; height: 24px; }
+.ad-logo-mark span:nth-child(1) { background: var(--yellow); }
+.ad-logo-mark span:nth-child(2) { background: var(--teal); }
+.ad-logo-mark span:nth-child(3) { background: var(--pink); }
+.ad-logo-mark span:nth-child(4) { background: var(--blue); }
+.ad-logo-text { font-size: 44px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div id="top">
+    <img src="file:///c:/Users/felipe.fadel/skolen-management/Marketing/Assets/pessoas/notebook_pessoa_sistema.png" alt="">
+  </div>
+
+  <div id="bottom">
+    <div class="circle c-bl"></div>
+    <div class="circle c-br"></div>
+
+    <p class="eyebrow">Diretores de Escola</p>
+    <h1 class="headline">Sua secretária apaga<br>incêndio <em>o dia todo?</em></h1>
+    <p class="subhead">Matrícula, boleto e recado de pai<br><strong>dá pra ser automático.</strong></p>
+    <span class="cta">Conheça o Skolen →</span>
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

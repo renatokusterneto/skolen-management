@@ -179,6 +179,89 @@ Exemplo valido:
 
 ---
 
+## SLIDE 01 — Cover DM (formato "Pergunta que todo gestor já se fez")
+
+Variação do Cover que simula a caixinha de pergunta do Instagram Stories (retângulo branco arredondado com sombra + "rabinho" de balão). Usada como slide 1 do formato "Pergunta que todo gestor já se fez": a pergunta parece recebida via DM, mas é uma dúvida comum do setor, antecipada. Os slides 2–7 seguem os tipos normais (`text`, `number`, `app`, `cta`).
+
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Eyebrow** | 22 chars | — | Não |
+| **Headline** | 70 chars | 32 chars | Max. 2 (a caixa comporta 3 linhas de texto) |
+| **Subhead** | 55 chars | 35 chars | Não |
+
+> Tom da pergunta: precisa soar como algo que um gestor diria de verdade — cru, um pouco inseguro. Evite perguntas com cara de propaganda ("Como o Skolen revolucionou minha escola?").
+
+Exemplo válido:
+```json
+{
+  "tipo": "cover-dm",
+  "eyebrow": "Pergunta de gestor",
+  "headline": "Como sei que um aluno<br>vai <em>cancelar</em> antes dele avisar?",
+  "subhead": "Uma duvida que todo gestor ja teve"
+}
+```
+
+---
+
+## SLIDE foto-card
+
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Label** | 22 chars | — | Não |
+| **Headline** | 36 chars | **18 chars** | Max. 1 · regra 40% |
+| **Body** | 80 chars | 36 chars | Max. 1 |
+
+> **Atenção:** O `foto-card` divide o slide 50/50 com a imagem. A área de texto tem ~490px de largura com fonte 52px — cada linha comporta no máximo **~18 caracteres**. Headlines longas quebram em 3 linhas e desestabilizam o layout. Escreva curto.
+
+> **`imagem_tipo: "produto"`** — sem frame. A imagem flutua com drop-shadow direto sobre o fundo branco. Ideal para screenshots e mockups com fundo transparente. Os tipos `pessoa`, `print-anotado` e `marca` mantêm seus frames.
+
+Exemplo válido:
+```json
+{
+  "tipo": "foto-card",
+  "posicao": "direita",
+  "imagem": "Marketing/Assets/produto/aplicativo_view_aluno.png",
+  "imagem_tipo": "produto",
+  "label": "Na prática",
+  "headline": "Boletim por aluno.<br><em>Em tempo real.</em>",
+  "body": "O gestor passou a ver quem<br>precisava de atenção agora."
+}
+```
+
+---
+
+## Template Teste Rápido / Diagnóstico
+
+### `teste-capa`
+
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Headline** | 55 chars | 30 chars | Max. 1 |
+| **Subhead** | 65 chars | 35 chars | Não |
+
+### `teste-pergunta`
+
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Headline** | 65 chars | 32 chars | Max. 1 |
+
+> Escreva a pergunta como frase direta que se responde com Sim/Não. Evite perguntas compostas ("X e Y?") — uma ideia por pergunta.
+
+### `teste-resultado`
+
+| Campo | Max. total | Max. por linha | `<br>` permitido |
+|-------|-----------|----------------|-----------------|
+| **Criterio** | 40 chars | — | Não |
+| **Headline** | 50 chars | 26 chars | Max. 1 · `<em>` na última linha |
+| **Segmentos** | inteiro ≤ segmentos_total | — | — |
+| **Segmentos_total** | inteiro = número de perguntas do teste | — | — |
+
+### `teste-cta`
+
+Mesmos campos e limites do tipo `cta` (ver Slide 07 — CTA acima), sem o campo `eyebrow`.
+
+---
+
 ## O que nunca fazer
 
 - Dois `<br>` em headline de cover ou CTA

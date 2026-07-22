@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Teste 1 — Split layout · Feed 1080×1080</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #FCD532;
+  --teal:   #00EDBF;
+  --pink:   #FF6DA0;
+  --blue:   #009CDE;
+  --text:   #253532;
+  --white:  #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1080px; overflow: hidden; font-family: 'Nunito', sans-serif; background: var(--white); }
+
+#canvas {
+  width: 1080px; height: 1080px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Coluna esquerda — texto */
+#left {
+  width: 520px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px 60px 72px 72px;
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+}
+
+.eyebrow {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  filter: brightness(0.75);
+}
+
+.headline {
+  font-size: 68px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+}
+.headline em { font-style: normal; color: var(--pink); }
+
+.subhead {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.6;
+  line-height: 1.4;
+  margin-bottom: 48px;
+}
+.subhead strong { color: var(--blue); opacity: 1; font-weight: 900; }
+
+.cta {
+  display: inline-block;
+  background: var(--text);
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 800;
+  padding: 16px 36px;
+  border-radius: 100px;
+  width: fit-content;
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  bottom: 48px;
+  left: 72px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+}
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; width: 52px; height: 52px; }
+.ad-logo-mark span { display: block; border-radius: 50%; }
+.ad-logo-mark span:nth-child(1) { background: var(--yellow); width: 22px; height: 22px; }
+.ad-logo-mark span:nth-child(2) { background: var(--teal); width: 22px; height: 22px; }
+.ad-logo-mark span:nth-child(3) { background: var(--pink); width: 22px; height: 22px; }
+.ad-logo-mark span:nth-child(4) { background: var(--blue); width: 22px; height: 22px; }
+.ad-logo-text { font-size: 42px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+
+/* Sem divisor */
+#divider { display: none; }
+
+/* Coluna direita — imagem */
+#right {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+#right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+/* Fade lateral para fundir com o branco */
+#right::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(255,255,255,0.6) 0%, transparent 40%);
+}
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div id="left">
+    <p class="eyebrow">Diretores de Escola</p>
+    <h1 class="headline">Sua secretária<br>apaga incêndio<br><em>o dia todo?</em></h1>
+    <p class="subhead">Matrícula, boleto e recado de pai<br><strong>dá pra ser automático.</strong></p>
+    <span class="cta">Conheça o Skolen →</span>
+  </div>
+
+  <div id="divider"></div>
+
+  <div id="right">
+    <img src="file:///c:/Users/felipe.fadel/skolen-management/Marketing/Assets/pessoas/notebook_pessoa_sistema.png" alt="">
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>

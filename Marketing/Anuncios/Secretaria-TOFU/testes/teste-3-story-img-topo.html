@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Teste 3 — Imagem topo · Story 1080×1920</title>
+<link rel="stylesheet" href="file:///Users/renatokusterneto/Skolen/.claude/skills/carrousel/fonts/nunito.css">
+<style>
+:root {
+  --yellow: #FCD532;
+  --teal:   #00EDBF;
+  --pink:   #FF6DA0;
+  --blue:   #009CDE;
+  --text:   #253532;
+  --white:  #FFFFFF;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; font-family: 'Nunito', sans-serif; background: var(--white); }
+
+#canvas {
+  width: 1080px; height: 1920px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Metade superior — foto */
+#top {
+  height: 900px;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+#top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+/* Fade inferior para fundir com o branco */
+#top::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 220px;
+  background: linear-gradient(to bottom, transparent, var(--white));
+}
+
+/* Linha de cor marca */
+#accent-bar {
+  height: 8px;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--pink) 50%, var(--yellow) 100%);
+  flex-shrink: 0;
+}
+
+/* Metade inferior — texto */
+#bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 90px 160px;
+  text-align: center;
+  position: relative;
+}
+
+/* Círculos decorativos nos cantos inferiores */
+.circle { border-radius: 50%; position: absolute; }
+.c-bl { width: 220px; height: 220px; background: var(--yellow); bottom: 120px; left: -70px; opacity: 0.35; }
+.c-br { width: 280px; height: 280px; background: var(--pink);   bottom: 80px;  right: -80px; opacity: 0.35; }
+
+.eyebrow {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--teal);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  filter: brightness(0.75);
+}
+
+.headline {
+  font-size: 104px;
+  font-weight: 900;
+  color: var(--text);
+  line-height: 1.0;
+  letter-spacing: -3px;
+  margin-bottom: 36px;
+}
+.headline em { font-style: normal; color: var(--pink); }
+
+.subhead {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text);
+  opacity: 0.6;
+  line-height: 1.35;
+  margin-bottom: 64px;
+}
+.subhead strong { color: var(--blue); opacity: 1; font-weight: 900; }
+
+.cta {
+  display: inline-block;
+  background: var(--text);
+  color: var(--white);
+  font-size: 32px;
+  font-weight: 800;
+  padding: 22px 56px;
+  border-radius: 100px;
+}
+
+/* Logo */
+#logo {
+  position: absolute;
+  bottom: 64px;
+  left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 3;
+}
+.ad-logo-mark { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; width: 72px; height: 72px; }
+.ad-logo-mark span { display: block; border-radius: 50%; width: 30px; height: 30px; }
+.ad-logo-mark span:nth-child(1) { background: var(--yellow); }
+.ad-logo-mark span:nth-child(2) { background: var(--teal); }
+.ad-logo-mark span:nth-child(3) { background: var(--pink); }
+.ad-logo-mark span:nth-child(4) { background: var(--blue); }
+.ad-logo-text { font-size: 60px; font-weight: 900; color: var(--text); letter-spacing: -0.5px; }
+</style>
+</head>
+<body>
+<div id="canvas">
+  <div id="top">
+    <img src="file:///c:/Users/felipe.fadel/skolen-management/Marketing/Assets/pessoas/notebook_pessoa_sistema.png" alt="">
+  </div>
+
+  <div id="accent-bar"></div>
+
+  <div id="bottom">
+    <div class="circle c-bl"></div>
+    <div class="circle c-br"></div>
+
+    <p class="eyebrow">Diretores de Escola</p>
+    <h1 class="headline">Sua secretária<br>apaga incêndio<br><em>o dia todo?</em></h1>
+    <p class="subhead">Matrícula, boleto e recado de pai<br><strong>dá pra ser automático.</strong></p>
+    <span class="cta">Conheça o Skolen →</span>
+  </div>
+
+  <div id="logo">
+    <div class="ad-logo-mark">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="ad-logo-text">Skolen</span>
+  </div>
+</div>
+</body>
+</html>
