@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Skolen — Template Vídeo Avatar</title>
+<style>
+  @font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400 900;
+    font-display: swap;
+    src: url("https://fonts.gstatic.com/s/nunito/v26/XRXV3I6Li01BKofINeaBTMnFcQIG.woff2") format('woff2');
+  }
+
+  :root {
+    /* Cores — logo Skolen */
+    --color-yellow: #FCD532;
+    --color-teal: #00EDBF;
+    --color-pink: #FF6DA0;
+    --color-blue: #009CDE;
+    --color-ink: #253532;
+    --color-white: #FFFFFF;
+    --color-gray-surface: #F5F5F5;
+
+    /* Espaçamento / radius */
+    --radius-xl: 48px;
+
+    /* Tamanho do frame — 9:16 */
+    --frame-w: 1080px;
+    --frame-h: 1920px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+
+  .frame {
+    width: var(--frame-w);
+    height: var(--frame-h);
+    background: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 64px 72px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  }
+
+  /* Círculos decorativos — tamanho base +20% sobre o design original, com respiração contínua */
+  .deco {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .deco-teal {
+    top: -120px; left: -120px;
+    width: 360px; height: 360px;
+    background: var(--color-teal);
+    animation: breathe-a 4.5s ease-in-out infinite;
+  }
+  .deco-yellow {
+    top: -90px; right: -110px;
+    width: 276px; height: 276px;
+    background: var(--color-yellow);
+    animation: breathe-b 3.8s ease-in-out infinite;
+    animation-delay: -0.95s; /* fase 0.25 */
+  }
+  .deco-blue {
+    bottom: -130px; left: -100px;
+    width: 288px; height: 288px;
+    background: var(--color-blue);
+    z-index: 2;
+    animation: breathe-c 5.2s ease-in-out infinite;
+    animation-delay: -2.6s; /* fase 0.5 */
+  }
+  .deco-pink {
+    bottom: -110px; right: -120px;
+    width: 336px; height: 336px;
+    background: var(--color-pink);
+    z-index: 2;
+    animation: breathe-d 4.1s ease-in-out infinite;
+    animation-delay: -3.075s; /* fase 0.75 */
+  }
+
+  @keyframes breathe-a { 0%,100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+  @keyframes breathe-b { 0%,100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+  @keyframes breathe-c { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+  @keyframes breathe-d { 0%,100% { transform: scale(1); } 50% { transform: scale(1.065); } }
+
+  /* Título */
+  .title {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .title p {
+    font-weight: 900;
+    font-size: 68px;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--color-teal);
+    text-wrap: balance;
+  }
+
+  /* Legenda — troca de frase sincronizada */
+  .caption {
+    width: 100%;
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  .caption p {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 1.25;
+    color: var(--color-ink);
+    transition: opacity 0.2s ease;
+  }
+
+  /* Avatar — slot de vídeo, -15% de área vs. o espaço total disponível */
+  .avatar-slot {
+    width: 100%;
+    flex: 0.85;
+    margin-top: 40px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background: var(--color-gray-surface);
+  }
+  .avatar-slot video,
+  .avatar-slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* nunca cortar o avatar */
+    display: block;
+  }
+  .avatar-slot .placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-ink);
+    opacity: 0.35;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    padding: 40px;
+  }
+</style>
+</head>
+<body>
+
+<div class="frame">
+  <div class="deco deco-teal"></div>
+  <div class="deco deco-yellow"></div>
+  <div class="deco deco-blue"></div>
+  <div class="deco deco-pink"></div>
+
+  <div class="title">
+    <p id="template-title">Sua secretaria tá perdendo tempo (e dinheiro)</p>
+  </div>
+
+  <div class="caption">
+    <p id="template-caption"></p>
+  </div>
+
+  <div class="avatar-slot">
+    <!-- Troque pelo <video src="..."> do avatar HeyGen. Placeholder abaixo é só para preview. -->
+    <div class="placeholder">Vídeo do avatar (HeyGen)<br>720×1280 · object-fit: contain</div>
+  </div>
+</div>
+
+<script>
+  // Simula a legenda sincronizada por segmento (mesmos timings usados no Remotion).
+  // Em produção, os segmentos vêm da transcrição Whisper do áudio do avatar.
+  const captions = [
+    { start: 0.0,  end: 4.4,  text: "Sua secretaria recebe a mesma pergunta 40 vezes por semana." },
+    { start: 4.4,  end: 6.96, text: "Isso tem nome: dinheiro jogado fora." },
+    { start: 6.96, end: 15.48, text: "Segundo fornecedores de chatbot para escolas, um chatbot no atendimento corta 60% da sobrecarga da secretaria." },
+    { start: 15.48, end: 19.64, text: "Chega de repetir horário de reunião e se já pagou a mensalidade." },
+    { start: 19.64, end: 25.16, text: "O chatbot responde 24 horas, e libera sua equipe pra reter o aluno em risco." },
+    { start: 25.16, end: 27.0, text: "Siga para mais dados assim." },
+  ];
+
+  const captionEl = document.getElementById('template-caption');
+  const startedAt = performance.now();
+
+  function tick() {
+    const t = (performance.now() - startedAt) / 1000;
+    const active = captions.find(c => t >= c.start && t < c.end);
+    captionEl.textContent = active ? active.text : '';
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+</script>
+
+</body>
+</html>

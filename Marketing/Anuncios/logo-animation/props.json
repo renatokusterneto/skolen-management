@@ -1,0 +1,13 @@
+{
+  "title": "Sua secretaria tá perdendo tempo (e dinheiro)",
+  "avatarVideoSrc": "avatars/chatbot-secretaria-60pct.mp4",
+  "durationInSeconds": 27.12,
+  "captions": [
+    { "start": 0.0, "end": 4.4, "text": "Sua secretaria recebe a mesma pergunta 40 vezes por semana." },
+    { "start": 4.4, "end": 6.96, "text": "Isso tem nome: dinheiro jogado fora." },
+    { "start": 6.96, "end": 15.48, "text": "Segundo fornecedores de chatbot para escolas, um chatbot no atendimento corta 60% da sobrecarga da secretaria." },
+    { "start": 15.48, "end": 19.64, "text": "Chega de repetir horário de reunião e se já pagou a mensalidade." },
+    { "start": 19.64, "end": 25.16, "text": "O chatbot responde 24 horas, e libera sua equipe pra reter o aluno em risco." },
+    { "start": 25.16, "end": 27.0, "text": "Siga para mais dados assim." }
+  ]
+}
