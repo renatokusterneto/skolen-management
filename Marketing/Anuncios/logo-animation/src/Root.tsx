@@ -4,6 +4,7 @@ import { SkolenLogo } from "./SkolenLogo";
 import { SecretariaFeed } from "./SecretariaFeed";
 import { SecretariaStory } from "./SecretariaStory";
 import { AvatarTemplate, type AvatarTemplateProps } from "./AvatarTemplate";
+import { AvatarNewsTemplate, type AvatarNewsTemplateProps } from "./AvatarNewsTemplate";
 
 const FPS = 30;
 
@@ -60,6 +61,24 @@ export const RemotionRoot: React.FC = () => {
           avatarVideoSrc: "",
           durationInSeconds: 10,
           captions: [] as AvatarTemplateProps["captions"],
+        }}
+        calculateMetadata={async ({ props }) => ({
+          durationInFrames: Math.ceil(props.durationInSeconds * FPS),
+        })}
+      />
+
+      <Composition
+        id="Avatar-News-Template"
+        component={AvatarNewsTemplate}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        durationInFrames={300}
+        defaultProps={{
+          title: "Título da matéria, traduzido e resumido",
+          avatarVideoSrc: "",
+          durationInSeconds: 10,
+          quotes: [] as AvatarNewsTemplateProps["quotes"],
         }}
         calculateMetadata={async ({ props }) => ({
           durationInFrames: Math.ceil(props.durationInSeconds * FPS),
