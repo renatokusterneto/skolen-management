@@ -126,6 +126,56 @@ Schedule (a cada hora)
 
 ---
 
+## Fluxo de Video Repost (TikTok → Reel Skolen)
+
+Descoberta e reaproveitamento de vídeos virais de terceiros (TikTok) em formato
+reaction/quote card com a identidade visual Skolen, para Reels do Instagram.
+
+```
+1. skolen-content-discovery  →  raspa TikTok (Apify) e cura candidatos pelos
+                                 5 padrões de conteúdo (CAOS-OPERACIONAL,
+                                 GAP-FORMACAO-REALIDADE, MOMENTO-IDENTIFICACAO,
+                                 MOTIVACIONAL, SITUACAO-ESPECIFICA)
+2. Aprovação humana          →  usuário escolhe o(s) candidato(s) entre os
+                                 top 5 apresentados
+3. skolen-video-repost        →  baixa o vídeo (yt-dlp), transcreve (Whisper),
+                                 gera 3 opções de CTA, usuário escolhe uma
+4. scripts/quote_post.py      →  monta o template final: fundo branco, logo
+                                 Skolen, CTA em cima, vídeo emoldurado com
+                                 cantos arredondados
+5. Registro                   →  Marketing/Social/_video-reposts/reaction-*.md
+```
+
+**Cache de descoberta** (evita gastar crédito Apify em buscas repetidas):
+- `Marketing/Social/_content-discovery/content-discovery.md` — log legível de runs e curadoria
+- `Marketing/Social/_content-discovery/*-raw.json` — resultados brutos do Apify por run
+
+**Nota técnica — yt-dlp e TikTok:** se o download falhar com erro `Unable to
+extract universal data for rehydration` (TikTok muda a estrutura da página
+periodicamente), usar o hostname de API alternativo:
+```bash
+yt-dlp --extractor-args "tiktok:api_hostname=api22-normal-c-useast2a.tiktokv.com" "<URL>"
+```
+
+### Exemplo executado — 2026-07-29
+
+| Item | Valor |
+|---|---|
+| Fonte | [@angerlania.b](https://www.tiktok.com/@angerlania.b/video/7645074094412647701) (TikTok) |
+| Padrão | MOMENTO-IDENTIFICACAO |
+| Views originais | 8,2K \| Likes: 234 \| Shares: 16 |
+| Descoberto via | skolen-content-discovery (recuradoria do cache `test-run-2026-07-21-raw.json`, sem custo Apify) |
+| CTA usado | "Ser diretor não é moleza. Mas com a Skolen, a gestão fica bem mais leve." |
+| Vídeo final | `Marketing/Social/_video-reposts/reaction-diretor-moleza.mp4` |
+| Registro | `Marketing/Social/_video-reposts/reaction-diretor-moleza.md` |
+
+Dos 20 itens do cache, 5 candidatos SITUACIONAL passaram no corte; ~40% da
+amostra era `tipo: AULA` (consultoria/curso de gestão disfarçado de reflexão)
+ou notícia/polêmica sensível — descartados por regra obrigatória da skill,
+independente do score de aderência.
+
+---
+
 ## Renovação Mensal
 
 No início de cada mês:
